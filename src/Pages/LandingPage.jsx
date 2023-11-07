@@ -4,7 +4,7 @@ import Cards from "../Components/Cards";
 const LandingPage = () => {
   return (
     <>
-    <section className="mt-5 flex flex-wrap gap-4 mt-32">
+    <section className="mt-5 flex flex-wrap gap-4 mt-36">
       <Cards/>
     </section>
     </>

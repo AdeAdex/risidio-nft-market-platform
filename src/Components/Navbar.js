@@ -36,7 +36,7 @@ const Navbar = () => {
           >
             <div className="flex justify-between w-full py-3 ">
               <div className="logo">
-                <img src="/risidio_logo.svg" alt="" />
+                <img src="/risidio_logo.svg" alt="" style={{height: '50px'}} />
               </div>
               <div
                 className={`menu-icon my-auto ${
