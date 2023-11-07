@@ -113,6 +113,7 @@
 
 
 import React, { useState, useEffect } from "react";
+import { Link } from 'react-router-dom';
 
 const Cards = () => {
   const titles = [
@@ -197,6 +198,7 @@ for (let i = 0; i < 20; i++) {
   return (
     <>
       {collection.map((eachCollection, index) => (
+        <Link to={`/collection/${eachCollection.title}`} key={index}>
         <div
           key={index}
           className="relative flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md mb-4"
@@ -230,6 +232,7 @@ for (let i = 0; i < 20; i++) {
             </span>
           </div>
         </div>
+        </Link>
       ))}
     </>
   );
