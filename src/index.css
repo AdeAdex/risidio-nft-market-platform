@@ -1,13 +1,83 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Navbar CSS code  */
+
+
+.App {
+  text-align: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+nav {
+  background-color: #333;
+  position: relative;
+  padding: 10px 0;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  font-size: 18px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  background-color: #010001;
+  width: 100%;
+}
+
+.logo {
+  font-size: 24px;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  margin-right: 10px;
+}
+
+.nav-list {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-list a {
+  color: white;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-list {
+    display: flex;
+    flex-direction: column;
+    transform: scaleY(0);
+    transform-origin: top;
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    width: 100%;
+    transition: transform 0.3s, opacity 0.3s;
+    z-index: 3;
+  }
+
+  .nav-list.open {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+
+  .menu-icon.open {
+    transform: rotate(90deg);
+  }
 }
