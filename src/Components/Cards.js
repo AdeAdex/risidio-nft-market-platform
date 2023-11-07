@@ -161,7 +161,7 @@ const Cards = () => {
 //   const [collection, setCollection] = useState([]);
 const collection = []
 
-for (let i = 0; i < 7; i++) {
+for (let i = 0; i < 20; i++) {
         collection.push({
           title: titles[i],
           photo: photos[i],
