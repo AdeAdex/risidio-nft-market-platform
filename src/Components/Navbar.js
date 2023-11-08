@@ -61,7 +61,6 @@ const Navbar = () => {
             <div className={`nav-list ${isMobileMenuOpen ? "open" : ""}`}>
               <a href="#">Home</a>
               <a href="#">About</a>
-              {/* <a href="">Services</a> */}
               <Link to="/wishlist" className="relative">
                 <BsCartCheck size={32}/>
                 <small className="absolute top-[-0.5rem] right-[-0.4rem] bg-orange-500 px-2 rounded-full">{wishlist.length}</small>
