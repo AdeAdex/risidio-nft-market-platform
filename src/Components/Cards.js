@@ -176,10 +176,10 @@ for (let i = 0; i < 20; i++) {
   return (
     <>
       {collection.map((eachCollection, index) => (
-        <Link to={`/collection/${eachCollection.title}`} key={index} state={eachCollection}>
+        <Link className="w-80 mx-auto lg:mx-0 mb-12 lg:mb-4" to={`/collection/${eachCollection.title}`} key={index} state={eachCollection}>
         <div
           key={index}
-          className="relative flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md mb-4"
+          className="relative flex w-full flex-col rounded-xl bg-clip-border text-gray-700 shadow-md"
         >
           <img
             src={eachCollection.photo}

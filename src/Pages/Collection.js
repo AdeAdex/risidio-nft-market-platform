@@ -47,6 +47,9 @@ const Collection = () => {
                 Add to Wishlist
               </button>
             </div>
+            <div>
+                <button>Play</button>
+            </div>
           </div>
         </div>
         <div className="mt-8">
