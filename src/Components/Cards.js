@@ -123,7 +123,7 @@ const Cards = () => {
     "Pi Oasis",
     "Metaverse HQ",
     "Rare Pepe",
-    "Fell by Davido",
+    "Feel by Davido",
   ];
 
   const summaries = [
@@ -172,33 +172,11 @@ for (let i = 0; i < 20; i++) {
         });
       }
 
-//   useEffect(() => {
-//     const shuffledCollection = shuffleArray(
-//       titles.map((title, index) => ({
-//         title,
-//         photo: photos[index],
-//         price: `$${(Math.random() * (50 - 10) + 10).toFixed(2)}`,
-//         summary: summaries[index],
-//         categories: categories[index],
-//       }))
-//     );
-//     setCollection(shuffledCollection);
-//   }, []);
-
-//   // Function to shuffle an array
-//   function shuffleArray(array) {
-//     const shuffledArray = [...array];
-//     for (let i = shuffledArray.length - 1; i > 0; i--) {
-//       const j = Math.floor(Math.random() * (i + 1));
-//       [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
-//     }
-//     return shuffledArray;
-//   }
 
   return (
     <>
       {collection.map((eachCollection, index) => (
-        <Link to={`/collection/${eachCollection.title}`} key={index}>
+        <Link to={`/collection/${eachCollection.title}`} key={index} state={eachCollection}>
         <div
           key={index}
           className="relative flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md mb-4"

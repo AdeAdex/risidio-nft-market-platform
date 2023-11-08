@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import { Link } from "react-router-dom";
+import { BsCartCheck } from 'react-icons/bs';
+import { useSelector } from "react-redux";
+
 
 const Navbar = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -9,6 +13,10 @@ const Navbar = () => {
   };
 
   const [scrolled, setScrolled] = useState(false);
+
+  const wishlist = useSelector((state) => state.wishlist.items);
+
+
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -35,9 +43,11 @@ const Navbar = () => {
             }`}
           >
             <div className="flex justify-between w-full py-3 ">
+            <Link to="/">
               <div className="logo">
                 <img src="/risidio_logo.svg" alt="" style={{height: '50px'}} />
               </div>
+              </Link>
               <div
                 className={`menu-icon my-auto ${
                   isMobileMenuOpen ? "open" : ""
@@ -51,7 +61,11 @@ const Navbar = () => {
             <div className={`nav-list ${isMobileMenuOpen ? "open" : ""}`}>
               <a href="#">Home</a>
               <a href="#">About</a>
-              <a href="#">Services</a>
+              {/* <a href="">Services</a> */}
+              <Link to="/wishlist" className="relative">
+                <BsCartCheck size={32}/>
+                <small className="absolute top-[-0.5rem] right-[-0.4rem] bg-orange-500 px-2 rounded-full">{wishlist.length}</small>
+              </Link>
               <a href="#">Portfolio</a>
               <a href="#">Contact</a>
             </div>
