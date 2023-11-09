@@ -157,16 +157,18 @@ const LandingPage = () => {
       title: "Abstract Echoes",
       photo: "https://imagescdn.junodownload.com/full/CS6005595-02A-BIG.jpg",
       price: "100.00",
-      summaries: "Abstract Echoes - A visual and auditory exploration of abstract concepts. A feast for the senses.",
+      summaries:
+        "Abstract Echoes - A visual and auditory exploration of abstract concepts. A feast for the senses.",
       categories: "Abstract",
       owner: "VisionaryArt",
       quantity: 0,
     },
     {
       title: "Arcane Alchemy",
-      photo: "https://f4.bcbits.com/img/a0323179043_65", 
+      photo: "https://f4.bcbits.com/img/a0323179043_65",
       price: "200.00",
-      summaries: "Unleash the magical essence of Arcane Alchemy. An enchanting blend of art and mysticism.",
+      summaries:
+        "Unleash the magical essence of Arcane Alchemy. An enchanting blend of art and mysticism.",
       categories: "Mystic",
       owner: "MysticArtisan",
       quantity: 0,
@@ -175,71 +177,108 @@ const LandingPage = () => {
       title: "Vibrant Visions",
       photo: "https://paintandvino.com/wp-content/uploads/Vibrant-Visions.jpg",
       price: "80.00",
-      summaries: "Experience the world through Vibrant Visions. A colorful array of digital artistry.",
+      summaries:
+        "Experience the world through Vibrant Visions. A colorful array of digital artistry.",
       categories: "Colorful",
       owner: "Risidio",
       quantity: 0,
     },
     {
       title: "Epic Odyssey",
-      photo: "https://media.pocketgamer.com/artwork/na-31800-1597942157/Epic_Odyssey-iOS-Android-Artwork-KeyArt.jpg", 
+      photo:
+        "https://media.pocketgamer.com/artwork/na-31800-1597942157/Epic_Odyssey-iOS-Android-Artwork-KeyArt.jpg",
       price: "250.00",
-      summaries: "Embark on an Epic Odyssey through digital realms. A journey of visual and auditory delights.",
+      summaries:
+        "Embark on an Epic Odyssey through digital realms. A journey of visual and auditory delights.",
       categories: "Adventure",
       owner: "DigitalExplorer",
       quantity: 0,
     },
     {
       title: "Celestial Serenade",
-      photo: "https://i.ytimg.com/vi/9US9nEopX-o/maxresdefault.jpg", 
+      photo: "https://i.ytimg.com/vi/9US9nEopX-o/maxresdefault.jpg",
       price: "120.00",
-      summaries: "Indulge in the heavenly sounds of Celestial Serenade. A musical experience like no other.",
+      summaries:
+        "Indulge in the heavenly sounds of Celestial Serenade. A musical experience like no other.",
       categories: "Heavenly",
       owner: "HarmonyMaster",
       quantity: 0,
     },
     {
       title: "Sculpted Soundwaves",
-      photo: "https://i.pinimg.com/originals/5d/8c/21/5d8c211c90fa4c104fc1735b93d75683.jpg",
+      photo:
+        "https://i.pinimg.com/originals/5d/8c/21/5d8c211c90fa4c104fc1735b93d75683.jpg",
       price: "150.00",
-      summaries: "Witness the fusion of art and sound with Sculpted Soundwaves. A masterpiece for audiophiles.",
+      summaries:
+        "Witness the fusion of art and sound with Sculpted Soundwaves. A masterpiece for audiophiles.",
       categories: "Sculpture",
       owner: "AudioSculptor",
       quantity: 0,
     },
     {
       title: "Quantum Canvas",
-      photo: "https://i.ytimg.com/vi/J3PeqEZO13c/maxresdefault.jpg", 
+      photo: "https://i.ytimg.com/vi/J3PeqEZO13c/maxresdefault.jpg",
       price: "180.00",
-      summaries: "Dive into the Quantum Canvas, where digital artistry meets the principles of quantum reality.",
+      summaries:
+        "Dive into the Quantum Canvas, where digital artistry meets the principles of quantum reality.",
       categories: "Quantum",
       owner: "QuantumArtisan",
       quantity: 0,
     },
     {
       title: "Futuristic Fusion",
-      photo: "https://static.vecteezy.com/system/resources/thumbnails/030/463/427/small/futuristic-nuclear-fusion-concept-with-magnetic-confinement-generative-ai-photo.jpeg", 
+      photo:
+        "https://static.vecteezy.com/system/resources/thumbnails/030/463/427/small/futuristic-nuclear-fusion-concept-with-magnetic-confinement-generative-ai-photo.jpeg",
       price: "200.00",
-      summaries: "Experience the merging of past and future in Futuristic Fusion. A visual and auditory delight.",
+      summaries:
+        "Experience the merging of past and future in Futuristic Fusion. A visual and auditory delight.",
       categories: "Futuristic",
       owner: "TimeTraveler",
       quantity: 0,
     },
     {
       title: "Galactic Grooves",
-      photo: "https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:392/h:594/q:75/https://bleedingcool.com/wp-content/uploads/2021/04/JL_Cv64_var.jpg", 
+      photo:
+        "https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:392/h:594/q:75/https://bleedingcool.com/wp-content/uploads/2021/04/JL_Cv64_var.jpg",
       price: "130.00",
-      summaries: "Immerse yourself in the otherworldly sounds of Galactic Grooves. A cosmic journey of beats and melodies.",
+      summaries:
+        "Immerse yourself in the otherworldly sounds of Galactic Grooves. A cosmic journey of beats and melodies.",
       categories: "Cosmic",
       owner: "CosmicBeats",
       quantity: 0,
     },
-    
   ];
 
   useEffect(() => {
     setFilteredCollection(collection);
   }, []);
+
+
+  const filterCollectionBySort = (value) => {
+    let sortedCollection = [...collection];
+
+  switch (value) {
+    case 'AZ':
+      sortedCollection.sort((a, b) => a.title.localeCompare(b.title));
+      break;
+    case 'ZA':
+      sortedCollection.sort((a, b) => b.title.localeCompare(a.title));
+      break;
+    case 'LowToHigh':
+      sortedCollection.sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
+      break;
+    case 'HighToLow':
+      sortedCollection.sort((a, b) => parseFloat(b.price) - parseFloat(a.price));
+      break;
+    // Handle other cases as needed
+    default:
+      // No specific sorting, do nothing
+      break;
+  }
+
+  setFilteredCollection(sortedCollection);
+  setSelectedCategory(value);
+  }
 
   const filterCollection = (category) => {
     setSelectedCategory(category);
@@ -294,20 +333,20 @@ const LandingPage = () => {
             <div className="flex">
               <select
                 value={selectedCategory}
-                onChange={(e) => filterCollection(e.target.value)}
+                onChange={(e) => filterCollectionBySort(e.target.value)}
                 className="rounded-md p-2"
               >
                 <option value="all">All</option>
-                <option value="Music">Music</option>
-                <option value="Art">Art</option>
-                <option value="Gaming">Gaming</option>
-                <option value="SportLight">SportLight</option>
+                <option value="AZ">A - Z</option>
+                <option value="ZA">Z - A</option>
+                <option value="LowToHigh">Price: Low to High</option>
+                <option value="HighToLow">Price: High to Low</option>
               </select>
             </div>
           </div>
 
           <section
-            className={`flex justify-end w-10/12 gap-14 ${
+            className={`flex justify-end w-9/12 gap-14 ${
               isSmallScreen ? "flex-col" : ""
             }`}
           >
@@ -323,6 +362,15 @@ const LandingPage = () => {
                 <option value="Art">Art</option>
                 <option value="Gaming">Gaming</option>
                 <option value="SportLight">SportLight</option>
+                <option value="Abstract">Abstract</option>
+                <option value="Mystic">Mystic</option>
+                <option value="Colorful">Colorful</option>
+                <option value="Adventure">Adventure</option>
+                <option value="Heavenly">Heavenly</option>
+                <option value="Sculpture">Sculpture</option>
+                <option value="Quantum">Quantum</option>
+                <option value="Futuristic">Futuristic</option>
+                <option value="Cosmic">Cosmic</option>
               </select>
             </div>
             <div className="flex">
