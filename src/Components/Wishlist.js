@@ -1,15 +1,34 @@
 import React, { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { AiOutlineDelete } from "react-icons/ai";
+import {
+  addToWishlist,
+  removeFromWishlist,
+  increaseQuantity,
+  decreaseQuantity,
+} from "../redux/wishlistSlice";
 
 const Wishlist = () => {
+  const dispatch = useDispatch();
   const wishlist = useSelector((state) => state.wishlist.items);
   const [isSmallScreen, setIsSmallScreen] = useState(false);
 
+  const handleRemoveItem = (index) => {
+    dispatch(removeFromWishlist(index));
+  };
+  
+  const handleIncreaseQuantity = (index) => {
+    dispatch(increaseQuantity(index));
+  };
+  
+  const handleDecreaseQuantity = (index) => {
+    dispatch(decreaseQuantity(index));
+  };
+  
 
   useEffect(() => {
     const handleResize = () => {
-      setIsSmallScreen(window.innerWidth <= 768); 
+      setIsSmallScreen(window.innerWidth <= 768);
     };
 
     handleResize();
@@ -19,6 +38,7 @@ const Wishlist = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
 
 
 
@@ -81,22 +101,15 @@ const Wishlist = () => {
                 </div>
               </div>
               <div className="flex items-center">
-                <button  className="bg-button-background text-white px-4 py-1 rounded-sm mr-2 flex gap-3">
-                  <AiOutlineDelete
-                    size={20}
-                    className="my-auto text-delete-button"
-                  />{" "}
-                  <span>Remove</span>
-                </button>
-                <div className="flex items-center">
-                  <button className="bg-gray-300 px-3 py-2 rounded-sm">
-                    -
-                  </button>
-                  <span className="mx-2">{item.quantity}</span>
-                  <button className="bg-button-background text-white px-3 py-2 rounded-sm">
-                    +
-                  </button>
-                </div>
+              <button onClick={() => handleRemoveItem(index)} className="bg-button-background text-white px-4 py-1 rounded-sm mr-2 flex gap-3">
+                <AiOutlineDelete size={20} className="my-auto text-delete-button" />{" "}
+                <span>Remove</span>
+              </button>
+              <div className="flex items-center">
+                <button onClick={() => handleDecreaseQuantity(index)} className="bg-gray-300 px-3 py-2 rounded-sm">-</button>
+                <span className="mx-2">{item.quantity}</span>
+                <button onClick={() => handleIncreaseQuantity(index)} className="bg-button-background text-white px-3 py-2 rounded-sm">+</button>
+              </div>
               </div>
             </div>
           ))}

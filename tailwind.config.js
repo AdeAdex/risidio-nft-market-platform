@@ -16,6 +16,9 @@ export default {
       colors: {
         'delete-button': '#E9493D'
       },
+      borderColor: {
+        'border-color': '#5FBDC1'
+      }
     },
   },
   plugins: [],

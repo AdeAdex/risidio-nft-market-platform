@@ -15,6 +15,8 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
 
   const wishlist = useSelector((state) => state.wishlist.items);
+  const totalQuantity = wishlist.reduce((total, item) => total + item.quantity, 0);
+  
 
   const [isSmallScreen, setIsSmallScreen] = useState(false);
 
@@ -41,6 +43,7 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
 
   const handleScroll = () => {
     if (window.scrollY > 80) {
@@ -80,7 +83,7 @@ const Navbar = () => {
               <a href="#">Contact</a>
               <Link to="/wishlist" className={`relative ${isSmallScreen ? 'flex justify-center' : ''}`}>
                 <BsCartCheck className="" size={32}/>
-                <small className={`absolute top-[-0.5rem] bg-orange-500 px-2 rounded-full ${isSmallScreen ? 'right-[10rem]' : 'right-[-0.4rem]'}`}>{wishlist.length}</small>
+                <small className={`absolute top-[-0.5rem] bg-orange-500 px-2 rounded-full ${isSmallScreen ? 'right-[10rem]' : 'right-[-0.4rem]'}`}>{totalQuantity}</small>
               </Link>
             </div>
           </div>

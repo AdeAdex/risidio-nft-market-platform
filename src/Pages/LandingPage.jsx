@@ -6,6 +6,20 @@ const LandingPage = () => {
   const [selectedPriceRange, setSelectedPriceRange] = useState("all");
   const [selectedName, setSelectedName] = useState("all");
   const [filteredCollection, setFilteredCollection] = useState([]);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 768);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const collection = [
     {
@@ -18,6 +32,7 @@ const LandingPage = () => {
       categories: "Gaming",
       music: process.env.PUBLIC_URL + "",
       owner: "Risidio",
+      quantity: 0,
     },
     {
       title: "Pixelmon - Generation",
@@ -29,6 +44,7 @@ const LandingPage = () => {
       categories: "Art",
       music: process.env.PUBLIC_URL + "",
       owner: "Risidio",
+      quantity: 0,
     },
     {
       title: "Fool Again by Westlife",
@@ -40,6 +56,7 @@ const LandingPage = () => {
       categories: "Music",
       music: process.env.PUBLIC_URL + "/music/Westlife_Fool again.mp3",
       owner: "Westlife",
+      quantity: 0,
     },
     {
       title: "Pi Oasis",
@@ -51,6 +68,7 @@ const LandingPage = () => {
       categories: "Art",
       music: process.env.PUBLIC_URL + "",
       owner: "Risidio",
+      quantity: 0,
     },
     {
       title: "Metaverse HQ",
@@ -62,6 +80,7 @@ const LandingPage = () => {
       categories: "Art",
       music: process.env.PUBLIC_URL + "",
       owner: "Risidio",
+      quantity: 0,
     },
     {
       title: "Rare Pepe",
@@ -73,6 +92,7 @@ const LandingPage = () => {
       categories: "SportLight",
       music: process.env.PUBLIC_URL + "",
       owner: "Risidio",
+      quantity: 0,
     },
     {
       title: "Feel by Davido",
@@ -83,6 +103,7 @@ const LandingPage = () => {
       categories: "Music",
       music: process.env.PUBLIC_URL + "/music/Davido_-_Feel.mp3",
       owner: "Davido",
+      quantity: 0,
     },
     // Add more items in a similar format
   ];
@@ -133,8 +154,12 @@ const LandingPage = () => {
 
   return (
     <>
-      <div className="mt-24 lg:mt-24">
-        <section className="mb-12 py-4 px-2 lg:px-32 flex gap-3">
+      <div className="mt-24 lg:mt-12">
+        <section
+          className={`mb-12 py-4 px-2 lg:px-32 flex gap-3 shadow-md ${
+            isSmallScreen ? "flex-col absolute z-10" : ""
+          }`}
+        >
           <div className="flex gap-3">
             <h2 className="my-auto">Sort by: </h2>
             <div className="flex">
@@ -152,7 +177,11 @@ const LandingPage = () => {
             </div>
           </div>
 
-          <section className="flex justify-end w-10/12 gap-14">
+          <section
+            className={`flex justify-end w-10/12 gap-14 ${
+              isSmallScreen ? "flex-col" : ""
+            }`}
+          >
             <div className="flex">
               <div className="my-auto text-md">Category:</div>
               <select
