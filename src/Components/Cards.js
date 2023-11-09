@@ -25,7 +25,7 @@ const Cards = ({ collection }) => {
   return (
     <>
       {collection.map((eachCollection, index) => (
-        <section key={index} className="w-full px-6 lg:px-0 lg:w-64 mx-auto lg:mx-0 mb-12 lg:mb-8">
+        <section key={index} className="w-full px-6 md:px-0 lg:px-0 md:w-1/3 lg:w-64 mx-auto md:mx-0 lg:mx-0 mb-12 lg:mb-8">
           <div
             key={index}
             className="relative flex w-full flex-col  rounded-xl bg-clip-border text-gray-700 shadow-md"
