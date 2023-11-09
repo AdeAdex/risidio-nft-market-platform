@@ -7,6 +7,7 @@ import {
   increaseQuantity,
   decreaseQuantity,
 } from "../redux/wishlistSlice";
+import Swal from 'sweetalert2'
 
 const Wishlist = () => {
   const dispatch = useDispatch();
@@ -15,12 +16,12 @@ const Wishlist = () => {
   const [subtotal, setSubtotal] = useState(0);
 
   useEffect(() => {
-    // Calculate subtotal when wishlist changes
     const newSubtotal = wishlist.reduce(
       (total, item) => total + item.price * item.quantity,
       0
     );
     setSubtotal(newSubtotal);
+    console.log(subtotal);
   }, [wishlist]);
 
   const handleRemoveItem = (index) => {
@@ -48,8 +49,49 @@ const Wishlist = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+ 
+
+  /* global PaystackPop */
 
 
+  const payWithPaystack = () => {
+    const amountInKobo = Math.round(subtotal * 100);
+    let handler = PaystackPop.setup({
+      key: "pk_test_a70c6dbb491c1021f98ea8cf0b840542607c2537",
+      email: "adeoluamole@gmail.com",
+      amount: amountInKobo,
+      ref: "risidio" + Math.floor(Math.random() * 10000 + 1),
+      onClose: function () {
+        let message = "You just cancel this transaction";
+        Swal.fire({
+          icon: "error",
+          title: "Dear Risidio customer",
+          text: message,
+          footer:
+            "For further assistance, please call us at +2347033959586 or email us at adeoluamole@gmail.com",
+        });
+      },
+      callback: function (response) {
+        let message =
+          "Payment completed! Your Reference Number is: " + response.reference;
+        Swal.fire({
+          icon: "success",
+          title: "Thank You Risidio customer",
+          text: message,
+          footer: "",
+        }).then((result) => {
+          if (result.isConfirmed) {
+          }
+        });
+      },
+    });
+
+    handler.openIframe();
+  };
+
+  const payForCollection = () => {
+    payWithPaystack();
+  };
 
 
   if (wishlist.length === 0) {
@@ -83,9 +125,9 @@ const Wishlist = () => {
           <h2 className="text-xl font-semibold mb-4">Cart Summary</h2>
           <div className="flex items-center justify-between mt-4">
             <p className="text-gray-600">Subtotal:</p>
-            <p className="text-blue-500 font-semibold">$50.00</p>
+            <p className="text-blue-500 font-semibold">${subtotal.toFixed(2)}</p>
           </div>
-          <button className={`w-full bg-blue-500 text-white  py-2 mt-4 hover:bg-blue-600 ${isSmallScreen ? 'fixed bottom-0 left-0 rounded-sm' : 'rounded-full'}`}>
+          <button onClick={payForCollection} className={`w-full bg-blue-500 text-white  py-2 mt-4 hover:bg-blue-600 ${isSmallScreen ? 'fixed bottom-0 left-0 rounded-sm' : 'rounded-full'}`}>
             Checkout
           </button>
         </div>
@@ -131,7 +173,7 @@ const Wishlist = () => {
             <p className="text-gray-600">Subtotal:</p>
             <p className="text-blue-500 font-semibold">${subtotal.toFixed(2)}</p>
           </div>
-          <button className="w-full bg-blue-500 text-white rounded-full py-2 mt-4 hover:bg-blue-600">
+          <button onClick={payForCollection} className="w-full bg-blue-500 text-white rounded-full py-2 mt-4 hover:bg-blue-600">
             Checkout
           </button>
         </div>
