@@ -25,20 +25,20 @@ const Cards = ({ collection }) => {
   return (
     <>
       {collection.map((eachCollection, index) => (
-        <section className="w-80 mx-auto lg:mx-0 mb-12 lg:mb-8">
+        <section key={index} className="w-full px-6 lg:px-0 lg:w-64 mx-auto lg:mx-0 mb-12 lg:mb-8">
           <div
             key={index}
             className="relative flex w-full flex-col  rounded-xl bg-clip-border text-gray-700 shadow-md"
           >
             <Link
-              className=""
+              className="w-full"
               to={`/collection/${eachCollection.title}`}
               key={index}
               state={eachCollection}
             >
               <img
                 src={eachCollection.photo}
-                className="relative mx-4 -mt-6 h-40 w-full overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-blue-500 to-blue-600"
+                className="relative mx-0 -mt-6 h-40 w-full overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-blue-500 to-blue-600"
               />
 
               <div className="p-6">
@@ -47,8 +47,8 @@ const Cards = ({ collection }) => {
                 </h5>
                 <p className="text-sm">{eachCollection.categories}</p>
                 <p
-                  className="block font-sans text-base font-light leading-relaxed text-inherit antialiased"
-                  style={{ height: "50px" }}
+                  className="block font-sans text-base font-light leading-relaxed text-inherit antialiased "
+                  style={{ height: "50px", overflowY: "auto" }}
                 >
                   {eachCollection.summaries}
                 </p>

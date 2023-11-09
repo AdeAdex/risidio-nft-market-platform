@@ -82,6 +82,10 @@ nav {
     display: block;
   }
 
+  .logo {
+    font-size: 12px;
+  }
+
   .nav-list {
     display: flex;
     flex-direction: column;

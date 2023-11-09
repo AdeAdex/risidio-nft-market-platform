@@ -157,7 +157,7 @@ const LandingPage = () => {
       <div className="mt-24 lg:mt-12">
         <section
           className={`mb-12 py-4 px-2 lg:px-32 flex gap-3 shadow-md ${
-            isSmallScreen ? "flex-col absolute z-10" : ""
+            isSmallScreen ? "flex-col absolute z-10 hidden" : ""
           }`}
         >
           <div className="flex gap-3">

@@ -62,12 +62,8 @@ const Navbar = () => {
             }`}
           >
             <div className="flex justify-between w-full py-3 ">
-            <Link to="/">
-              <div className="logo">
-                <img src="/risidio_logo.svg" alt="" style={{height: '50px'}} />
-              </div>
-              </Link>
-              <div
+            <div className="flex ">
+            <div
                 className={`menu-icon my-auto ${
                   isMobileMenuOpen ? "open" : ""
                 }`}
@@ -75,13 +71,25 @@ const Navbar = () => {
               >
                 {isMobileMenuOpen ? (<AiOutlineClose size={32}/>) : (<AiOutlineMenu size={32}/>)}
               </div>
+            <Link to="/">
+              <div className="logo">
+                <img src="/risidio_logo.svg" alt="" style={{ height: isSmallScreen ? '35px' : '50px' }} />
+              </div>
+              </Link>
+            </div>
+            
+              <Link to="/wishlist" className={`relative my-auto ${isSmallScreen ? 'flex justify-center right-[1rem]' : 'hidden'}`}>
+                <BsCartCheck className="" size={32}/>
+                <small className={`absolute top-[-0.5rem] bg-orange-500 px-2 rounded-full ${isSmallScreen ? 'right-[-1rem]' : 'right-[-0.4rem]'}`}>{totalQuantity}</small>
+              </Link>
+              
             </div>
 
             <div className={`nav-list ${isMobileMenuOpen ? "open" : ""} ${isSmallScreen ? 'h-screen' : ''}`}>
               <a href="#">Account</a>
               <a href="#">Help</a>
               <a href="#">Contact</a>
-              <Link to="/wishlist" className={`relative ${isSmallScreen ? 'flex justify-center' : ''}`}>
+              <Link to="/wishlist" className={`relative ${isSmallScreen ? 'flex justify-center hidden' : ''}`}>
                 <BsCartCheck className="" size={32}/>
                 <small className={`absolute top-[-0.5rem] bg-orange-500 px-2 rounded-full ${isSmallScreen ? 'right-[10rem]' : 'right-[-0.4rem]'}`}>{totalQuantity}</small>
               </Link>
