@@ -20,6 +20,8 @@ const Wishlist = () => {
     };
   }, []);
 
+
+
   if (wishlist.length === 0) {
     return (
       <div className="mt-32">
@@ -47,7 +49,7 @@ const Wishlist = () => {
     <>
       <section className={`mt-16  px-0 lg:px-52 w-full ${isSmallScreen ? 'flex flex-col gap-2' : 'flex gap-8'}`}>
       {isSmallScreen ? (
-          <div className="w-full border rounded-lg p-4 shadow-md">
+          <div className={`w-full border rounded-lg p-4 shadow-md ${isSmallScreen ? '' : ''}`}>
           <h2 className="text-xl font-semibold mb-4">Cart Summary</h2>
           <div className="flex items-center justify-between mt-4">
             <p className="text-gray-600">Subtotal:</p>
@@ -79,7 +81,7 @@ const Wishlist = () => {
                 </div>
               </div>
               <div className="flex items-center">
-                <button className="bg-button-background text-white px-4 py-1 rounded-sm mr-2 flex gap-3">
+                <button  className="bg-button-background text-white px-4 py-1 rounded-sm mr-2 flex gap-3">
                   <AiOutlineDelete
                     size={20}
                     className="my-auto text-delete-button"

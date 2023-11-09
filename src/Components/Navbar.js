@@ -16,6 +16,22 @@ const Navbar = () => {
 
   const wishlist = useSelector((state) => state.wishlist.items);
 
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 768); 
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
 
 
   useEffect(() => {
@@ -58,15 +74,14 @@ const Navbar = () => {
               </div>
             </div>
 
-            <div className={`nav-list ${isMobileMenuOpen ? "open" : ""}`}>
-              <a href="#">Home</a>
-              <a href="#">About</a>
-              <Link to="/wishlist" className="relative">
-                <BsCartCheck size={32}/>
-                <small className="absolute top-[-0.5rem] right-[-0.4rem] bg-orange-500 px-2 rounded-full">{wishlist.length}</small>
-              </Link>
-              <a href="#">Portfolio</a>
+            <div className={`nav-list ${isMobileMenuOpen ? "open" : ""} ${isSmallScreen ? 'h-screen' : ''}`}>
+              <a href="#">Account</a>
+              <a href="#">Help</a>
               <a href="#">Contact</a>
+              <Link to="/wishlist" className={`relative ${isSmallScreen ? 'flex justify-center' : ''}`}>
+                <BsCartCheck className="" size={32}/>
+                <small className={`absolute top-[-0.5rem] bg-orange-500 px-2 rounded-full ${isSmallScreen ? 'right-[10rem]' : 'right-[-0.4rem]'}`}>{wishlist.length}</small>
+              </Link>
             </div>
           </div>
         </nav>
