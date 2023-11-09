@@ -86,7 +86,7 @@ const Navbar = () => {
             </div>
 
             <div className={`nav-list ${isMobileMenuOpen ? "open" : ""} ${isSmallScreen ? 'h-screen' : ''}`}>
-              <a href="#">Account</a>
+              <a href="#" className={`${isSmallScreen ? 'mt-5' : ''}`}>Account</a>
               <a href="#">Help</a>
               <a href="#">Contact</a>
               <Link to="/wishlist" className={`relative ${isSmallScreen ? 'flex justify-center hidden' : ''}`}>

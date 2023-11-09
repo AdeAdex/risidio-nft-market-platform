@@ -21,7 +21,7 @@ const Collection = () => {
 
   return (
     <>
-      <div className="container mx-auto p-4 mt-32">
+      <div className="container mx-auto p-4 mt-20 lg:mt-32">
         <div className="flex flex-col md:flex-row gap-4">
           <div className="md:w-1/2 h-96 ">
             <img
