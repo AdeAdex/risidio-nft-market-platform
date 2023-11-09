@@ -12,6 +12,16 @@ const Wishlist = () => {
   const dispatch = useDispatch();
   const wishlist = useSelector((state) => state.wishlist.items);
   const [isSmallScreen, setIsSmallScreen] = useState(false);
+  const [subtotal, setSubtotal] = useState(0);
+
+  useEffect(() => {
+    // Calculate subtotal when wishlist changes
+    const newSubtotal = wishlist.reduce(
+      (total, item) => total + item.price * item.quantity,
+      0
+    );
+    setSubtotal(newSubtotal);
+  }, [wishlist]);
 
   const handleRemoveItem = (index) => {
     dispatch(removeFromWishlist(index));
@@ -97,7 +107,7 @@ const Wishlist = () => {
                   <h3 className={`font-semibold text-blue-900 ${isSmallScreen ? 'text-sm' : 'text-lg'} `}>
                     {item.title}
                   </h3>
-                  <p className="text-gray-600">Price: {item.price}</p>
+                  <p className="text-gray-600">Price: ${item.price}</p>
                 </div>
               </div>
               <div className="flex items-center">
@@ -119,7 +129,7 @@ const Wishlist = () => {
           <h2 className="text-xl font-semibold mb-4">Cart Summary</h2>
           <div className="flex items-center justify-between mt-4">
             <p className="text-gray-600">Subtotal:</p>
-            <p className="text-blue-500 font-semibold">$50.00</p>
+            <p className="text-blue-500 font-semibold">${subtotal.toFixed(2)}</p>
           </div>
           <button className="w-full bg-blue-500 text-white rounded-full py-2 mt-4 hover:bg-blue-600">
             Checkout
