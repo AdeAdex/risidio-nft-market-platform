@@ -12,6 +12,10 @@ const Navbar = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false);
+  };
+
   const [scrolled, setScrolled] = useState(false);
 
   const wishlist = useSelector((state) => state.wishlist.items);
@@ -86,13 +90,32 @@ const Navbar = () => {
             </div>
 
             <div className={`nav-list ${isMobileMenuOpen ? "open" : ""} ${isSmallScreen ? 'h-screen' : ''}`}>
-              <a href="#" className={`${isSmallScreen ? 'mt-5' : ''}`}>Account</a>
-              <a href="#">Help</a>
-              <a href="#">Contact</a>
-              <Link to="/wishlist" className={`relative ${isSmallScreen ? 'flex justify-center hidden' : ''}`}>
-                <BsCartCheck className="" size={32}/>
-                <small className={`absolute top-[-0.5rem] bg-orange-500 px-2 rounded-full ${isSmallScreen ? 'right-[10rem]' : 'right-[-0.4rem]'}`}>{totalQuantity}</small>
+            <Link to="/" onClick={closeMobileMenu}>
+                Account
               </Link>
+              <Link to="/" onClick={closeMobileMenu}>
+                Help
+              </Link>
+              <Link to="/" onClick={closeMobileMenu}>
+                Contact
+              </Link>
+              <Link
+                to="/wishlist"
+                onClick={closeMobileMenu}
+                className={`relative ${
+                  isSmallScreen ? "flex justify-center hidden" : ""
+                }`}
+              >
+                <BsCartCheck className="" size={32} />
+                <small
+                  className={`absolute top-[-0.5rem] bg-orange-500 px-2 rounded-full ${
+                    isSmallScreen ? "right-[10rem]" : "right-[-0.4rem]"
+                  }`}
+                >
+                  {totalQuantity}
+                </small>
+              </Link>
+
             </div>
           </div>
         </nav>
