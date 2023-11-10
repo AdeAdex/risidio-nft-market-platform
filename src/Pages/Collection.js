@@ -64,8 +64,9 @@ const Collection = () => {
                   >
                     -
                   </button>
-                  {/* <span className="mx-2">{eachCollection.quantity || 0 }</span> */}
-                  <span className="mx-2">{selectedCollection.quantity !== undefined ? selectedCollection.quantity : 0}</span>
+                  <span className="mx-2 quantity">
+                    {wishlist.find(item => item.title === selectedCollection.title)?.quantity || 0}
+                  </span>
                   <button
                     onClick={() => handleIncreaseQuantity(selectedCollection)}
                     className="bg-button-background text-white px-3 py-1 rounded-sm"
