@@ -145,7 +145,7 @@ const Collection = () => {
             <li>Category: {selectedCollection.categories}</li>
             <li>Owner: {selectedCollection.owner}</li>
             <li>Edition: Limited Edition</li>
-            <li>Release Date: 2023-11-07</li>
+            <li>Release Date: 2023-11-10</li>
           </ul>
         </div>
       </div>
