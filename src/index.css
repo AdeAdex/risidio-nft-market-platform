@@ -49,6 +49,8 @@ nav {
   text-decoration: none;
 }
 
+/* Css code for the empty cart container that animate start here*/
+
 .empty-cart-container img {
   animation-name: fall;
   animation-duration: 2s;
@@ -71,6 +73,10 @@ nav {
     transform: rotate(-50deg);
   }
 }
+
+/* Css code for the empty cart container that animate end here*/
+
+/* Css code for responsive navbar start here */
 
 @media screen and (max-width: 600px) {
   .menu-icon {
@@ -105,3 +111,5 @@ nav {
     transform: rotate(90deg);
   }
 }
+
+/* Css code for responsive navbar end here */

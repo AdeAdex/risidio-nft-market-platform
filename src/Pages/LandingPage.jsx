@@ -350,7 +350,9 @@ const LandingPage = () => {
           }`}
         >
           <div className="flex  gap-3">
-            <div className="my-auto sm:text-xs lg:text-base flex"><span>Sort </span> {" "}<span>by:</span> </div>
+            <div className="my-auto sm:text-xs lg:text-base flex">
+              <span>Sort </span> <span>by:</span>{" "}
+            </div>
             <div className="flex">
               <select
                 value={selectedCategory}
