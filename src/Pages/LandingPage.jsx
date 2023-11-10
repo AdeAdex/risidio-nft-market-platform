@@ -253,32 +253,35 @@ const LandingPage = () => {
     setFilteredCollection(collection);
   }, []);
 
-
   const filterCollectionBySort = (value) => {
     let sortedCollection = [...collection];
 
-  switch (value) {
-    case 'AZ':
-      sortedCollection.sort((a, b) => a.title.localeCompare(b.title));
-      break;
-    case 'ZA':
-      sortedCollection.sort((a, b) => b.title.localeCompare(a.title));
-      break;
-    case 'LowToHigh':
-      sortedCollection.sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
-      break;
-    case 'HighToLow':
-      sortedCollection.sort((a, b) => parseFloat(b.price) - parseFloat(a.price));
-      break;
-    // Handle other cases as needed
-    default:
-      // No specific sorting, do nothing
-      break;
-  }
+    switch (value) {
+      case "AZ":
+        sortedCollection.sort((a, b) => a.title.localeCompare(b.title));
+        break;
+      case "ZA":
+        sortedCollection.sort((a, b) => b.title.localeCompare(a.title));
+        break;
+      case "LowToHigh":
+        sortedCollection.sort(
+          (a, b) => parseFloat(a.price) - parseFloat(b.price)
+        );
+        break;
+      case "HighToLow":
+        sortedCollection.sort(
+          (a, b) => parseFloat(b.price) - parseFloat(a.price)
+        );
+        break;
+      // Handle other cases as needed
+      default:
+        // No specific sorting, do nothing
+        break;
+    }
 
-  setFilteredCollection(sortedCollection);
-  setSelectedCategory(value);
-  }
+    setFilteredCollection(sortedCollection);
+    setSelectedCategory(value);
+  };
 
   const filterCollection = (category) => {
     setSelectedCategory(category);

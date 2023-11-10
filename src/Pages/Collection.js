@@ -4,7 +4,6 @@ import { useLocation } from "react-router-dom";
 import { addToWishlist, decreaseQuantity, increaseQuantity} from "../redux/wishlistSlice";
 
 const Collection = () => {
-  // const { collectionId } = useParams();
   const location = useLocation();
   const selectedCollection = location.state;
   const [isPlaying, setIsPlaying] = useState(false);
@@ -18,20 +17,31 @@ const Collection = () => {
   
   const handleBuyNow = (selectedItem) => {
     const isInWishlist = wishlist.some(item => item.title === selectedItem.title);
-  
+
     if (isInWishlist) {
       dispatch(increaseQuantity(wishlist.findIndex(item => item.title === selectedItem.title)));
     } else {
       dispatch(addToWishlist({ ...selectedItem, quantity: 1 }));
     }
   };
-  
-  const handleIncreaseQuantity = (index) => {
-    dispatch(increaseQuantity(index));
+
+  const handleIncreaseQuantity = () => {
+    const itemIndex = wishlist.findIndex(item => item.title === selectedCollection.title);
+
+    if (itemIndex !== -1) {
+      dispatch(increaseQuantity(itemIndex));
+    } else {
+      dispatch(addToWishlist({ ...selectedCollection, quantity: 1 }));
+    }
   };
-  
-  const handleDecreaseQuantity = (index) => {
-    dispatch(decreaseQuantity(index));
+
+  const handleDecreaseQuantity = () => {
+    const itemIndex = wishlist.findIndex(item => item.title === selectedCollection.title);
+
+    if (itemIndex !== -1) {
+      dispatch(decreaseQuantity(itemIndex));
+    } else {
+    }
   };
  
 

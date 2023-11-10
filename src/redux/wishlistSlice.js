@@ -26,9 +26,6 @@ const wishlistSlice = createSlice({
         item.quantity -= 1;
       }
     },
-
-
-    
   },
 });
 
