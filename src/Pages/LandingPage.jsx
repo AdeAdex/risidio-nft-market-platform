@@ -150,7 +150,7 @@ const LandingPage = () => {
       summaries:
         "Quantum Beats - Where music and science collide. Immerse yourself in this fusion of art and technology.",
       categories: "Music",
-      music: process.env.PUBLIC_URL + "/music/Quantum_Beats.mp3",
+      music: process.env.PUBLIC_URL + "/music/Mohbad_-_Peace.mp3",
       owner: "QuantumSound",
       quantity: 0,
     },
