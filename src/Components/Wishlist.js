@@ -218,7 +218,7 @@ const Wishlist = () => {
           <div className="w-3/12 border rounded-lg p-4 shadow-md h-auto mb-auto">
           <div className="flex justify-between my-auto">
             <h2 className="text-xl font-semibold mb-4">Cart Summary</h2>
-            <h3><span>{wishlist.length}</span> {wishlist.length > 1 ? (<span>Items</span>) : (<span>Item</span>)}</h3>
+            <h3 className="font-bold"><span>{wishlist.length}</span> {wishlist.length > 1 ? (<span>Items</span>) : (<span>Item</span>)}</h3>
           </div>
             <hr />
             <div className="flex items-center justify-between mt-12">
