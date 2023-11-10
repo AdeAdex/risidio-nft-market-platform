@@ -303,7 +303,6 @@ const LandingPage = () => {
 
   const filterCollection = (category) => {
     setSelectedCategory(category);
-    console.log(category);
 
     if (category === "all") {
       setFilteredCollection(collection);
