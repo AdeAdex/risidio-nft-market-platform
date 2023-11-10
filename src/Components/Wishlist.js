@@ -8,6 +8,8 @@ import {
   decreaseQuantity,
 } from "../redux/wishlistSlice";
 import Swal from 'sweetalert2'
+import { Link} from "react-router-dom";
+
 
 const Wishlist = () => {
   const dispatch = useDispatch();
@@ -21,7 +23,6 @@ const Wishlist = () => {
       0
     );
     setSubtotal(newSubtotal);
-    console.log(subtotal);
   }, [wishlist]);
 
   const handleRemoveItem = (index) => {
@@ -132,9 +133,16 @@ const Wishlist = () => {
           </button>
         </div>
         ) : null}
+        
         <div className={`grid gap-4 shadow-lg p-5 ${isSmallScreen ? 'w-full' : 'w-8/12'}`}>
         <h1 className="font-bold text-lg">Cart: ({wishlist.length})</h1>
           {wishlist.map((item, index) => (
+            <Link
+              className="w-full"
+              to={`/collection/${item.title}`}
+              key={index}
+              state={item}
+            >
             <div
               key={index}
               className={`border p-4 rounded-lg shadow-md  justify-between ${isSmallScreen ? 'flex flex-col gap-4' : 'flex items-center'}`}
@@ -164,6 +172,7 @@ const Wishlist = () => {
               </div>
               </div>
             </div>
+        </Link>
           ))}
         </div>
         {isSmallScreen ? null : (

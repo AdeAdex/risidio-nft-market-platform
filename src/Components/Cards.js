@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { Link, useLocation, useParams } from "react-router-dom";
-import { addToWishlist, increaseQuantity } from "../redux/wishlistSlice";
+import { Link} from "react-router-dom";
+import { addToWishlist, decreaseQuantity, increaseQuantity, removeFromWishlist } from "../redux/wishlistSlice";
 import { useSelector } from "react-redux";
 
 
@@ -19,6 +19,15 @@ const Cards = ({ collection }) => {
       dispatch(addToWishlist({ ...selectedItem, quantity: 1 }));
     }
   };
+  
+  const handleIncreaseQuantity = (index) => {
+    dispatch(increaseQuantity(index));
+  };
+  
+  const handleDecreaseQuantity = (index) => {
+    dispatch(decreaseQuantity(index));
+  };
+
   
   
 
@@ -55,20 +64,21 @@ const Cards = ({ collection }) => {
               </div>
             </Link>
             <div className="p-6 pt-0 mt-3 flex justify-between">
-              {wishlist.includes(eachCollection) ? (
+              {wishlist.some(item => item.title === eachCollection.title) ? (
                 <div className="flex items-center border border-1 border-color">
                 <button
-                    // onClick={() => handleDecrement(eachCollection)}
+                    onClick={() => handleDecreaseQuantity(index)}
                     className="bg-gray-300 px-3 py-1 rounded-sm"
                   >
                     -
                   </button>
-                  <span className="mx-2">{eachCollection.quantity}</span>
+                  {/* <span className="mx-2">{eachCollection.quantity || 0 }</span> */}
+                  <span className="mx-2">{eachCollection.quantity !== undefined ? eachCollection.quantity : 0}</span>
                   <button
-                    // onClick={() => handleIncrement(eachCollection)}
+                    onClick={() => handleIncreaseQuantity(index)}
                     className="bg-button-background text-white px-3 py-1 rounded-sm"
                   >
-                    +
+                    + 
                   </button>
                 </div>
               ) : (
