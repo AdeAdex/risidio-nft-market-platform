@@ -137,15 +137,16 @@ const Wishlist = () => {
         <div className={`grid gap-4 shadow-lg p-5 ${isSmallScreen ? 'w-full' : 'w-8/12'}`}>
         <h1 className="font-bold text-lg">Cart: ({wishlist.length})</h1>
           {wishlist.map((item, index) => (
+            
+            <div
+              key={index}
+              className={`border p-4 rounded-lg shadow-md  justify-between ${isSmallScreen ? 'flex flex-col gap-4' : 'flex items-center'}`}
+            >
             <Link
               className="w-full"
               to={`/collection/${item.title}`}
               key={index}
               state={item}
-            >
-            <div
-              key={index}
-              className={`border p-4 rounded-lg shadow-md  justify-between ${isSmallScreen ? 'flex flex-col gap-4' : 'flex items-center'}`}
             >
               <div className="flex ">
                 <img
@@ -160,6 +161,7 @@ const Wishlist = () => {
                   <p className="text-gray-600">Price: ${item.price}</p>
                 </div>
               </div>
+              </Link>
               <div className="flex items-center">
               <button onClick={() => handleRemoveItem(index)} className="bg-button-background text-white px-4 py-1 rounded-sm mr-2 flex gap-3">
                 <AiOutlineDelete size={20} className="my-auto text-delete-button" />{" "}
@@ -172,7 +174,7 @@ const Wishlist = () => {
               </div>
               </div>
             </div>
-        </Link>
+        
           ))}
         </div>
         {isSmallScreen ? null : (
