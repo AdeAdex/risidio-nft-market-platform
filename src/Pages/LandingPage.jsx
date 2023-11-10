@@ -377,7 +377,7 @@ const LandingPage = () => {
               <select
                 value={selectedCategory}
                 onChange={(e) => filterCollectionBySort(e.target.value)}
-                className="rounded-md p-2 sm:text-xs lg:text-base bg-transparent border border-1"
+                className="rounded-md p-2 sm:text-xs lg:text-base bg-transparent border border-1 focus:bg-black"
               >
                 <option value="all">All</option>
                 <option value="AZ">A - Z</option>
@@ -398,7 +398,7 @@ const LandingPage = () => {
               <select
                 value={selectedCategory}
                 onChange={(e) => filterCollection(e.target.value)}
-                className="rounded-md p-2 sm:text-xs lg:text-base bg-transparent border border-1"
+                className="rounded-md p-2 sm:text-xs lg:text-base bg-transparent border border-1 focus:bg-black"
               >
                 <option value="all">All</option>
                 <option value="Music">Music</option>
@@ -421,7 +421,7 @@ const LandingPage = () => {
               <select
                 value={selectedPriceRange}
                 onChange={(e) => filterCollectionByPrice(e.target.value)}
-                className="rounded-md p-2 sm:text-xs lg:text-base bg-transparent border border-1"
+                className="rounded-md p-2 sm:text-xs lg:text-base bg-transparent border border-1 focus:bg-black"
               >
                 <option value="1-50">$1 - $50</option>
                 <option value="51-100">$51 - $100</option>
@@ -435,7 +435,7 @@ const LandingPage = () => {
               <select
                 value={selectedName}
                 onChange={(e) => filterCollectionByName(e.target.value)}
-                className="rounded-md p-2 sm:text-xs lg:text-base bg-transparent border border-1"
+                className="rounded-md p-2 sm:text-xs lg:text-base bg-transparent border border-1 focus:bg-black"
               >
                 {collection.map((eachTitle, index) => (
                   <option key={index} value={eachTitle.title}>
