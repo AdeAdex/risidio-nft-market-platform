@@ -2,9 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-
 /* Navbar CSS code  */
-
 
 .App {
   text-align: center;
@@ -51,8 +49,6 @@ nav {
   text-decoration: none;
 }
 
-
-
 .empty-cart-container img {
   animation-name: fall;
   animation-duration: 2s;
@@ -75,7 +71,6 @@ nav {
     transform: rotate(-50deg);
   }
 }
-
 
 @media screen and (max-width: 600px) {
   .menu-icon {
