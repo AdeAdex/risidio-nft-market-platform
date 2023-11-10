@@ -115,8 +115,8 @@ const Wishlist = () => {
   return (
     <>
       <section
-        className={`mt-16  px-0 lg:px-52 w-full h-screen ${
-          isSmallScreen ? "flex flex-col gap-2" : "flex gap-8"
+        className={`mt-16  px-0 lg:px-52 w-full  ${
+          isSmallScreen ? "flex flex-col gap-2" : "flex gap-8 h-screen overflow-y-auto mb-5"
         }`}
       >
         {isSmallScreen ? (
@@ -146,7 +146,7 @@ const Wishlist = () => {
         ) : null}
 
         <div
-          className={`grid gap-4 shadow-lg p-5 ${
+          className={`flex flex-col gap-4 shadow-lg p-5 ${
             isSmallScreen ? "w-full" : "w-8/12"
           }`}
         >
