@@ -96,7 +96,7 @@ const Wishlist = () => {
           className="flex"
           style={{ padding: "0 20px", height: "100vh", width: "100%" }}
         >
-          <div className="container mx-auto mt-5 flex flex-col justify-center gap-3 w-full h-1/2 bg-white shadow empty-cart-container">
+          <div className="container mx-auto mt-5 flex flex-col justify-center gap-3 w-full h-1/2 bg-white shadow-lg empty-cart-container">
             <img
               src="/empty-cart.png"
               alt=""
@@ -115,7 +115,7 @@ const Wishlist = () => {
   return (
     <>
       <section
-        className={`mt-16  px-0 lg:px-52 w-full ${
+        className={`mt-16  px-0 lg:px-52 w-full h-screen ${
           isSmallScreen ? "flex flex-col gap-2" : "flex gap-8"
         }`}
       >
@@ -155,7 +155,7 @@ const Wishlist = () => {
             <div
               key={index}
               className={`border p-4 rounded-lg shadow-md  justify-between ${
-                isSmallScreen ? "flex flex-col gap-4" : "flex items-center"
+                isSmallScreen ? "flex flex-col gap-4" : "flex items-center h-32"
               }`}
             >
               <Link
@@ -196,14 +196,14 @@ const Wishlist = () => {
                 <div className="flex items-center">
                   <button
                     onClick={() => handleDecreaseQuantity(index)}
-                    className="bg-gray-300 px-3 py-2 rounded-sm"
+                    className="bg-gray-300 px-3 py-1 rounded-sm"
                   >
                     -
                   </button>
                   <span className="mx-2">{item.quantity}</span>
                   <button
                     onClick={() => handleIncreaseQuantity(index)}
-                    className="bg-button-background text-white px-3 py-2 rounded-sm"
+                    className="bg-button-background text-white px-3 py-1 rounded-sm"
                   >
                     +
                   </button>
