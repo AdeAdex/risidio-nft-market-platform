@@ -350,7 +350,7 @@ const LandingPage = () => {
         >
           <div className="flex  gap-3">
             <div className="my-auto sm:text-xs lg:text-base flex">
-              <span className="mr-1">Sort </span>  <span>by:</span>
+              <span className="mr-1">Sort </span> <span>by:</span>
             </div>
             <div className="flex">
               <select

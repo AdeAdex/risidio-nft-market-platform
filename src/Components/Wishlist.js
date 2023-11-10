@@ -6,9 +6,8 @@ import {
   increaseQuantity,
   decreaseQuantity,
 } from "../redux/wishlistSlice";
-import Swal from 'sweetalert2'
-import { Link} from "react-router-dom";
-
+import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 const Wishlist = () => {
   const dispatch = useDispatch();
@@ -27,15 +26,14 @@ const Wishlist = () => {
   const handleRemoveItem = (index) => {
     dispatch(removeFromWishlist(index));
   };
-  
+
   const handleIncreaseQuantity = (index) => {
     dispatch(increaseQuantity(index));
   };
-  
+
   const handleDecreaseQuantity = (index) => {
     dispatch(decreaseQuantity(index));
   };
-  
 
   useEffect(() => {
     const handleResize = () => {
@@ -49,10 +47,8 @@ const Wishlist = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
- 
 
   /* global PaystackPop */
-
 
   const payWithPaystack = () => {
     const amountInKobo = Math.round(subtotal * 100);
@@ -93,7 +89,6 @@ const Wishlist = () => {
     payWithPaystack();
   };
 
-
   if (wishlist.length === 0) {
     return (
       <div className="mt-32">
@@ -119,76 +114,121 @@ const Wishlist = () => {
   }
   return (
     <>
-      <section className={`mt-16  px-0 lg:px-52 w-full ${isSmallScreen ? 'flex flex-col gap-2' : 'flex gap-8'}`}>
-      {isSmallScreen ? (
-          <div className={`w-full border rounded-lg p-4 shadow-md ${isSmallScreen ? '' : ''}`}>
-          <h2 className="text-xl font-semibold mb-4">Cart Summary</h2>
-          <div className="flex items-center justify-between mt-4">
-            <p className="text-gray-600">Subtotal:</p>
-            <p className="text-blue-500 font-semibold">${subtotal.toFixed(2)}</p>
+      <section
+        className={`mt-16  px-0 lg:px-52 w-full ${
+          isSmallScreen ? "flex flex-col gap-2" : "flex gap-8"
+        }`}
+      >
+        {isSmallScreen ? (
+          <div
+            className={`w-full border rounded-lg p-4 shadow-md ${
+              isSmallScreen ? "" : ""
+            }`}
+          >
+            <h2 className="text-xl font-semibold mb-4">Cart Summary</h2>
+            <div className="flex items-center justify-between mt-4">
+              <p className="text-gray-600">Subtotal:</p>
+              <p className="text-blue-500 font-semibold">
+                ${subtotal.toFixed(2)}
+              </p>
+            </div>
+            <button
+              onClick={payForCollection}
+              className={`w-full bg-blue-500 text-white  py-2 mt-4 hover:bg-blue-600 ${
+                isSmallScreen
+                  ? "fixed bottom-0 left-0 rounded-sm"
+                  : "rounded-full"
+              }`}
+            >
+              Checkout
+            </button>
           </div>
-          <button onClick={payForCollection} className={`w-full bg-blue-500 text-white  py-2 mt-4 hover:bg-blue-600 ${isSmallScreen ? 'fixed bottom-0 left-0 rounded-sm' : 'rounded-full'}`}>
-            Checkout
-          </button>
-        </div>
         ) : null}
-        
-        <div className={`grid gap-4 shadow-lg p-5 ${isSmallScreen ? 'w-full' : 'w-8/12'}`}>
-        <h1 className="font-bold text-lg">Cart: ({wishlist.length})</h1>
+
+        <div
+          className={`grid gap-4 shadow-lg p-5 ${
+            isSmallScreen ? "w-full" : "w-8/12"
+          }`}
+        >
+          <h1 className="font-bold text-lg">Cart: ({wishlist.length})</h1>
           {wishlist.map((item, index) => (
-            
             <div
               key={index}
-              className={`border p-4 rounded-lg shadow-md  justify-between ${isSmallScreen ? 'flex flex-col gap-4' : 'flex items-center'}`}
+              className={`border p-4 rounded-lg shadow-md  justify-between ${
+                isSmallScreen ? "flex flex-col gap-4" : "flex items-center"
+              }`}
             >
-            <Link
-              className="w-full"
-              to={`/collection/${item.title}`}
-              key={index}
-              state={item}
-            >
-              <div className="flex ">
-                <img
-                  src={item.photo}
-                  alt={item.title}
-                  className="w-20 h-20 rounded-full mr-4"
-                />
-                <div>
-                  <h3 className={`font-semibold text-blue-900 ${isSmallScreen ? 'text-sm' : 'text-lg'} `}>
-                    {item.title}
-                  </h3>
-                  <p className="text-gray-600">Price: ${item.price}</p>
+              <Link
+                className="w-full"
+                to={`/collection/${item.title}`}
+                key={index}
+                state={item}
+              >
+                <div className="flex ">
+                  <img
+                    src={item.photo}
+                    alt={item.title}
+                    className="w-20 h-20 rounded-full mr-4"
+                  />
+                  <div>
+                    <h3
+                      className={`font-semibold text-blue-900 ${
+                        isSmallScreen ? "text-sm" : "text-lg"
+                      } `}
+                    >
+                      {item.title}
+                    </h3>
+                    <p className="text-gray-600">Price: ${item.price}</p>
+                  </div>
                 </div>
-              </div>
               </Link>
               <div className="flex items-center">
-              <button onClick={() => handleRemoveItem(index)} className="bg-button-background text-white px-4 py-1 rounded-sm mr-2 flex gap-3">
-                <AiOutlineDelete size={20} className="my-auto text-delete-button" />{" "}
-                <span>Remove</span>
-              </button>
-              <div className="flex items-center">
-                <button onClick={() => handleDecreaseQuantity(index)} className="bg-gray-300 px-3 py-2 rounded-sm">-</button>
-                <span className="mx-2">{item.quantity}</span>
-                <button onClick={() => handleIncreaseQuantity(index)} className="bg-button-background text-white px-3 py-2 rounded-sm">+</button>
-              </div>
+                <button
+                  onClick={() => handleRemoveItem(index)}
+                  className="bg-button-background text-white px-4 py-1 rounded-sm mr-2 flex gap-3"
+                >
+                  <AiOutlineDelete
+                    size={20}
+                    className="my-auto text-delete-button"
+                  />{" "}
+                  <span>Remove</span>
+                </button>
+                <div className="flex items-center">
+                  <button
+                    onClick={() => handleDecreaseQuantity(index)}
+                    className="bg-gray-300 px-3 py-2 rounded-sm"
+                  >
+                    -
+                  </button>
+                  <span className="mx-2">{item.quantity}</span>
+                  <button
+                    onClick={() => handleIncreaseQuantity(index)}
+                    className="bg-button-background text-white px-3 py-2 rounded-sm"
+                  >
+                    +
+                  </button>
+                </div>
               </div>
             </div>
-        
           ))}
         </div>
         {isSmallScreen ? null : (
           <div className="w-3/12 border rounded-lg p-4 shadow-md">
-          <h2 className="text-xl font-semibold mb-4">Cart Summary</h2>
-          <div className="flex items-center justify-between mt-4">
-            <p className="text-gray-600">Subtotal:</p>
-            <p className="text-blue-500 font-semibold">${subtotal.toFixed(2)}</p>
+            <h2 className="text-xl font-semibold mb-4">Cart Summary</h2>
+            <div className="flex items-center justify-between mt-4">
+              <p className="text-gray-600">Subtotal:</p>
+              <p className="text-blue-500 font-semibold">
+                ${subtotal.toFixed(2)}
+              </p>
+            </div>
+            <button
+              onClick={payForCollection}
+              className="w-full bg-blue-500 text-white rounded-full py-2 mt-4 hover:bg-blue-600"
+            >
+              Checkout
+            </button>
           </div>
-          <button onClick={payForCollection} className="w-full bg-blue-500 text-white rounded-full py-2 mt-4 hover:bg-blue-600">
-            Checkout
-          </button>
-        </div>
         )}
-        
       </section>
     </>
   );
