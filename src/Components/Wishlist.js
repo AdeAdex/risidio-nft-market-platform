@@ -134,16 +134,19 @@ const Wishlist = () => {
                 ${subtotal.toFixed(2)}
               </p>
             </div>
+            <div className={`w-full px-3  ${
+                isSmallScreen
+                  ? "fixed bottom-1 left-0"
+                  : ""
+              }`}>
             <button
               onClick={payForCollection}
-              className={`w-full bg-blue-500 text-white  py-2 mt-4 hover:bg-blue-600 ${
-                isSmallScreen
-                  ? "fixed bottom-0 left-0 rounded-sm"
-                  : "rounded-full"
-              }`}
+              className={`w-full bg-blue-500 text-white  py-2 mt-4 hover:bg-blue-600 rounded-sm`}
             >
               Checkout
             </button>
+            </div>
+            
           </div>
         ) : null}
 
