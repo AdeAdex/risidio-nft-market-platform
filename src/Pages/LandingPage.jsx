@@ -344,7 +344,7 @@ const LandingPage = () => {
     <>
       <div className="mt-12 lg:mt-12">
         <section
-          className={`mb-12 py-4 px-2 lg:px-32 flex gap-3 shadow-md ${
+          className={`mb-12 py-4 px-2 lg:px-32 flex gap-3 shadow-md bg-sort-background ${
             isSmallScreen ? "flex-row z-10 overflow-y-scroll w-full" : ""
           }`}
         >
@@ -356,7 +356,7 @@ const LandingPage = () => {
               <select
                 value={selectedCategory}
                 onChange={(e) => filterCollectionBySort(e.target.value)}
-                className="rounded-md p-2 sm:text-xs lg:text-base"
+                className="rounded-md p-2 sm:text-xs lg:text-base bg-transparent"
               >
                 <option value="all">All</option>
                 <option value="AZ">A - Z</option>
@@ -377,7 +377,7 @@ const LandingPage = () => {
               <select
                 value={selectedCategory}
                 onChange={(e) => filterCollection(e.target.value)}
-                className="rounded-md p-2 sm:text-xs lg:text-base"
+                className="rounded-md p-2 sm:text-xs lg:text-base bg-transparent"
               >
                 <option value="all">All</option>
                 <option value="Music">Music</option>
@@ -400,7 +400,7 @@ const LandingPage = () => {
               <select
                 value={selectedPriceRange}
                 onChange={(e) => filterCollectionByPrice(e.target.value)}
-                className="rounded-md p-2 sm:text-xs lg:text-base"
+                className="rounded-md p-2 sm:text-xs lg:text-base bg-transparent"
               >
                 <option value="1-50">$1 - $50</option>
                 <option value="51-100">$51 - $100</option>
@@ -414,7 +414,7 @@ const LandingPage = () => {
               <select
                 value={selectedName}
                 onChange={(e) => filterCollectionByName(e.target.value)}
-                className="rounded-md p-2 sm:text-xs lg:text-base"
+                className="rounded-md p-2 sm:text-xs lg:text-base bg-transparent"
               >
                 {collection.map((eachTitle, index) => (
                   <option key={index} value={eachTitle.title}>
