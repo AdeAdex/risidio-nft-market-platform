@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Cards from "../Components/Cards";
+import { FaArrowUp } from "react-icons/fa";
 
 const LandingPage = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -7,6 +8,8 @@ const LandingPage = () => {
   const [selectedName, setSelectedName] = useState("all");
   const [filteredCollection, setFilteredCollection] = useState([]);
   const [isSmallScreen, setIsSmallScreen] = useState(false);
+  // const [showTopButton, setShowTopButton] = useState(false);
+  const [showTopButton, setShowTopButton] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -340,6 +343,24 @@ const LandingPage = () => {
     setFilteredCollection(filtered);
   };
 
+  const handleScroll = () => {
+    const scrollY = window.scrollY;
+
+    setShowTopButton(scrollY > 100);
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
       <div className="mt-12 lg:mt-12">
@@ -428,6 +449,18 @@ const LandingPage = () => {
         <section className="flex flex-wrap gap-4 w-full justify-center">
           <Cards collection={filteredCollection} />
         </section>
+
+        <div>
+          {showTopButton && (
+            <button
+              onClick={scrollToTop}
+              className="top-button fixed bg-red-500 p-3 rounded-md"
+              style={{ bottom: "40px", right: "50px" }}
+            >
+              <FaArrowUp className="text-white" />
+            </button>
+          )}
+        </div>
       </div>
     </>
   );
