@@ -116,7 +116,9 @@ const Wishlist = () => {
     <>
       <section
         className={`mt-16  px-0 lg:px-52 w-full  ${
-          isSmallScreen ? "flex flex-col gap-2" : "flex gap-8 h-screen overflow-y-auto mb-5"
+          isSmallScreen
+            ? "flex flex-col gap-2"
+            : "flex gap-8 h-screen overflow-y-auto mb-5"
         }`}
       >
         {isSmallScreen ? (
@@ -214,7 +216,10 @@ const Wishlist = () => {
         </div>
         {isSmallScreen ? null : (
           <div className="w-3/12 border rounded-lg p-4 shadow-md h-auto mb-auto">
+          <div className="flex justify-between my-auto">
             <h2 className="text-xl font-semibold mb-4">Cart Summary</h2>
+            <h3><span>{wishlist.length}</span> {wishlist.length > 1 ? (<span>Items</span>) : (<span>Item</span>)}</h3>
+          </div>
             <hr />
             <div className="flex items-center justify-between mt-12">
               <p className="text-gray-600">Subtotal:</p>
@@ -224,10 +229,54 @@ const Wishlist = () => {
             </div>
             <button
               onClick={payForCollection}
-              className="w-full bg-blue-500 text-white rounded-full py-2 mt-4 hover:bg-blue-600"
+              className="w-full bg-blue-500 text-white rounded-md py-2 mt-4 hover:bg-blue-600"
             >
               Checkout
             </button>
+            <div className="w-full bg-white flex flex-col p-3 mt-5">
+              <div className="w-full" id="orderSummaryOnLargeScreen"></div>
+              <div
+                className="flex justify-between accept-payment"
+                style={{ marginTop: "-10px", color: "#cbcbcb" }}
+              >
+                <div className="my-auto text-sm">We accept:</div>
+                <img
+                  src="/mastercard.png"
+                  className="my-auto"
+                  style={{ height: "15px" }}
+                  alt=""
+                />
+                <img
+                  src="/visa.png"
+                  className="my-auto"
+                  style={{ height: "15px" }}
+                  alt=""
+                />
+                <img
+                  src="/verve.png"
+                  className="my-auto"
+                  style={{ height: "15px" }}
+                  alt=""
+                />
+                <img
+                  src="/opay.png"
+                  className="my-auto"
+                  style={{ height: "15px" }}
+                  alt=""
+                />
+              </div>
+              <div className="flex gap-2 mt-2">
+                <img
+                  className="my-auto"
+                  src="/padlock.jpeg"
+                  style={{ height: "30px" }}
+                  alt=""
+                />
+                <div className="my-auto text-sm text-gray-300">
+                  Transactions are 100% Safe and Secure
+                </div>
+              </div>
+            </div>
           </div>
         )}
       </section>
