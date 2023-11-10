@@ -72,6 +72,7 @@ const Collection = () => {
             <h1 className="text-3xl font-semibold mb-4 text-blue-900">
               {selectedCollection.title}
             </h1>
+            <small>Code: {selectedCollection.id}</small>
             <p className="text-gray-600 mb-4">{selectedCollection.summaries}</p>
             <p className="text-xl text-blue-500 font-semibold mb-4">
               Price: {selectedCollection.price}
@@ -112,7 +113,8 @@ const Collection = () => {
                 Buy Now
               </button>
             )}
-            <div className="mt-5">
+            {!selectedCollection.music ? null : (
+              <div className="mt-5">
               <button
                 onClick={() => setIsPlaying(!isPlaying)}
                 className="px-4 py-1 bg-blue-500 text-white rounded-lg font-semibold hover:bg-blue-600 transition duration-300"
@@ -131,6 +133,8 @@ const Collection = () => {
                 </audio>
               )}
             </div>
+            )}
+            
           </div>
         </div>
         <div className="mt-8">

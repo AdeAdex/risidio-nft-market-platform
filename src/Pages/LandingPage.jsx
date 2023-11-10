@@ -23,6 +23,7 @@ const LandingPage = () => {
 
   const collection = [
     {
+      id: 123456,
       title: "BoomLand - Shards",
       photo:
         "https://i.seadn.io/gcs/files/aa98dbd1ecf8973695f6096bae3753da.jpg?auto=format&dpr=1&h=500",
@@ -35,6 +36,7 @@ const LandingPage = () => {
       quantity: 0,
     },
     {
+      id: 234567,
       title: "Pixelmon - Generation",
       photo:
         "https://i.seadn.io/gcs/files/15253f057fda61d8498f3e8264c2be23.png?auto=format&dpr=1&h=500",
@@ -47,6 +49,7 @@ const LandingPage = () => {
       quantity: 0,
     },
     {
+      id: 345678,
       title: "Fool Again by Westlife",
       photo:
         "https://c-cl.cdn.smule.com/rs-s46/arr/73/a4/e03b4db6-15de-482a-9426-1dfee3c5c24f.jpg",
@@ -59,6 +62,7 @@ const LandingPage = () => {
       quantity: 0,
     },
     {
+      id: 456789,
       title: "Pi Oasis",
       photo:
         "https://i.seadn.io/s/raw/files/34507010881574b28ac7787ce829f2be.jpg?auto=format&dpr=1&h=500",
@@ -71,6 +75,7 @@ const LandingPage = () => {
       quantity: 0,
     },
     {
+      id: 567890,
       title: "Metaverse HQ",
       photo:
         "https://i.seadn.io/gae/3RomDmo-bRVOLfSmn4XaCinDjJkGWuDoGf4NlblW1XenaYmHjo93OpdfzmqjgNIM4qf8e8wGOc91PZO3wGahP5niCfsGZGPEl0dcfw?auto=format&dpr=1&h=500",
@@ -83,6 +88,7 @@ const LandingPage = () => {
       quantity: 0,
     },
     {
+      id: 678901,
       title: "Rare Pepe",
       photo:
         "https://i.seadn.io/gcs/files/b36c8411036867ffedd8d85c54079785.png?auto=format&dpr=1&h=500",
@@ -95,6 +101,7 @@ const LandingPage = () => {
       quantity: 0,
     },
     {
+      id: 789012,
       title: "Feel by Davido",
       photo: "https://i.ytimg.com/vi/irkGSP6SxDY/maxresdefault.jpg",
       price: "250.00",
@@ -106,6 +113,7 @@ const LandingPage = () => {
       quantity: 0,
     },
     {
+      id: 890123,
       title: "Lunar Symphony",
       photo:
         "https://source.boomplaymusic.com/group10/M00/08/04/34b9087d18174cc5b93afe4ada9ae24e_320_320.jpg",
@@ -118,6 +126,7 @@ const LandingPage = () => {
       quantity: 0,
     },
     {
+      id: 901234,
       title: "Neo Tokyo Dreams",
       photo:
         "https://i.discogs.com/0WRRthFQe3Mc0xISimekulhxo7nSx7QkKuIMkCF_hSA/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEwMzQ3/NzU4LTE0OTU3NDgz/NTYtNTUyNy5qcGVn.jpeg",
@@ -130,6 +139,7 @@ const LandingPage = () => {
       quantity: 0,
     },
     {
+      id: 123456,
       title: "Quantum Beats",
       photo:
         "https://scontent.fiba1-1.fna.fbcdn.net/v/t39.30808-6/299679018_194855359567053_7219755556257230098_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeG_RAFI2APmNrs1ElhwsST6_Ged7QBjkxH8Z53tAGOTEccfuhPm1qegn3gOB7qpPH5BRU0vCuxnWfeUjYOp4Myw&_nc_ohc=OCLmYV1gxlkAX9PTaAe&_nc_zt=23&_nc_ht=scontent.fiba1-1.fna&cb_e2o_trans=q&oh=00_AfCTq78Eme9BYYqMwc5XCRF7SFz3nkn643CmCcyXDq40bg&oe=65515F0A",
@@ -142,6 +152,7 @@ const LandingPage = () => {
       quantity: 0,
     },
     {
+      id: 234567,
       title: "Oceanic Harmony",
       photo:
         "https://source.boomplaymusic.com/group10/M00/04/05/ba5c897ed2304c6db8e25a89f7e5d757_464_464.jpg",
@@ -154,6 +165,7 @@ const LandingPage = () => {
       quantity: 0,
     },
     {
+      id: 345678,
       title: "Abstract Echoes",
       photo: "https://imagescdn.junodownload.com/full/CS6005595-02A-BIG.jpg",
       price: "100.00",
@@ -164,6 +176,7 @@ const LandingPage = () => {
       quantity: 0,
     },
     {
+      id: 456789,
       title: "Arcane Alchemy",
       photo: "https://f4.bcbits.com/img/a0323179043_65",
       price: "200.00",
@@ -174,6 +187,7 @@ const LandingPage = () => {
       quantity: 0,
     },
     {
+      id: 567890,
       title: "Vibrant Visions",
       photo: "https://paintandvino.com/wp-content/uploads/Vibrant-Visions.jpg",
       price: "80.00",
@@ -184,6 +198,7 @@ const LandingPage = () => {
       quantity: 0,
     },
     {
+      id: 678901,
       title: "Epic Odyssey",
       photo:
         "https://media.pocketgamer.com/artwork/na-31800-1597942157/Epic_Odyssey-iOS-Android-Artwork-KeyArt.jpg",
@@ -195,6 +210,7 @@ const LandingPage = () => {
       quantity: 0,
     },
     {
+      id: 789012,
       title: "Celestial Serenade",
       photo: "https://i.ytimg.com/vi/9US9nEopX-o/maxresdefault.jpg",
       price: "120.00",
@@ -205,6 +221,7 @@ const LandingPage = () => {
       quantity: 0,
     },
     {
+      id: 890123,
       title: "Sculpted Soundwaves",
       photo:
         "https://i.pinimg.com/originals/5d/8c/21/5d8c211c90fa4c104fc1735b93d75683.jpg",
@@ -216,6 +233,7 @@ const LandingPage = () => {
       quantity: 0,
     },
     {
+      id: 901234,
       title: "Quantum Canvas",
       photo: "https://i.ytimg.com/vi/J3PeqEZO13c/maxresdefault.jpg",
       price: "180.00",
@@ -226,6 +244,7 @@ const LandingPage = () => {
       quantity: 0,
     },
     {
+      id: 123456,
       title: "Futuristic Fusion",
       photo:
         "https://static.vecteezy.com/system/resources/thumbnails/030/463/427/small/futuristic-nuclear-fusion-concept-with-magnetic-confinement-generative-ai-photo.jpeg",
@@ -237,6 +256,7 @@ const LandingPage = () => {
       quantity: 0,
     },
     {
+      id: 234567,
       title: "Galactic Grooves",
       photo:
         "https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:392/h:594/q:75/https://bleedingcool.com/wp-content/uploads/2021/04/JL_Cv64_var.jpg",
@@ -273,9 +293,7 @@ const LandingPage = () => {
           (a, b) => parseFloat(b.price) - parseFloat(a.price)
         );
         break;
-      // Handle other cases as needed
       default:
-        // No specific sorting, do nothing
         break;
     }
 
@@ -325,19 +343,19 @@ const LandingPage = () => {
 
   return (
     <>
-      <div className="mt-24 lg:mt-12">
+      <div className="mt-12 lg:mt-12">
         <section
           className={`mb-12 py-4 px-2 lg:px-32 flex gap-3 shadow-md ${
-            isSmallScreen ? "flex-col absolute z-10 hidden" : ""
+            isSmallScreen ? "flex-row z-10 overflow-y-scroll w-full" : ""
           }`}
         >
-          <div className="flex gap-3">
-            <h2 className="my-auto">Sort by: </h2>
+          <div className="flex  gap-3">
+            <div className="my-auto sm:text-xs lg:text-base flex"><span>Sort </span> {" "}<span>by:</span> </div>
             <div className="flex">
               <select
                 value={selectedCategory}
                 onChange={(e) => filterCollectionBySort(e.target.value)}
-                className="rounded-md p-2"
+                className="rounded-md p-2 sm:text-xs lg:text-base"
               >
                 <option value="all">All</option>
                 <option value="AZ">A - Z</option>
@@ -349,16 +367,16 @@ const LandingPage = () => {
           </div>
 
           <section
-            className={`flex justify-end w-9/12 gap-14 ${
-              isSmallScreen ? "flex-col" : ""
+            className={`flex w-9/12  ${
+              isSmallScreen ? "flex-row w-full gap-2" : "gap-14 justify-end"
             }`}
           >
             <div className="flex">
-              <div className="my-auto text-md">Category:</div>
+              <div className="my-auto sm:text-xs lg:text-base">Category:</div>
               <select
                 value={selectedCategory}
                 onChange={(e) => filterCollection(e.target.value)}
-                className="rounded-md p-2"
+                className="rounded-md p-2 sm:text-xs lg:text-base"
               >
                 <option value="all">All</option>
                 <option value="Music">Music</option>
@@ -377,11 +395,11 @@ const LandingPage = () => {
               </select>
             </div>
             <div className="flex">
-              <div className="my-auto text-md">Price:</div>
+              <div className="my-auto sm:text-xs lg:text-base">Price:</div>
               <select
                 value={selectedPriceRange}
                 onChange={(e) => filterCollectionByPrice(e.target.value)}
-                className="rounded-md p-2"
+                className="rounded-md p-2 sm:text-xs lg:text-base"
               >
                 <option value="1-50">$1 - $50</option>
                 <option value="51-100">$51 - $100</option>
@@ -391,11 +409,11 @@ const LandingPage = () => {
               </select>
             </div>
             <div className="flex">
-              <div className="my-auto text-md">Name:</div>
+              <div className="my-auto sm:text-xs lg:text-base">Name:</div>
               <select
                 value={selectedName}
                 onChange={(e) => filterCollectionByName(e.target.value)}
-                className="rounded-md p-2"
+                className="rounded-md p-2 sm:text-xs lg:text-base"
               >
                 {collection.map((eachTitle, index) => (
                   <option key={index} value={eachTitle.title}>
