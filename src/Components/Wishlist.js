@@ -213,9 +213,10 @@ const Wishlist = () => {
           ))}
         </div>
         {isSmallScreen ? null : (
-          <div className="w-3/12 border rounded-lg p-4 shadow-md">
+          <div className="w-3/12 border rounded-lg p-4 shadow-md h-auto mb-auto">
             <h2 className="text-xl font-semibold mb-4">Cart Summary</h2>
-            <div className="flex items-center justify-between mt-4">
+            <hr />
+            <div className="flex items-center justify-between mt-12">
               <p className="text-gray-600">Subtotal:</p>
               <p className="text-blue-500 font-semibold">
                 ${subtotal.toFixed(2)}
