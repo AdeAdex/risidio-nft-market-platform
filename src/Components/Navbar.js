@@ -90,7 +90,7 @@ const Navbar = () => {
             </div>
 
             <div className={`nav-list ${isMobileMenuOpen ? "open" : ""} ${isSmallScreen ? 'h-screen' : ''}`}>
-            <Link className="mt-6" to="/" onClick={closeMobileMenu}>
+            <Link className="mt-6 lg:mt-0" to="/" onClick={closeMobileMenu}>
                 Account
               </Link>
               <Link to="/" onClick={closeMobileMenu}>

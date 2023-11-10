@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useDispatch } from "react-redux";
 import { Link} from "react-router-dom";
-import { addToWishlist, decreaseQuantity, increaseQuantity, removeFromWishlist } from "../redux/wishlistSlice";
+import { addToWishlist, decreaseQuantity, increaseQuantity} from "../redux/wishlistSlice";
 import { useSelector } from "react-redux";
 
 
@@ -47,6 +47,7 @@ const Cards = ({ collection }) => {
             >
               <img
                 src={eachCollection.photo}
+                alt={eachCollection.title}
                 className="relative mx-0 -mt-6 h-40 w-full overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-blue-500 to-blue-600"
               />
 
@@ -65,7 +66,7 @@ const Cards = ({ collection }) => {
             </Link>
             <div className="p-6 pt-0 mt-3 flex justify-between">
               {wishlist.some(item => item.title === eachCollection.title) ? (
-                <div className="flex items-center border border-1 border-color">
+                <div className="flex items-center border border-1 border-border-color">
                 <button
                     onClick={() => handleDecreaseQuantity(index)}
                     className="bg-gray-300 px-3 py-1 rounded-sm"

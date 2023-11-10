@@ -1,22 +1,39 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams, useLocation } from "react-router-dom";
-import { addToWishlist, removeFromWishlist } from "../redux/wishlistSlice";
+import { useLocation } from "react-router-dom";
+import { addToWishlist, decreaseQuantity, increaseQuantity} from "../redux/wishlistSlice";
 
 const Collection = () => {
-  const { collectionId } = useParams();
+  // const { collectionId } = useParams();
   const location = useLocation();
   const selectedCollection = location.state;
-  const dispatch = useDispatch();
   const [isPlaying, setIsPlaying] = useState(false);
+  const dispatch = useDispatch();
+  const wishlist = useSelector((state) => state.wishlist.items);
 
   if (!selectedCollection) {
     return <div>Collection not found</div>;
   }
 
-  const handleAddToWishlist = () => {
-    dispatch(addToWishlist(selectedCollection));
-  };  
+  
+  const handleBuyNow = (selectedItem) => {
+    const isInWishlist = wishlist.some(item => item.title === selectedItem.title);
+  
+    if (isInWishlist) {
+      dispatch(increaseQuantity(wishlist.findIndex(item => item.title === selectedItem.title)));
+    } else {
+      dispatch(addToWishlist({ ...selectedItem, quantity: 1 }));
+    }
+  };
+  
+  const handleIncreaseQuantity = (index) => {
+    dispatch(increaseQuantity(index));
+  };
+  
+  const handleDecreaseQuantity = (index) => {
+    dispatch(decreaseQuantity(index));
+  };
+ 
 
 
   return (
@@ -38,17 +55,38 @@ const Collection = () => {
             <p className="text-xl text-blue-500 font-semibold mb-4">
               Price: {selectedCollection.price}
             </p>
-            <div className="flex items-center justify-between">
-              <button className="px-6 py-2 bg-blue-500 text-white rounded-lg font-semibold hover:bg-blue-600 transition duration-300">
-                Buy Now
-              </button>
-              <button
-                onClick={handleAddToWishlist}
-                className="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg font-semibold hover:bg-gray-300 transition duration-300"
-              >
-                Add to Wishlist
-              </button>
-            </div>
+            {wishlist.some(item => item.title === selectedCollection.title) ? (
+              <div className="w-auto">
+              <div className="w-auto mx-auto items-center">
+                <button
+                    onClick={() => handleDecreaseQuantity(selectedCollection)}
+                    className="bg-gray-300 px-3 py-1 rounded-sm"
+                  >
+                    -
+                  </button>
+                  {/* <span className="mx-2">{eachCollection.quantity || 0 }</span> */}
+                  <span className="mx-2">{selectedCollection.quantity !== undefined ? selectedCollection.quantity : 0}</span>
+                  <button
+                    onClick={() => handleIncreaseQuantity(selectedCollection)}
+                    className="bg-button-background text-white px-3 py-1 rounded-sm"
+                  >
+                    + 
+                  </button>
+                </div>
+              </div>
+                
+              ) : (
+                <button
+                  onClick={() => {
+                    handleBuyNow(selectedCollection);
+                  }}
+                  data-ripple-light="true"
+                  type="button"
+                  className="select-none rounded-lg bg-blue-500 py-2 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-gray-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                >
+                  Buy Now
+                </button>
+              )}
             <div className="mt-5">
               <button
                 onClick={() => setIsPlaying(!isPlaying)}
