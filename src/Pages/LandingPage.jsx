@@ -124,7 +124,7 @@ const LandingPage = () => {
       summaries:
         "Embark on a musical journey with Lunar Symphony. Let the celestial tunes elevate your soul.",
       categories: "Music",
-      music: process.env.PUBLIC_URL + "/music/Lunar_Symphony.mp3",
+      music: process.env.PUBLIC_URL + "/music/Asa-Ft.-Wizkid-IDG.mp3",
       owner: "ComposerX",
       quantity: 0,
     },
@@ -163,7 +163,7 @@ const LandingPage = () => {
       summaries:
         "Feel the serenity of Oceanic Harmony. Let the soothing waves of sound wash over you.",
       categories: "Music",
-      music: process.env.PUBLIC_URL + "/music/Oceanic_Harmony.mp3",
+      music: process.env.PUBLIC_URL + "/music/Omah-Lay-Justin-Bieber-–-Attention.mp3",
       owner: "SoundSculptor",
       quantity: 0,
     },
