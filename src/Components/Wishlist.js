@@ -134,19 +134,18 @@ const Wishlist = () => {
                 ${subtotal.toFixed(2)}
               </p>
             </div>
-            <div className={`w-full px-3  ${
-                isSmallScreen
-                  ? "fixed bottom-1 left-0"
-                  : ""
-              }`}>
-            <button
-              onClick={payForCollection}
-              className={`w-full bg-blue-500 text-white  py-2 mt-4 hover:bg-blue-600 rounded-sm`}
+            <div
+              className={`w-full px-3  ${
+                isSmallScreen ? "fixed bottom-1 left-0" : ""
+              }`}
             >
-              Checkout
-            </button>
+              <button
+                onClick={payForCollection}
+                className={`w-full bg-blue-500 text-white  py-2 mt-4 hover:bg-blue-600 rounded-sm`}
+              >
+                Checkout
+              </button>
             </div>
-            
           </div>
         ) : null}
 
@@ -219,10 +218,13 @@ const Wishlist = () => {
         </div>
         {isSmallScreen ? null : (
           <div className="w-3/12 border rounded-lg p-4 shadow-md h-auto mb-auto">
-          <div className="flex justify-between my-auto">
-            <h2 className="text-xl font-semibold mb-4">Cart Summary</h2>
-            <h3 className="font-bold"><span>{wishlist.length}</span> {wishlist.length > 1 ? (<span>Items</span>) : (<span>Item</span>)}</h3>
-          </div>
+            <div className="flex justify-between my-auto">
+              <h2 className="text-xl font-semibold mb-4">Cart Summary</h2>
+              <h3 className="font-bold">
+                <span>{wishlist.length}</span>{" "}
+                {wishlist.length > 1 ? <span>Items</span> : <span>Item</span>}
+              </h3>
+            </div>
             <hr />
             <div className="flex items-center justify-between mt-12">
               <p className="text-gray-600">Subtotal:</p>

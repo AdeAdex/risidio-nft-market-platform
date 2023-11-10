@@ -365,7 +365,7 @@ const LandingPage = () => {
     <>
       <div className="mt-12 lg:mt-12">
         <section
-          className={`mb-12 py-4 px-2 lg:px-32 flex gap-3 shadow-md bg-sort-background ${
+          className={`mb-12 py-4 px-2 lg:px-32 flex gap-3 shadow-md bg-sort-background  text-white  font-bold ${
             isSmallScreen ? "flex-row z-10 overflow-y-scroll w-full" : ""
           }`}
         >
@@ -377,7 +377,7 @@ const LandingPage = () => {
               <select
                 value={selectedCategory}
                 onChange={(e) => filterCollectionBySort(e.target.value)}
-                className="rounded-md p-2 sm:text-xs lg:text-base bg-transparent"
+                className="rounded-md p-2 sm:text-xs lg:text-base bg-transparent border border-1"
               >
                 <option value="all">All</option>
                 <option value="AZ">A - Z</option>
@@ -394,11 +394,11 @@ const LandingPage = () => {
             }`}
           >
             <div className="flex">
-              <div className="my-auto sm:text-xs lg:text-base">Category:</div>
+              <div className="my-auto sm:text-xs lg:text-base mr-2">Category:</div>
               <select
                 value={selectedCategory}
                 onChange={(e) => filterCollection(e.target.value)}
-                className="rounded-md p-2 sm:text-xs lg:text-base bg-transparent"
+                className="rounded-md p-2 sm:text-xs lg:text-base bg-transparent border border-1"
               >
                 <option value="all">All</option>
                 <option value="Music">Music</option>
@@ -417,11 +417,11 @@ const LandingPage = () => {
               </select>
             </div>
             <div className="flex">
-              <div className="my-auto sm:text-xs lg:text-base">Price:</div>
+              <div className="my-auto sm:text-xs lg:text-base mr-2">Price:</div>
               <select
                 value={selectedPriceRange}
                 onChange={(e) => filterCollectionByPrice(e.target.value)}
-                className="rounded-md p-2 sm:text-xs lg:text-base bg-transparent"
+                className="rounded-md p-2 sm:text-xs lg:text-base bg-transparent border border-1"
               >
                 <option value="1-50">$1 - $50</option>
                 <option value="51-100">$51 - $100</option>
@@ -431,11 +431,11 @@ const LandingPage = () => {
               </select>
             </div>
             <div className="flex">
-              <div className="my-auto sm:text-xs lg:text-base">Name:</div>
+              <div className="my-auto sm:text-xs lg:text-base mr-2">Name:</div>
               <select
                 value={selectedName}
                 onChange={(e) => filterCollectionByName(e.target.value)}
-                className="rounded-md p-2 sm:text-xs lg:text-base bg-transparent"
+                className="rounded-md p-2 sm:text-xs lg:text-base bg-transparent border border-1"
               >
                 {collection.map((eachTitle, index) => (
                   <option key={index} value={eachTitle.title}>

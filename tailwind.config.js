@@ -5,7 +5,7 @@ export default {
     extend: {
       backgroundColor: {
         "button-background": "#5FBDC1",
-        "sort-background": "#f1f1f1",
+        "sort-background": "#292A2D",
         "footer-background": "#010001"
       },
       backgroundImage: {
