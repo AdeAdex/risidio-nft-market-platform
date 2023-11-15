@@ -12,24 +12,6 @@ const Cards = ({ collection }) => {
   const dispatch = useDispatch();
   const wishlist = useSelector((state) => state.wishlist.items);
 
-  // const handleBuyNow = (selectedItem) => {
-  //   const isInWishlist = wishlist.some(item => item.title === selectedItem.title);
-
-  //   if (isInWishlist) {
-  //     dispatch(increaseQuantity(wishlist.findIndex(item => item.title === selectedItem.title)));
-  //   } else {
-  //     dispatch(addToWishlist({ ...selectedItem, quantity: 1 }));
-  //   }
-  // };
-
-  // const handleIncreaseQuantity = (index) => {
-  //   dispatch(increaseQuantity(index));
-  // };
-
-  // const handleDecreaseQuantity = (index) => {
-  //   dispatch(decreaseQuantity(index));
-  // };
-
   const handleBuyNow = (selectedItem) => {
     const isInWishlist = wishlist.some(
       (item) => item.title === selectedItem.title
@@ -99,9 +81,9 @@ const Cards = ({ collection }) => {
                 <p className="text-sm">{eachCollection.categories}</p>
                 <p
                   className="block font-sans text-base font-light leading-relaxed text-inherit antialiased "
-                  style={{ height: "50px", overflowY: "auto" }}
+                  style={{ height: "50px" }}
                 >
-                  {eachCollection.summaries}
+                <small> {eachCollection.summaries.slice(0, 50)}...</small>
                 </p>
               </div>
             </Link>

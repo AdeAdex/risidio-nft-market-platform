@@ -8,7 +8,6 @@ const LandingPage = () => {
   const [selectedName, setSelectedName] = useState("all");
   const [filteredCollection, setFilteredCollection] = useState([]);
   const [isSmallScreen, setIsSmallScreen] = useState(false);
-  // const [showTopButton, setShowTopButton] = useState(false);
   const [showTopButton, setShowTopButton] = useState(false);
 
   useEffect(() => {
@@ -314,6 +313,7 @@ const LandingPage = () => {
         (item) => item.categories === category
       );
       setFilteredCollection(filtered);
+      console.log("filterd " + filtered);
     }
   };
 
