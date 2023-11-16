@@ -80,7 +80,7 @@ const Cards = ({ collection }) => {
                 </h5>
                 <p className="text-sm">{eachCollection.categories}</p>
                 <p
-                  className="block font-sans text-base font-light leading-relaxed text-inherit antialiased bg-red-500"
+                  className="block font-sans text-base font-light leading-relaxed text-inherit antialiased"
                   style={{ height: "50px" }}
                 >
                 <small> {eachCollection.summaries.slice(0, 50)}...</small>
