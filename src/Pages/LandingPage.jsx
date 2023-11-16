@@ -229,7 +229,7 @@ const LandingPage = () => {
           {showTopButton && (
             <button
               onClick={scrollToTop}
-              className="top-button fixed bg-red-500 p-3 rounded-md"
+              className="top-button fixed bg-blue-500 p-3 rounded-md"
               style={{ bottom: "40px", right: "50px" }}
             >
               <FaArrowUp className="text-white" />

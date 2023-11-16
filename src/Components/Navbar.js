@@ -110,13 +110,13 @@ const Navbar = () => {
                 isSmallScreen ? "h-screen" : ""
               }`}
             >
-              <Link className="mt-6 lg:mt-0 md:my-auto" to="/" onClick={closeMobileMenu}>
+              <Link className="mt-6 lg:unset md:my-auto" to="/" onClick={closeMobileMenu}>
                 Account
               </Link>
-              <Link className="md:my-auto" to="/" onClick={closeMobileMenu}>
+              <Link className="lg:my-auto md:my-auto" to="/" onClick={closeMobileMenu}>
                 Help
               </Link>
-              <Link className="md:my-auto" to="/" onClick={closeMobileMenu}>
+              <Link className="lg:my-auto md:my-auto" to="/" onClick={closeMobileMenu}>
                 Contact
               </Link>
               <Link
