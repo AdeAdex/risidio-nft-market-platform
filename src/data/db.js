@@ -113,7 +113,7 @@ export const collection = [
     id: 123456,
     title: "Quantum Beats",
     photo:
-      "https://scontent.fiba1-1.fna.fbcdn.net/v/t39.30808-6/299679018_194855359567053_7219755556257230098_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeG_RAFI2APmNrs1ElhwsST6_Ged7QBjkxH8Z53tAGOTEccfuhPm1qegn3gOB7qpPH5BRU0vCuxnWfeUjYOp4Myw&_nc_ohc=OCLmYV1gxlkAX9PTaAe&_nc_zt=23&_nc_ht=scontent.fiba1-1.fna&cb_e2o_trans=q&oh=00_AfCTq78Eme9BYYqMwc5XCRF7SFz3nkn643CmCcyXDq40bg&oe=65515F0A",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw2TyYvH8ICPD_J18n0GxOjnNrjQDfRJP11Q&usqp=CAU",
     price: "180.00",
     summaries:
       "Quantum Beats - Where music and science collide. Immerse yourself in this fusion of art and technology.",
