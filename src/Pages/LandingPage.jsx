@@ -3,7 +3,6 @@ import Cards from "../Components/Cards";
 import { FaArrowUp } from "react-icons/fa";
 import { collection } from "../data/db";
 
-
 const LandingPage = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [selectedPriceRange, setSelectedPriceRange] = useState("all");
@@ -12,7 +11,6 @@ const LandingPage = () => {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
   const [showTopButton, setShowTopButton] = useState(false);
   const [loading, setLoading] = useState(true);
-
 
   useEffect(() => {
     const handleResize = () => {
@@ -27,11 +25,9 @@ const LandingPage = () => {
     };
   }, []);
 
-  
-
   useEffect(() => {
     if (collection) {
-      setLoading(false)
+      setLoading(false);
       setFilteredCollection(collection);
     }
   }, []);
@@ -122,14 +118,20 @@ const LandingPage = () => {
     };
   }, []);
 
-
-  
   if (loading) {
-    return <div className="h-screen w-full flex">
-      <div className="my-auto text-red-500 text-center w-full">
-        
+    return (
+      <div className="h-screen w-full flex justify-center">
+        <div className="my-auto">
+          <div className="loading">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
       </div>
-    </div>;
+    );
   }
 
   return (
@@ -165,7 +167,9 @@ const LandingPage = () => {
             }`}
           >
             <div className="flex">
-              <div className="my-auto sm:text-xs lg:text-base mr-2">Category:</div>
+              <div className="my-auto sm:text-xs lg:text-base mr-2">
+                Category:
+              </div>
               <select
                 value={selectedCategory}
                 onChange={(e) => filterCollection(e.target.value)}
