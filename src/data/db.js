@@ -1,0 +1,241 @@
+export const collection = [
+  {
+    id: 123456,
+    title: "BoomLand - Shards",
+    photo:
+      "https://i.seadn.io/gcs/files/aa98dbd1ecf8973695f6096bae3753da.jpg?auto=format&dpr=1&h=500",
+    price: "75.00",
+    summaries:
+      "Step into the futuristic world of BoomLand. Explore its stunning shards and own a piece of this digital masterpiece.",
+    categories: "Gaming",
+    owner: "Risidio",
+    quantity: 0,
+  },
+  {
+    id: 234567,
+    title: "Pixelmon - Generation",
+    photo:
+      "https://i.seadn.io/gcs/files/15253f057fda61d8498f3e8264c2be23.png?auto=format&dpr=1&h=500",
+    price: "180.00",
+    summaries:
+      "Experience the enchanting Pixelmon Generation, where art and imagination collide in the most surreal way.",
+    categories: "Art",
+    owner: "Risidio",
+    quantity: 0,
+  },
+  {
+    id: 345678,
+    title: "Fool Again by Westlife",
+    photo:
+      "https://c-cl.cdn.smule.com/rs-s46/arr/73/a4/e03b4db6-15de-482a-9426-1dfee3c5c24f.jpg",
+    price: "150.00",
+    summaries:
+      "Feel the nostalgia and emotion with Westlife's classic 'Fool Again.' A digital masterpiece to touch your soul.",
+    categories: "Music",
+    music: "/music/Westlife_Fool again.mp3",
+    owner: "Westlife",
+    quantity: 0,
+  },
+  {
+    id: 456789,
+    title: "Pi Oasis",
+    photo:
+      "https://i.seadn.io/s/raw/files/34507010881574b28ac7787ce829f2be.jpg?auto=format&dpr=1&h=500",
+    price: "20.00",
+    summaries:
+      "Pi Oasis - a digital representation of a world-famous scream. Own this iconic artwork in the digital realm.",
+    categories: "Art",
+    owner: "Risidio",
+    quantity: 0,
+  },
+  {
+    id: 567890,
+    title: "Metaverse HQ",
+    photo:
+      "https://i.seadn.io/gae/3RomDmo-bRVOLfSmn4XaCinDjJkGWuDoGf4NlblW1XenaYmHjo93OpdfzmqjgNIM4qf8e8wGOc91PZO3wGahP5niCfsGZGPEl0dcfw?auto=format&dpr=1&h=500",
+    price: "50.00",
+    summaries:
+      "Metaverse HQ - where Picasso's powerful statement comes to life in the form of NFT art. Dive into the metaverse.",
+    categories: "Art",
+    owner: "Risidio",
+    quantity: 0,
+  },
+  {
+    id: 678901,
+    title: "Rare Pepe",
+    photo:
+      "https://i.seadn.io/gcs/files/b36c8411036867ffedd8d85c54079785.png?auto=format&dpr=1&h=500",
+    price: "120.00",
+    summaries:
+      "Rare Pepe - Botticelli's Venus takes on a new form in the digital realm. A rare masterpiece for collectors.",
+    categories: "SportLight",
+    owner: "Risidio",
+    quantity: 0,
+  },
+  {
+    id: 789012,
+    title: "Feel by Davido",
+    photo: "https://i.ytimg.com/vi/irkGSP6SxDY/maxresdefault.jpg",
+    price: "250.00",
+    summaries:
+      "Listen to 'Feel' by Davido, the enigmatic smile in NFT format. Immerse yourself in this musical journey.",
+    categories: "Music",
+    music: "/music/Davido_-_Feel.mp3",
+    owner: "Davido",
+    quantity: 0,
+  },
+  {
+    id: 890123,
+    title: "Lunar Symphony",
+    photo:
+      "https://source.boomplaymusic.com/group10/M00/08/04/34b9087d18174cc5b93afe4ada9ae24e_320_320.jpg",
+    price: "90.00",
+    summaries:
+      "Embark on a musical journey with Lunar Symphony. Let the celestial tunes elevate your soul.",
+    categories: "Music",
+    music: "/music/Asa-Ft.-Wizkid-IDG.mp3",
+    owner: "ComposerX",
+    quantity: 0,
+  },
+  {
+    id: 901234,
+    title: "Neo Tokyo Dreams",
+    photo:
+      "https://i.discogs.com/0WRRthFQe3Mc0xISimekulhxo7nSx7QkKuIMkCF_hSA/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEwMzQ3/NzU4LTE0OTU3NDgz/NTYtNTUyNy5qcGVn.jpeg",
+    price: "120.00",
+    summaries:
+      "Step into the futuristic cityscape of Neo Tokyo Dreams. A digital masterpiece for cyberpunk enthusiasts.",
+    categories: "Art",
+    owner: "Risidio",
+    quantity: 0,
+  },
+  {
+    id: 123456,
+    title: "Quantum Beats",
+    photo:
+      "https://scontent.fiba1-1.fna.fbcdn.net/v/t39.30808-6/299679018_194855359567053_7219755556257230098_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeG_RAFI2APmNrs1ElhwsST6_Ged7QBjkxH8Z53tAGOTEccfuhPm1qegn3gOB7qpPH5BRU0vCuxnWfeUjYOp4Myw&_nc_ohc=OCLmYV1gxlkAX9PTaAe&_nc_zt=23&_nc_ht=scontent.fiba1-1.fna&cb_e2o_trans=q&oh=00_AfCTq78Eme9BYYqMwc5XCRF7SFz3nkn643CmCcyXDq40bg&oe=65515F0A",
+    price: "180.00",
+    summaries:
+      "Quantum Beats - Where music and science collide. Immerse yourself in this fusion of art and technology.",
+    categories: "Music",
+    music: "/music/Mohbad_-_Peace.mp3",
+    owner: "QuantumSound",
+    quantity: 0,
+  },
+  {
+    id: 234567,
+    title: "Oceanic Harmony",
+    photo:
+      "https://source.boomplaymusic.com/group10/M00/04/05/ba5c897ed2304c6db8e25a89f7e5d757_464_464.jpg",
+    price: "150.00",
+    summaries:
+      "Feel the serenity of Oceanic Harmony. Let the soothing waves of sound wash over you.",
+    categories: "Music",
+    music: "/music/Omah-Lay-Justin-Bieber-–-Attention.mp3",
+    owner: "SoundSculptor",
+    quantity: 0,
+  },
+  {
+    id: 345678,
+    title: "Abstract Echoes",
+    photo: "https://imagescdn.junodownload.com/full/CS6005595-02A-BIG.jpg",
+    price: "100.00",
+    summaries:
+      "Abstract Echoes - A visual and auditory exploration of abstract concepts. A feast for the senses.",
+    categories: "Abstract",
+    owner: "VisionaryArt",
+    quantity: 0,
+  },
+  {
+    id: 456789,
+    title: "Arcane Alchemy",
+    photo: "https://f4.bcbits.com/img/a0323179043_65",
+    price: "200.00",
+    summaries:
+      "Unleash the magical essence of Arcane Alchemy. An enchanting blend of art and mysticism.",
+    categories: "Mystic",
+    owner: "MysticArtisan",
+    quantity: 0,
+  },
+  {
+    id: 567890,
+    title: "Vibrant Visions",
+    photo: "https://paintandvino.com/wp-content/uploads/Vibrant-Visions.jpg",
+    price: "80.00",
+    summaries:
+      "Experience the world through Vibrant Visions. A colorful array of digital artistry.",
+    categories: "Colorful",
+    owner: "Risidio",
+    quantity: 0,
+  },
+  {
+    id: 678901,
+    title: "Epic Odyssey",
+    photo:
+      "https://media.pocketgamer.com/artwork/na-31800-1597942157/Epic_Odyssey-iOS-Android-Artwork-KeyArt.jpg",
+    price: "250.00",
+    summaries:
+      "Embark on an Epic Odyssey through digital realms. A journey of visual and auditory delights.",
+    categories: "Adventure",
+    owner: "DigitalExplorer",
+    quantity: 0,
+  },
+  {
+    id: 789012,
+    title: "Celestial Serenade",
+    photo: "https://i.ytimg.com/vi/9US9nEopX-o/maxresdefault.jpg",
+    price: "120.00",
+    summaries:
+      "Indulge in the heavenly sounds of Celestial Serenade. A musical experience like no other.",
+    categories: "Heavenly",
+    owner: "HarmonyMaster",
+    quantity: 0,
+  },
+  {
+    id: 890123,
+    title: "Sculpted Soundwaves",
+    photo:
+      "https://i.pinimg.com/originals/5d/8c/21/5d8c211c90fa4c104fc1735b93d75683.jpg",
+    price: "150.00",
+    summaries:
+      "Witness the fusion of art and sound with Sculpted Soundwaves. A masterpiece for audiophiles.",
+    categories: "Sculpture",
+    owner: "AudioSculptor",
+    quantity: 0,
+  },
+  {
+    id: 901234,
+    title: "Quantum Canvas",
+    photo: "https://i.ytimg.com/vi/J3PeqEZO13c/maxresdefault.jpg",
+    price: "180.00",
+    summaries:
+      "Dive into the Quantum Canvas, where digital artistry meets the principles of quantum reality.",
+    categories: "Quantum",
+    owner: "QuantumArtisan",
+    quantity: 0,
+  },
+  {
+    id: 123456,
+    title: "Futuristic Fusion",
+    photo:
+      "https://static.vecteezy.com/system/resources/thumbnails/030/463/427/small/futuristic-nuclear-fusion-concept-with-magnetic-confinement-generative-ai-photo.jpeg",
+    price: "200.00",
+    summaries:
+      "Experience the merging of past and future in Futuristic Fusion. A visual and auditory delight.",
+    categories: "Futuristic",
+    owner: "TimeTraveler",
+    quantity: 0,
+  },
+  {
+    id: 234567,
+    title: "Galactic Grooves",
+    photo:
+      "https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:392/h:594/q:75/https://bleedingcool.com/wp-content/uploads/2021/04/JL_Cv64_var.jpg",
+    price: "130.00",
+    summaries:
+      "Immerse yourself in the otherworldly sounds of Galactic Grooves. A cosmic journey of beats and melodies.",
+    categories: "Cosmic",
+    owner: "CosmicBeats",
+    quantity: 0,
+  },
+];
