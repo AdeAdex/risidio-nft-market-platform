@@ -110,20 +110,32 @@ const Navbar = () => {
                 isSmallScreen ? "h-screen" : ""
               }`}
             >
-              <Link className="mt-6 lg:unset md:my-auto" to="/" onClick={closeMobileMenu}>
+              <Link
+                className="mt-6 lg:unset md:my-auto"
+                to="/"
+                onClick={closeMobileMenu}
+              >
                 Account
               </Link>
-              <Link className="lg:my-auto md:my-auto" to="/" onClick={closeMobileMenu}>
+              <Link
+                className="lg:my-auto md:my-auto"
+                to="/"
+                onClick={closeMobileMenu}
+              >
                 Help
               </Link>
-              <Link className="lg:my-auto md:my-auto" to="/" onClick={closeMobileMenu}>
+              <Link
+                className="lg:my-auto md:my-auto"
+                to="/"
+                onClick={closeMobileMenu}
+              >
                 Contact
               </Link>
               <Link
                 to="/wishlist"
                 onClick={closeMobileMenu}
                 className={`relative ${
-                  isSmallScreen ? "flex justify-center hidden" : ""
+                  isSmallScreen ? "hidden" : ""
                 }`}
               >
                 <BsCartCheck className="" size={32} />
