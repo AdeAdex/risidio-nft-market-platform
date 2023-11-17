@@ -6,6 +6,9 @@ const Categories = ({
   collection,
   selectedCategory,
 }) => {
+  const uniqueCategories = [
+    ...new Set(collection.map((item) => item.categories)),
+  ];
   const filterCollection = (category) => {
     setSelectedCategory(category);
 
@@ -28,20 +31,11 @@ const Categories = ({
           onChange={(e) => filterCollection(e.target.value)}
           className="rounded-md p-2 sm:text-xs lg:text-base bg-transparent border border-1 focus:bg-black"
         >
-          <option value="all">All</option>
-          <option value="Music">Music</option>
-          <option value="Art">Art</option>
-          <option value="Gaming">Gaming</option>
-          <option value="SportLight">SportLight</option>
-          <option value="Abstract">Abstract</option>
-          <option value="Mystic">Mystic</option>
-          <option value="Colorful">Colorful</option>
-          <option value="Adventure">Adventure</option>
-          <option value="Heavenly">Heavenly</option>
-          <option value="Sculpture">Sculpture</option>
-          <option value="Quantum">Quantum</option>
-          <option value="Futuristic">Futuristic</option>
-          <option value="Cosmic">Cosmic</option>
+          {uniqueCategories.map((category) => (
+            <option key={category} value={category}>
+              {category}
+            </option>
+          ))}
         </select>
       </div>
     </>
