@@ -4,23 +4,9 @@ import { collection } from "../data/db";
 import SortBy from "../Components/sortByComponents/SortBy";
 import GoTop from "../Components/GoTop";
 
-const LandingPage = () => {
+const LandingPage = ({isSmallScreen}) => {
   const [filteredCollection, setFilteredCollection] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [isSmallScreen, setIsSmallScreen] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsSmallScreen(window.innerWidth <= 768);
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  const [loading, setLoading] = useState(true); 
 
   useEffect(() => {
     if (collection) {

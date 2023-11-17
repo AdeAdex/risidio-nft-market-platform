@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { BsCartCheck } from "react-icons/bs";
 import { useSelector } from "react-redux";
 
-const Navbar = () => {
+const Navbar = ({isSmallScreen}) => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
@@ -23,20 +23,6 @@ const Navbar = () => {
     0
   );
 
-  const [isSmallScreen, setIsSmallScreen] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsSmallScreen(window.innerWidth <= 768);
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);

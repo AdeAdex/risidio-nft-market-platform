@@ -1,5 +1,5 @@
 import "./App.css";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import LandingPage from "./Pages/LandingPage";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Navbar from "./Components/Navbar";
@@ -8,12 +8,26 @@ import Wishlist from "./Components/Wishlist";
 import Footer from "./Components/Footer";
 
 function App() {
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 768);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <>
       <Router>
-        <Navbar />
+        <Navbar isSmallScreen={isSmallScreen}/>
         <Routes>
-          <Route path="/" element={<LandingPage />} />
+          <Route path="/" element={<LandingPage isSmallScreen={isSmallScreen}/>} />
           <Route path="/collection/:collectionId" element={<Collection />} />
           <Route path="/wishlist" element={<Wishlist />} />
         </Routes>
