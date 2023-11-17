@@ -83,7 +83,7 @@ const Cards = ({ collection }) => {
                   className="block font-sans text-base font-light leading-relaxed text-inherit antialiased"
                   style={{ height: "50px" }}
                 >
-                <small> {eachCollection.summaries.slice(0, 50)}...</small>
+                  <small> {eachCollection.summaries.slice(0, 50)}...</small>
                 </p>
               </div>
             </Link>
