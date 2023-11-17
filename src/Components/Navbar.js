@@ -4,8 +4,9 @@ import { Link } from "react-router-dom";
 import { BsCartCheck } from "react-icons/bs";
 import { useSelector } from "react-redux";
 
-const Navbar = ({isSmallScreen}) => {
+const Navbar = ({ isSmallScreen }) => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
@@ -15,14 +16,11 @@ const Navbar = ({isSmallScreen}) => {
     setMobileMenuOpen(false);
   };
 
-  const [scrolled, setScrolled] = useState(false);
-
   const wishlist = useSelector((state) => state.wishlist.items);
   const totalQuantity = wishlist.reduce(
     (total, item) => total + item.quantity,
     0
   );
-
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -120,9 +118,7 @@ const Navbar = ({isSmallScreen}) => {
               <Link
                 to="/wishlist"
                 onClick={closeMobileMenu}
-                className={`relative ${
-                  isSmallScreen ? "hidden" : ""
-                }`}
+                className={`relative ${isSmallScreen ? "hidden" : ""}`}
               >
                 <BsCartCheck className="" size={32} />
                 <small
