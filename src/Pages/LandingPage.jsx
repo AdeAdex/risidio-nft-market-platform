@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Cards from "../Components/Cards";
 import { FaArrowUp } from "react-icons/fa";
 import { collection } from "../data/db";
-import SortBy from "../Components/sortbyComponents/SortBy";
+import SortBy from "../Components/sortByComponents/SortBy";
 
 const LandingPage = () => {
   const [filteredCollection, setFilteredCollection] = useState([]);
