@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Cards from "../Components/Cards";
+import Cards from "../Components/cardComponent/Cards";
 import { collection } from "../data/db";
 import SortBy from "../Components/sortByComponents/SortBy";
 import GoTop from "../Components/GoTop";

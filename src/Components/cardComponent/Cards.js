@@ -5,10 +5,10 @@ import {
   addToWishlist,
   decreaseQuantity,
   increaseQuantity,
-} from "../redux/wishlistSlice";
+} from "../../redux/wishlistSlice";
 import { useSelector } from "react-redux";
-import CardImage from "./cardComponent/CardImage";
-import CardDetails from "./cardComponent/CardDetails";
+import CardImage from "./CardImage";
+import CardDetails from "./CardDetails";
 
 const Cards = ({ collection }) => {
   const dispatch = useDispatch();
