@@ -8,7 +8,7 @@ import {
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
 import RemoveItemButton from "./itemControl/RemoveItemButton";
-import QuantityControl from "./itemControl/QuantityControl";
+// import QuantityControl from "./itemControl/QuantityControl";
 import ItemSummary from "./checkoutComponentOnLargeScreen/ItemSummary";
 import ItemTotalPrice from "./checkoutComponentOnLargeScreen/ItemTotalPrice";
 import EmptyItem from "./itemControl/EmptyItem";
@@ -44,6 +44,14 @@ const Wishlist = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  const handleIncreaseQuantity = (index) => {
+    dispatch(increaseQuantity(index));
+  };
+
+  const handleDecreaseQuantity = (index) => {
+    dispatch(decreaseQuantity(index));
+  };
 
   /* global PaystackPop */
 
@@ -136,12 +144,27 @@ const Wishlist = () => {
                   dispatch={dispatch}
                   index={index}
                 />
-                <QuantityControl
+                {/* <QuantityControl
                   item={item}
                   dispatch={dispatch}
                   increaseQuantity={increaseQuantity}
                   decreaseQuantity={decreaseQuantity}
-                />
+                /> */}
+                <div className="flex items-center">
+                  <button
+                    onClick={() => handleDecreaseQuantity(index)}
+                    className="bg-gray-300 px-3 py-1 rounded-sm"
+                  >
+                    -
+                  </button>
+                  <span className="mx-2">{item.quantity}</span>
+                  <button
+                    onClick={() => handleIncreaseQuantity(index)}
+                    className="bg-button-background text-white px-3 py-1 rounded-sm"
+                  >
+                    +
+                  </button>
+                </div>
               </div>
             </div>
           ))}
