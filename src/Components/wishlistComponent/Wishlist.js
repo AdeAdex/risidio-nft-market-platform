@@ -7,9 +7,6 @@ import {
 } from "../../redux/wishlistSlice";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
-import CheckoutComponentOnSmallScreen from "./CheckoutOnSmallScreen";
-import EachWishlistImage from "./ItemImage";
-import EachWishlistDetails from "./ItemDetails";
 import RemoveItemButton from "./itemControl/RemoveItemButton";
 import QuantityControl from "./itemControl/QuantityControl";
 import ItemSummary from "./checkoutComponentOnLargeScreen/ItemSummary";
@@ -17,6 +14,9 @@ import ItemTotalPrice from "./checkoutComponentOnLargeScreen/ItemTotalPrice";
 import EmptyItem from "./itemControl/EmptyItem";
 import CheckoutButton from "./checkoutComponentOnLargeScreen/CheckoutButton";
 import PaymentMethodsBanner from "./checkoutComponentOnLargeScreen/PaymentMethodsBanner";
+import CheckoutOnSmallScreen from "./CheckoutOnSmallScreen";
+import ItemImage from "./ItemImage";
+import ItemDetails from "./ItemDetails";
 
 const Wishlist = () => {
   const dispatch = useDispatch();
@@ -99,7 +99,7 @@ const Wishlist = () => {
         }`}
       >
         {isSmallScreen ? (
-          <CheckoutComponentOnSmallScreen
+          <CheckoutOnSmallScreen
             isSmallScreen={isSmallScreen}
             subtotal={subtotal}
             payForCollection={payForCollection}
@@ -126,11 +126,8 @@ const Wishlist = () => {
                 state={item}
               >
                 <div className="flex ">
-                  <EachWishlistImage item={item} />
-                  <EachWishlistDetails
-                    item={item}
-                    isSmallScreen={isSmallScreen}
-                  />
+                  <ItemImage item={item} />
+                  <ItemDetails item={item} isSmallScreen={isSmallScreen} />
                 </div>
               </Link>
               <div className="flex items-center">
