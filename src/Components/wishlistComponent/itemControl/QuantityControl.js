@@ -17,7 +17,7 @@ const QuantityControl = ({ index, item, dispatch, increaseQuantity, decreaseQuan
         >
           -
         </button>
-        {/* <span className="mx-2">{item.quantity}</span> */}
+        <span className="mx-2">{item.quantity}</span>
         <button
           onClick={() => handleIncreaseQuantity(index)}
           className="bg-button-background text-white px-3 py-1 rounded-sm"

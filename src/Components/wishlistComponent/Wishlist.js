@@ -137,6 +137,7 @@ const Wishlist = () => {
                   index={index}
                 />
                 <QuantityControl
+                  item={item}
                   dispatch={dispatch}
                   increaseQuantity={increaseQuantity}
                   decreaseQuantity={decreaseQuantity}
