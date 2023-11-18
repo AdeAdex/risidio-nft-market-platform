@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { BsCartCheck } from "react-icons/bs";
 import { useSelector } from "react-redux";
-import NavbarMenuIcon from "./navbar/NavbarMenuIcon";
-import NavbarLogo from "./navbar/NavbarLogo";
-import NavbarWishlistQuantityIcon from "./navbar/NavbarWishlistQuantityIcon";
-import NavbarLinks from "./navbar/NavbarLinks";
+import NavbarMenuIcon from "./NavbarMenuIcon";
+import NavbarLogo from "./NavbarLogo";
+import NavbarWishlistQuantityIcon from "./NavbarWishlistQuantityIcon";
+import NavbarLinks from "./NavbarLinks";
 
 const Navbar = ({ isSmallScreen }) => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);

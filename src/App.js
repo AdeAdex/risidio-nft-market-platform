@@ -2,10 +2,10 @@ import "./App.css";
 import React, { useEffect, useState } from "react";
 import LandingPage from "./Pages/LandingPage";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import Navbar from "./Components/Navbar";
+import Navbar from "./Components/navbar/Navbar";
 import Collection from "./Pages/Collection";
 import Wishlist from "./Components/Wishlist";
-import Footer from "./Components/Footer";
+import Footer from "./Components/footerComponent/Footer";
 
 function App() {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
