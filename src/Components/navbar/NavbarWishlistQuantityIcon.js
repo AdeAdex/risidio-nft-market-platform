@@ -1,12 +1,17 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 const NavbarWishlistQuantityIcon = ({
   closeMobileMenu,
   isSmallScreen,
-  totalQuantity,
   Link,
   BsCartCheck,
 }) => {
+  const wishlist = useSelector((state) => state.wishlist.items);
+  const totalQuantity = wishlist.reduce(
+    (total, item) => total + item.quantity,
+    0
+  );
   return (
     <>
       <Link
