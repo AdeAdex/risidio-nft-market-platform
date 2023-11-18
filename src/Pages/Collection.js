@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import AdditionalDetails from "../Components/collectionComponent/AdditionalDetails";
+import AdditionalDetails from "../Components/collectionComponent/SelectedNFTsAdditionalDetails";
 import SelectedNFTsDetails from "../Components/collectionComponent/SelectedNFTsDetails";
 import SelectedNFTsImage from "../Components/collectionComponent/SelectedNFTsImage";
 
