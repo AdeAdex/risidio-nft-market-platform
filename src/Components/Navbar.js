@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { BsCartCheck } from "react-icons/bs";
 import { useSelector } from "react-redux";
+import NavbarMenuIcon from "./navbar/NavbarMenuIcon";
+import NavbarLogo from "./navbar/NavbarLogo";
+import NavbarWishlistQuantityIcon from "./navbar/NavbarWishlistQuantityIcon";
+import NavbarLinks from "./navbar/NavbarLinks";
 
 const Navbar = ({ isSmallScreen }) => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-
-  const toggleMobileMenu = () => {
-    setMobileMenuOpen(!isMobileMenuOpen);
-  };
 
   const closeMobileMenu = () => {
     setMobileMenuOpen(false);
@@ -48,88 +47,33 @@ const Navbar = ({ isSmallScreen }) => {
           >
             <div className="flex justify-between w-full py-3 ">
               <div className="flex ">
-                <div
-                  className={`menu-icon my-auto ${
-                    isMobileMenuOpen ? "open" : ""
-                  }`}
-                  onClick={toggleMobileMenu}
-                >
-                  {isMobileMenuOpen ? (
-                    <AiOutlineClose size={32} />
-                  ) : (
-                    <AiOutlineMenu size={32} />
-                  )}
-                </div>
-                <Link to="/" onClick={closeMobileMenu}>
-                  <div className="logo">
-                    <img
-                      src="/risidio_logo.svg"
-                      alt=""
-                      style={{ height: isSmallScreen ? "35px" : "50px" }}
-                    />
-                  </div>
-                </Link>
+                <NavbarMenuIcon
+                  setMobileMenuOpen={setMobileMenuOpen}
+                  isMobileMenuOpen={isMobileMenuOpen}
+                />
+                <NavbarLogo
+                  closeMobileMenu={closeMobileMenu}
+                  isSmallScreen={isSmallScreen}
+                  Link={Link}
+                />
               </div>
 
-              <Link
-                to="/wishlist"
-                onClick={closeMobileMenu}
-                className={`relative my-auto ${
-                  isSmallScreen ? "flex justify-center right-[1rem]" : "hidden"
-                }`}
-              >
-                <BsCartCheck className="" size={32} />
-                <small
-                  className={`absolute top-[-0.5rem] bg-orange-500 px-2 rounded-full ${
-                    isSmallScreen ? "right-[-1rem]" : "right-[-0.4rem]"
-                  }`}
-                >
-                  {totalQuantity}
-                </small>
-              </Link>
+              <NavbarWishlistQuantityIcon
+                closeMobileMenu={closeMobileMenu}
+                isSmallScreen={isSmallScreen}
+                Link={Link}
+                BsCartCheck={BsCartCheck}
+              />
             </div>
 
-            <div
-              className={`nav-list ${isMobileMenuOpen ? "open" : ""} ${
-                isSmallScreen ? "h-screen" : ""
-              }`}
-            >
-              <Link
-                className="mt-6 lg:unset md:my-auto"
-                to="/"
-                onClick={closeMobileMenu}
-              >
-                Account
-              </Link>
-              <Link
-                className="lg:my-auto md:my-auto"
-                to="/"
-                onClick={closeMobileMenu}
-              >
-                Help
-              </Link>
-              <Link
-                className="lg:my-auto md:my-auto"
-                to="/"
-                onClick={closeMobileMenu}
-              >
-                Contact
-              </Link>
-              <Link
-                to="/wishlist"
-                onClick={closeMobileMenu}
-                className={`relative ${isSmallScreen ? "hidden" : ""}`}
-              >
-                <BsCartCheck className="" size={32} />
-                <small
-                  className={`absolute top-[-0.5rem] bg-orange-500 px-2 rounded-full ${
-                    isSmallScreen ? "right-[10rem]" : "right-[-0.4rem]"
-                  }`}
-                >
-                  {totalQuantity}
-                </small>
-              </Link>
-            </div>
+            <NavbarLinks
+              isMobileMenuOpen={isMobileMenuOpen}
+              isSmallScreen={isSmallScreen}
+              Link={Link}
+              closeMobileMenu={closeMobileMenu}
+              totalQuantity={totalQuantity}
+              BsCartCheck={BsCartCheck}
+            />
           </div>
         </nav>
       </div>
