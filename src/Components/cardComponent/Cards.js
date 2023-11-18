@@ -9,49 +9,12 @@ import {
 import { useSelector } from "react-redux";
 import CardImage from "./CardImage";
 import CardDetails from "./CardDetails";
+import BuyNowButton from "./BuyNowButton";
+import QuantityControl from "./QuantityControl";
 
 const Cards = ({ collection }) => {
   const dispatch = useDispatch();
   const wishlist = useSelector((state) => state.wishlist.items);
-
-  const handleBuyNow = (selectedItem) => {
-    const isInWishlist = wishlist.some(
-      (item) => item.title === selectedItem.title
-    );
-
-    if (isInWishlist) {
-      dispatch(
-        increaseQuantity(
-          wishlist.findIndex((item) => item.title === selectedItem.title)
-        )
-      );
-    } else {
-      dispatch(addToWishlist({ ...selectedItem, quantity: 1 }));
-    }
-  };
-
-  const handleIncreaseQuantity = (index) => {
-    const itemIndex = wishlist.findIndex(
-      (item) => item.title === collection[index].title
-    );
-
-    if (itemIndex !== -1) {
-      dispatch(increaseQuantity(itemIndex));
-    } else {
-      dispatch(addToWishlist({ ...collection[index], quantity: 1 }));
-    }
-  };
-
-  const handleDecreaseQuantity = (index) => {
-    const itemIndex = wishlist.findIndex(
-      (item) => item.title === collection[index].title
-    );
-
-    if (itemIndex !== -1) {
-      dispatch(decreaseQuantity(itemIndex));
-    } else {
-    }
-  };
 
   return (
     <>
@@ -75,36 +38,24 @@ const Cards = ({ collection }) => {
             </Link>
             <div className="p-6 pt-0 mt-3 flex justify-between">
               {wishlist.some((item) => item.title === eachCollection.title) ? (
-                <div className="flex items-center border border-1 border-border-color">
-                  <button
-                    onClick={() => handleDecreaseQuantity(index)}
-                    className="bg-gray-300 px-3 py-1 rounded-sm"
-                  >
-                    -
-                  </button>
-                  <span className="mx-2 quantity">
-                    {wishlist.find(
-                      (item) => item.title === eachCollection.title
-                    )?.quantity || 0}
-                  </span>
-                  <button
-                    onClick={() => handleIncreaseQuantity(index)}
-                    className="bg-button-background text-white px-3 py-1 rounded-sm"
-                  >
-                    +
-                  </button>
-                </div>
+                <QuantityControl
+                  dispatch={dispatch}
+                  collection={collection}
+                  wishlist={wishlist}
+                  index={index}
+                  addToWishlist={addToWishlist}
+                  decreaseQuantity={decreaseQuantity}
+                  eachCollection={eachCollection}
+                  increaseQuantity={increaseQuantity}
+                />
               ) : (
-                <button
-                  onClick={() => {
-                    handleBuyNow(eachCollection);
-                  }}
-                  data-ripple-light="true"
-                  type="button"
-                  className="select-none rounded-lg bg-blue-500 py-2 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-gray-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-                >
-                  Buy Now
-                </button>
+                <BuyNowButton
+                  eachCollection={eachCollection}
+                  wishlist={wishlist}
+                  dispatch={dispatch}
+                  increaseQuantity={increaseQuantity}
+                  addToWishlist={addToWishlist}
+                />
               )}
               <span className="my-auto font-bold text-1xl">
                 ${eachCollection.price}
