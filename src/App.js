@@ -4,8 +4,8 @@ import LandingPage from "./Pages/LandingPage";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Navbar from "./Components/navbar/Navbar";
 import Collection from "./Pages/Collection";
-import Wishlist from "./Components/wishlistComponent/Wishlist";
 import Footer from "./Components/footerComponent/Footer";
+import Wishlist from "./Components/wishlistComponent/Wishlist";
 
 function App() {
   const [isSmallScreen, setIsSmallScreen] = useState(false);

@@ -1,25 +1,21 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  removeFromWishlist,
-  increaseQuantity,
-  decreaseQuantity,
-} from "../../redux/wishlistSlice";
 import Swal from "sweetalert2";
-import { Link } from "react-router-dom";
-import RemoveItemButton from "./itemControl/RemoveItemButton";
-import QuantityControl from "./itemControl/QuantityControl";
-import EmptyItem from "./itemControl/EmptyItem";
+import EmptyItem from "./WishlistItemContainerComponent/itemControl/EmptyItem";
 import CheckoutOnSmallScreen from "./checkoutComponentOnSmallScreen/CheckoutOnSmallScreen";
-import ItemImage from "./ItemImage";
-import ItemDetails from "./ItemDetails";
 import CheckoutOnLargeScreen from "./checkoutComponentOnLargeScreen/CheckoutOnLargeScreen";
+import WishlistItemContainer from "./WishlistItemContainerComponent/WishlistItemContainer";
+import {
+  decreaseQuantity,
+  increaseQuantity,
+  removeFromWishlist,
+} from "../../redux/wishlistSlice";
 
 const Wishlist = () => {
-  const dispatch = useDispatch();
   const wishlist = useSelector((state) => state.wishlist.items);
   const [isSmallScreen, setIsSmallScreen] = useState(false);
   const [subtotal, setSubtotal] = useState(0);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     const newSubtotal = wishlist.reduce(
@@ -103,49 +99,13 @@ const Wishlist = () => {
           />
         ) : null}
 
-        <div
-          className={`flex flex-col gap-4 shadow-lg p-5 ${
-            isSmallScreen ? "w-full" : "w-8/12"
-          }`}
-        >
-          <h1 className="font-bold text-lg">Cart: ({wishlist.length})</h1>
-          {wishlist.map((item, index) => (
-            <div
-              key={index}
-              className={`border p-4 rounded-lg shadow-md  justify-between ${
-                isSmallScreen ? "flex flex-col gap-4" : "flex items-center h-32"
-              }`}
-            >
-              <Link
-                className="w-full"
-                to={`/collection/${item.title}`}
-                key={index}
-                state={item}
-              >
-                <div className="flex ">
-                  <ItemImage item={item} />
-                  <ItemDetails item={item} isSmallScreen={isSmallScreen} />
-                </div>
-              </Link>
-              <div className="flex items-center">
-                <RemoveItemButton
-                  removeFromWishlist={removeFromWishlist}
-                  dispatch={dispatch}
-                  index={index}
-                />
-                <QuantityControl
-                  key={index}
-                  item={item}
-                  dispatch={dispatch}
-                  increaseQuantity={increaseQuantity}
-                  decreaseQuantity={decreaseQuantity}
-                  wishlist={wishlist}
-                  index={index}
-                />
-              </div>
-            </div>
-          ))}
-        </div>
+        <WishlistItemContainer
+          wishlist={wishlist}
+          removeFromWishlist={removeFromWishlist}
+          increaseQuantity={increaseQuantity}
+          decreaseQuantity={decreaseQuantity}
+          dispatch={dispatch}
+        />
         {isSmallScreen ? null : (
           <CheckoutOnLargeScreen
             wishlist={wishlist}
