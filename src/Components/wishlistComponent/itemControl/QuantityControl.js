@@ -1,6 +1,12 @@
 import React from "react";
 
-const QuantityControl = ({ index, item, dispatch, increaseQuantity, decreaseQuantity }) => {
+const QuantityControl = ({
+  index,
+  item,
+  dispatch,
+  increaseQuantity,
+  decreaseQuantity,
+}) => {
   const handleIncreaseQuantity = (index) => {
     dispatch(increaseQuantity(index));
   };
@@ -8,6 +14,7 @@ const QuantityControl = ({ index, item, dispatch, increaseQuantity, decreaseQuan
   const handleDecreaseQuantity = (index) => {
     dispatch(decreaseQuantity(index));
   };
+
   return (
     <>
       <div className="flex items-center">
@@ -17,7 +24,8 @@ const QuantityControl = ({ index, item, dispatch, increaseQuantity, decreaseQuan
         >
           -
         </button>
-        <span className="mx-2">{item.quantity}</span>
+        <small></small>
+        <span className="mx-2">{item.quantity || 0}</span>
         <button
           onClick={() => handleIncreaseQuantity(index)}
           className="bg-button-background text-white px-3 py-1 rounded-sm"
