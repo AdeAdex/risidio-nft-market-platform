@@ -1,15 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { BsCartCheck } from "react-icons/bs";
+import { BsCartCheck} from "react-icons/bs";
 import { useSelector } from "react-redux";
 import NavbarMenuIcon from "./NavbarMenuIcon";
 import NavbarLogo from "./NavbarLogo";
 import NavbarWishlistQuantityIcon from "./NavbarWishlistQuantityIcon";
 import NavbarLinks from "./NavbarLinks";
+import SearchBar from "./SearchBar";
+import { collection } from "../../data/db";
 
 const Navbar = ({ isSmallScreen }) => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [filteredCollection, setFilteredCollection] = useState(collection);
 
   const closeMobileMenu = () => {
     setMobileMenuOpen(false);
@@ -36,6 +39,11 @@ const Navbar = ({ isSmallScreen }) => {
       setScrolled(false);
     }
   };
+
+  const handleSearch = (filteredItems) => {
+    setFilteredCollection(filteredItems);
+  };
+ 
   return (
     <>
       <div className="App">
@@ -57,6 +65,8 @@ const Navbar = ({ isSmallScreen }) => {
                   Link={Link}
                 />
               </div>
+
+              <SearchBar onSearch={handleSearch}/>
 
               <NavbarWishlistQuantityIcon
                 closeMobileMenu={closeMobileMenu}
