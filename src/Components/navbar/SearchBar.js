@@ -60,9 +60,11 @@ const SearchBar = () => {
         onFocus={() => setShowDropdown(true)}
         // onBlur={() => setShowDropdown(false)}
         placeholder="Search..."
-        className="w-[95%] border border-gray-300 rounded-sm px-2 py-1 text-black"
+        className="w-[95%] border border-gray-300 rounded-s-sm px-2 py-1 text-black"
       />
-      <BsSearch className="ml-2 cursor-pointer" />
+      <div className="bg-blue-500 py-[6.5px] px-[8px] my-auto flex justify-center rounded-e-sm cursor-pointer">
+      <BsSearch className="cursor-pointer" size={24} />
+      </div>
 
       {/* Dropdown */}
       {showDropdown && (
