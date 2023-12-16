@@ -3,7 +3,7 @@ import React from "react";
 const SelectedNFTsImage = ({ selectedCollection }) => {
   return (
     <>
-      <div className="md:w-1/2 h-96 ">
+      <div className="md:w-1/2 h-[300px] md:h-96 ">
         <img
           src={selectedCollection.photo}
           alt={selectedCollection.title}

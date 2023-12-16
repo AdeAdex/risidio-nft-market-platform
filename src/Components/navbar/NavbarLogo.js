@@ -6,7 +6,7 @@ const NavbarLogo = ({ closeMobileMenu, isSmallScreen, Link }) => {
       <Link to="/" onClick={closeMobileMenu}>
         <div className="logo">
           <img
-            src="/risidio_logo.svg"
+            src="/ade.png"
             alt=""
             style={{ height: isSmallScreen ? "35px" : "50px" }}
           />

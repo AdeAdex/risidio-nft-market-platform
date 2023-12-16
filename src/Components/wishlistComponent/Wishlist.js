@@ -40,18 +40,18 @@ const Wishlist = () => {
 
   /* global PaystackPop */
 
-  const payWithPaystack = () => {
+  const payWithPaystack = (email) => {
     const amountInKobo = Math.round(subtotal * 100);
     let handler = PaystackPop.setup({
       key: "pk_test_a70c6dbb491c1021f98ea8cf0b840542607c2537",
-      email: "adeoluamole@gmail.com",
+      email: email,
       amount: amountInKobo,
-      ref: "risidio" + Math.floor(Math.random() * 10000 + 1),
+      ref: "Adex" + Math.floor(Math.random() * 10000 + 1),
       onClose: function () {
         let message = "You just cancel this transaction";
         Swal.fire({
           icon: "error",
-          title: "Dear Risidio customer",
+          title: `Dear Customer with email ${email}`,
           text: message,
           footer:
             "For further assistance, please call us at +2347033959586 or email us at adeoluamole@gmail.com",
@@ -62,11 +62,12 @@ const Wishlist = () => {
           "Payment completed! Your Reference Number is: " + response.reference;
         Swal.fire({
           icon: "success",
-          title: "Thank You Risidio customer",
+          title: `Dear Customer with email ${email}`,
           text: message,
           footer: "",
         }).then((result) => {
           if (result.isConfirmed) {
+            // Do something after payment confirmation
           }
         });
       },
@@ -75,8 +76,26 @@ const Wishlist = () => {
     handler.openIframe();
   };
 
-  const payForCollection = () => {
-    payWithPaystack();
+  const payForCollection = async () => {
+    const { value: enteredEmail, isConfirmed } = await Swal.fire({
+      title: "Enter your email",
+      input: "text",
+      inputPlaceholder: "Your email",
+      showCancelButton: true,
+      confirmButtonText: "Pay",
+      cancelButtonText: "Cancel",
+      inputValidator: (value) => {
+        if (!value) {
+          return "Email is required!";
+        }
+      },
+    });
+
+    if (isConfirmed) {
+      payWithPaystack(enteredEmail);
+    } else {
+      console.log("Payment canceled");
+    }
   };
 
   if (wishlist.length === 0) {
@@ -85,7 +104,7 @@ const Wishlist = () => {
   return (
     <>
       <section
-        className={`mt-16  px-0 lg:px-52 w-full  ${
+        className={`mt-16  px-0 lg:px-52 w-full ${
           isSmallScreen
             ? "flex flex-col gap-2"
             : "flex gap-8 h-screen overflow-y-auto mb-5"

@@ -13,16 +13,14 @@ const WishlistItemContainer = ({ isSmallScreen, wishlist, removeFromWishlist, in
     <>
         <div
           className={`flex flex-col gap-4 shadow-lg p-5 ${
-            isSmallScreen ? "w-full" : "w-8/12"
+            isSmallScreen ? "w-12" : "md:w-8/12"
           }`}
         >
           <h1 className="font-bold text-lg">Cart: ({wishlist.length})</h1>
           {wishlist.map((item, index) => (
             <div
               key={index}
-              className={`border p-4 rounded-lg shadow-md  justify-between ${
-                isSmallScreen ? "flex flex-col gap-4" : "flex items-center h-32"
-              }`}
+              className="border p-4 rounded-lg shadow-md  justify-between flex flex-col gap-4 md:flex-row items-center md:h-32"
             >
               <Link
                 className="w-full"

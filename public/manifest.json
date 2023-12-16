@@ -1,9 +1,9 @@
 {
-  "short_name": "risidio-market",
-  "name": "risidio-nft-market-platform",
+  "short_name": "Adex-market",
+  "name": "Adex-nft-market-platform",
   "icons": [
     {
-      "src": "risidio_logo.svg",
+      "src": "Adex_logo.svg",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },

@@ -8,7 +8,7 @@ export const collection = [
     summaries:
       "Step into the futuristic world of BoomLand. Explore its stunning shards and own a piece of this digital masterpiece.",
     categories: "Gaming",
-    owner: "Risidio",
+    owner: "Adex",
     quantity: 0,
   },
   {
@@ -20,7 +20,7 @@ export const collection = [
     summaries:
       "Experience the enchanting Pixelmon Generation, where art and imagination collide in the most surreal way.",
     categories: "Art",
-    owner: "Risidio",
+    owner: "Adex",
     quantity: 0,
   },
   {
@@ -45,7 +45,7 @@ export const collection = [
     summaries:
       "Pi Oasis - a digital representation of a world-famous scream. Own this iconic artwork in the digital realm.",
     categories: "Art",
-    owner: "Risidio",
+    owner: "Adex",
     quantity: 0,
   },
   {
@@ -57,7 +57,7 @@ export const collection = [
     summaries:
       "Metaverse HQ - where Picasso's powerful statement comes to life in the form of NFT art. Dive into the metaverse.",
     categories: "Art",
-    owner: "Risidio",
+    owner: "Adex",
     quantity: 0,
   },
   {
@@ -69,7 +69,7 @@ export const collection = [
     summaries:
       "Rare Pepe - Botticelli's Venus takes on a new form in the digital realm. A rare masterpiece for collectors.",
     categories: "SportLight",
-    owner: "Risidio",
+    owner: "Adex",
     quantity: 0,
   },
   {
@@ -106,7 +106,7 @@ export const collection = [
     summaries:
       "Step into the futuristic cityscape of Neo Tokyo Dreams. A digital masterpiece for cyberpunk enthusiasts.",
     categories: "Art",
-    owner: "Risidio",
+    owner: "Adex",
     quantity: 0,
   },
   {
@@ -165,7 +165,7 @@ export const collection = [
     summaries:
       "Experience the world through Vibrant Visions. A colorful array of digital artistry.",
     categories: "Colorful",
-    owner: "Risidio",
+    owner: "Adex",
     quantity: 0,
   },
   {
