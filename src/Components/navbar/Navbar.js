@@ -7,7 +7,6 @@ import NavbarLogo from "./NavbarLogo";
 import NavbarWishlistQuantityIcon from "./NavbarWishlistQuantityIcon";
 import NavbarLinks from "./NavbarLinks";
 import SearchBar from "./SearchBar";
-// import { collection } from "../../data/db";
 
 const Navbar = ({ isSmallScreen }) => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);

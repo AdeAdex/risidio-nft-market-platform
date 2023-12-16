@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Cards from "../Components/cardComponent/Cards";
 import { collection } from "../data/db";
-import SortBy from "../Components/sortByComponents/SortBy";
 import GoTop from "../Components/GoTop";
+import SortBy from "../Components/sortByComponents/SortBy";
 
-const LandingPage = ({isSmallScreen}) => {
+const LandingPage = ({ isSmallScreen }) => {
   const [filteredCollection, setFilteredCollection] = useState([]);
-  const [loading, setLoading] = useState(true); 
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     if (collection) {
