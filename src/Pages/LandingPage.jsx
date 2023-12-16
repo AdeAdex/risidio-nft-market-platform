@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Cards from "../Components/cardComponent/Cards";
 import { collection } from "../data/db";
 import GoTop from "../Components/GoTop";
-import SortBy from "../Components/sortByComponents/SortBy";
+import Sort from "../Components/sortByComponents/Sort";
 
 const LandingPage = ({ isSmallScreen }) => {
   const [filteredCollection, setFilteredCollection] = useState([]);
@@ -34,7 +34,7 @@ const LandingPage = ({ isSmallScreen }) => {
   return (
     <>
       <div className="mt-[85px] lg:mt-12">
-        <SortBy
+        <Sort
           collection={collection}
           setFilteredCollection={setFilteredCollection}
           isSmallScreen={isSmallScreen}

@@ -1,14 +1,14 @@
 import React, { useState } from "react";
+import SortMenu from "./SortMenu";
 import Categories from "./SortByCategories";
 import Prices from "./SortByPrices";
 import Names from "./SortByNames";
-import SortMenu from "./SortMenu";
 
-const SortBy = ({ collection, setFilteredCollection, isSmallScreen }) => {
+const Sort = ({ collection, setFilteredCollection, isSmallScreen }) => {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [selectedPriceRange, setSelectedPriceRange] = useState("all");
   const [selectedName, setSelectedName] = useState("all");
-
+  
   return (
     <>
       <section
@@ -52,4 +52,4 @@ const SortBy = ({ collection, setFilteredCollection, isSmallScreen }) => {
   );
 };
 
-export default SortBy;
+export default Sort;
