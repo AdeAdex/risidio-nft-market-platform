@@ -48,10 +48,7 @@ const SearchBar = () => {
   };
 
   return (
-    <div
-      className="w-full flex items-center relative"
-      ref={searchBoxRef}
-    >
+    <div className="w-full flex items-center relative" ref={searchBoxRef}>
       {/* Search Box */}
       <input
         type="text"
@@ -63,12 +60,12 @@ const SearchBar = () => {
         className="w-[95%] border border-gray-300 rounded-s-sm px-2 py-1 text-black"
       />
       <div className="bg-blue-500 py-[6.5px] px-[8px] my-auto flex justify-center rounded-e-sm cursor-pointer">
-      <BsSearch className="cursor-pointer" size={24} />
+        <BsSearch className="cursor-pointer" size={24} />
       </div>
 
       {/* Dropdown */}
       {showDropdown && (
-        <div className="flex flex-col absolute w-[95%] top-full left-0 bg-white border border-gray-300 rounded-md mt-1 p-2 overflow-y-auto">
+        <div className="flex flex-col absolute w-[95%] h-[500px] top-full left-0 bg-white border border-gray-300 rounded-sm mt-0 p-2 overflow-y-auto">
           {dropdownItems.length === 0 ? (
             <div className="text-gray-500">
               Sorry, we couldn't find any results
@@ -79,10 +76,15 @@ const SearchBar = () => {
                 to={`/collection/${item.title}`}
                 key={index}
                 state={item}
-                className="cursor-pointer hover:bg-gray-100 p-1 rounded-sm border-b border-gray-300 text-black w-[full] mb-3"
+                className="flex gap-5 cursor-pointer hover:bg-gray-100 p-1 rounded-sm border-b border-gray-300 text-black w-[full] mb-3"
                 onClick={handleClick}
               >
-                {item.title}
+                <img
+                  src={item.photo}
+                  alt={item.title}
+                  className="w-[30px] h-[30px]"
+                />{" "}
+                <span>{item.title}</span>
               </Link>
             ))
           )}
