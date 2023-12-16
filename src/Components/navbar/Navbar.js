@@ -7,12 +7,12 @@ import NavbarLogo from "./NavbarLogo";
 import NavbarWishlistQuantityIcon from "./NavbarWishlistQuantityIcon";
 import NavbarLinks from "./NavbarLinks";
 import SearchBar from "./SearchBar";
-import { collection } from "../../data/db";
+// import { collection } from "../../data/db";
 
 const Navbar = ({ isSmallScreen }) => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [filteredCollection, setFilteredCollection] = useState(collection);
+  // const [filteredCollection, setFilteredCollection] = useState(collection);
 
   const closeMobileMenu = () => {
     setMobileMenuOpen(false);
@@ -40,9 +40,9 @@ const Navbar = ({ isSmallScreen }) => {
     }
   };
 
-  const handleSearch = (filteredItems) => {
-    setFilteredCollection(filteredItems);
-  };
+  // const handleSearch = (filteredItems) => {
+  //   setFilteredCollection(filteredItems);
+  // };
  
   return (
     <>
@@ -66,7 +66,7 @@ const Navbar = ({ isSmallScreen }) => {
                 />
               </div>
 
-              <SearchBar onSearch={handleSearch}/>
+              <SearchBar />
 
               <NavbarWishlistQuantityIcon
                 closeMobileMenu={closeMobileMenu}

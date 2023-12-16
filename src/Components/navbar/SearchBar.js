@@ -1,13 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { BsSearch } from "react-icons/bs";
 import { collection } from "../../data/db";
 import { Link } from "react-router-dom";
 
 
-const SearchBar = ({ onSearch }) => {
+const SearchBar = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [showDropdown, setShowDropdown] = useState(false);
   const [dropdownItems, setDropdownItems] = useState([]);
+  const searchBoxRef = useRef(null);
 
   const handleSearchChange = (event) => {
     const query = event.target.value;
@@ -20,7 +21,7 @@ const SearchBar = ({ onSearch }) => {
     );
 
     // Pass the filtered items to the parent component via the onSearch callback
-    onSearch(filteredItems);
+    //     onSearch(filteredItems);
 
     // Update the dropdown items
     setDropdownItems(filteredItems);
@@ -28,20 +29,32 @@ const SearchBar = ({ onSearch }) => {
     // Show or hide the dropdown based on search results and non-empty search query
     setShowDropdown(filteredItems.length > 0 && query.trim() !== "");
   };
+ 
 
-//   const handleDropdownItemClick = (item) => {
-//     console.log("Clicked on", item);
-//   };
+  const handleClickOutside = (event) => {
+        if (searchBoxRef.current && !searchBoxRef.current.contains(event.target)) {
+          // Click is outside the search box, close the dropdown
+          setShowDropdown(false);
+        }
+      };
+    
+      useEffect(() => {
+        document.addEventListener("click", handleClickOutside);
+    
+        return () => {
+          document.removeEventListener("click", handleClickOutside);
+        };
+      }, []);
 
   return (
-    <div className="flex items-center mr-[20px] relative">
+    <div className="flex items-center mr-[20px] relative" ref={searchBoxRef}>
       {/* Search Box */}
       <input
         type="text"
         value={searchQuery}
         onChange={handleSearchChange}
         onFocus={() => setShowDropdown(true)}
-        onBlur={() => setShowDropdown(false)}
+        // onBlur={() => setShowDropdown(false)}
         placeholder="Search..."
         className="border border-gray-300 rounded-md px-2 py-1 text-black"
       />
@@ -50,21 +63,14 @@ const SearchBar = ({ onSearch }) => {
       {/* Dropdown */}
       {showDropdown && (
         <div className="absolute top-full left-0 bg-white border border-gray-300 rounded-md mt-1 p-2">
-          {/* Render the dropdown items here */}
-          {dropdownItems.map((item) => (
+          {dropdownItems.map((item, index) => (
             <Link
-              className="w-full"
               to={`/collection/${item.title}`}
-              key={item.id}
+              key={index}
               state={item}
+              className="cursor-pointer hover:bg-gray-100 p-1 rounded text-black"
             >
-              <div
-                key={item.id}
-                // onClick={() => handleDropdownItemClick(item)}
-                className="cursor-pointer hover:bg-gray-100 p-1 rounded text-black"
-              >
-                {item.title}
-              </div>
+              {item.title}
             </Link>
           ))}
         </div>
