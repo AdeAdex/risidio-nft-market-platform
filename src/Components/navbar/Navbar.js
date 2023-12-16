@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { BsCartCheck} from "react-icons/bs";
+import { BsCartCheck } from "react-icons/bs";
 import { useSelector } from "react-redux";
 import NavbarMenuIcon from "./NavbarMenuIcon";
 import NavbarLogo from "./NavbarLogo";
@@ -43,18 +43,18 @@ const Navbar = ({ isSmallScreen }) => {
   // const handleSearch = (filteredItems) => {
   //   setFilteredCollection(filteredItems);
   // };
- 
+
   return (
     <>
       <div className="App">
         <nav>
           <div
-            className={`navbar px-4 lg:px-20 ${
+            className={`navbar md:flex flex-col px-4 lg:px-20 pb-[10px] md:pb-[unset] ${
               scrolled ? "fixed" : "absolute"
             }`}
           >
-            <div className="flex justify-between w-full py-3 ">
-              <div className="flex ">
+            <div className="flex justify-between w-full py-3">
+              <div className="flex">
                 <NavbarMenuIcon
                   setMobileMenuOpen={setMobileMenuOpen}
                   isMobileMenuOpen={isMobileMenuOpen}
@@ -65,8 +65,9 @@ const Navbar = ({ isSmallScreen }) => {
                   Link={Link}
                 />
               </div>
-
-              <SearchBar />
+              <div className="hidden md:inline-flex w-[40%]">
+                <SearchBar />
+              </div>
 
               <NavbarWishlistQuantityIcon
                 closeMobileMenu={closeMobileMenu}
@@ -74,16 +75,18 @@ const Navbar = ({ isSmallScreen }) => {
                 Link={Link}
                 BsCartCheck={BsCartCheck}
               />
+              <NavbarLinks
+                isMobileMenuOpen={isMobileMenuOpen}
+                isSmallScreen={isSmallScreen}
+                Link={Link}
+                closeMobileMenu={closeMobileMenu}
+                totalQuantity={totalQuantity}
+                BsCartCheck={BsCartCheck}
+              />
             </div>
-
-            <NavbarLinks
-              isMobileMenuOpen={isMobileMenuOpen}
-              isSmallScreen={isSmallScreen}
-              Link={Link}
-              closeMobileMenu={closeMobileMenu}
-              totalQuantity={totalQuantity}
-              BsCartCheck={BsCartCheck}
-            />
+            <div className="md:hidden w-[100%]">
+              <SearchBar />
+            </div>
           </div>
         </nav>
       </div>

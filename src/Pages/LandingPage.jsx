@@ -33,7 +33,7 @@ const LandingPage = ({isSmallScreen}) => {
 
   return (
     <>
-      <div className="mt-12 lg:mt-12">
+      <div className="mt-[85px] lg:mt-12">
         <SortBy
           collection={collection}
           setFilteredCollection={setFilteredCollection}
