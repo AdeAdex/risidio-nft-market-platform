@@ -1,4 +1,5 @@
 import React from "react";
+import CartCheck from "../base/CartCheck";
 
 const NavbarLinks = ({
   isMobileMenuOpen,
@@ -6,7 +7,6 @@ const NavbarLinks = ({
   Link,
   closeMobileMenu,
   totalQuantity,
-  BsCartCheck,
 }) => {
   return (
     <>
@@ -36,20 +36,12 @@ const NavbarLinks = ({
         >
           Contact
         </Link>
-        <Link
+        <CartCheck
           to="/wishlist"
           onClick={closeMobileMenu}
-          className={`relative ${isSmallScreen ? "hidden" : ""}`}
-        >
-          <BsCartCheck className="" size={32} />
-          <small
-            className={`absolute top-[-0.5rem] bg-orange-500 px-2 rounded-full ${
-              isSmallScreen ? "right-[10rem]" : "right-[-0.4rem]"
-            }`}
-          >
-            {totalQuantity}
-          </small>
-        </Link>
+          className={`relative ${isSmallScreen ? "hidden" : "my-auto"}`}
+          totalQuantity={totalQuantity}
+        />
       </div>
     </>
   );

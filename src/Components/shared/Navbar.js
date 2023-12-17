@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { BsCartCheck } from "react-icons/bs";
 import { useSelector } from "react-redux";
-import NavbarMenuIcon from "./NavbarMenuIcon";
-import NavbarLogo from "./NavbarLogo";
-import NavbarWishlistQuantityIcon from "./NavbarWishlistQuantityIcon";
-import NavbarLinks from "./NavbarLinks";
-import SearchBar from "./SearchBar";
+import NavbarMenuIcon from "../navbar/NavbarMenuIcon";
+import NavbarLogo from "../navbar/NavbarLogo";
+import NavbarWishlistQuantityIcon from "../navbar/NavbarWishlistQuantityIcon";
+import NavbarLinks from "../navbar/NavbarLinks";
+import SearchBar from "../navbar/SearchBar";
 
 const Navbar = ({ isSmallScreen }) => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -71,8 +70,6 @@ const Navbar = ({ isSmallScreen }) => {
               <NavbarWishlistQuantityIcon
                 closeMobileMenu={closeMobileMenu}
                 isSmallScreen={isSmallScreen}
-                Link={Link}
-                BsCartCheck={BsCartCheck}
               />
               <NavbarLinks
                 isMobileMenuOpen={isMobileMenuOpen}
@@ -80,7 +77,6 @@ const Navbar = ({ isSmallScreen }) => {
                 Link={Link}
                 closeMobileMenu={closeMobileMenu}
                 totalQuantity={totalQuantity}
-                BsCartCheck={BsCartCheck}
               />
             </div>
             <div className="md:hidden w-[100%]">

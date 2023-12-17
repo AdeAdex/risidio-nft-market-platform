@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import FooterLogo from "./FooterLogo";
-import FooterAboutUs from "./FooterAboutUs";
-import FooterContactUs from "./FooterContactUs";
-import FooterSocialMediaSection from "./FooterSocialMediaSection";
+import FooterLogo from "../footerComponent/FooterLogo";
+import FooterAboutUs from "../footerComponent/FooterAboutUs";
+import FooterContactUs from "../footerComponent/FooterContactUs";
+import FooterSocialMediaSection from "../footerComponent/FooterSocialMediaSection";
 
 const Footer = () => {
   return (

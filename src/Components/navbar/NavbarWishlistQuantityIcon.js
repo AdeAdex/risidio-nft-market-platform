@@ -1,12 +1,8 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import CartCheck from "../base/CartCheck";
 
-const NavbarWishlistQuantityIcon = ({
-  closeMobileMenu,
-  isSmallScreen,
-  Link,
-  BsCartCheck,
-}) => {
+const NavbarWishlistQuantityIcon = ({ closeMobileMenu, isSmallScreen }) => {
   const wishlist = useSelector((state) => state.wishlist.items);
   const totalQuantity = wishlist.reduce(
     (total, item) => total + item.quantity,
@@ -14,22 +10,14 @@ const NavbarWishlistQuantityIcon = ({
   );
   return (
     <>
-      <Link
+      <CartCheck
         to="/wishlist"
         onClick={closeMobileMenu}
         className={`relative my-auto ${
           isSmallScreen ? "flex justify-center right-[1rem]" : "hidden"
         }`}
-      >
-        <BsCartCheck className="" size={32} />
-        <small
-          className={`absolute top-[-0.5rem] bg-orange-500 px-2 rounded-full ${
-            isSmallScreen ? "right-[-1rem]" : "right-[-0.4rem]"
-          }`}
-        >
-          {totalQuantity}
-        </small>
-      </Link>
+        totalQuantity={totalQuantity}
+      />
     </>
   );
 };
