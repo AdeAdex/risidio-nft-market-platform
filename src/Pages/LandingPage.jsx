@@ -2,10 +2,11 @@ import React, { useEffect, useState } from "react";
 import Cards from "../Components/cardComponent/Cards";
 import { collection } from "../data/db";
 import GoTop from "../Components/GoTop";
-// import Sort from "../Components/sortByComponents/Sort";
 import Pagination from "../lib/Pagination";
 import PaginationButton from "../lib/PaginationButton";
-import SortComponent from "../Components/sortByComponents/SortComponent";
+import Sort from "../Components/SortComponent/Sort";
+// import SortComponent from "../Components/SortComponent/SortComponent";
+
 
 const LandingPage = ({ isSmallScreen }) => {
   // const [filteredCollection, setFilteredCollection] = useState([]);
@@ -48,20 +49,20 @@ const LandingPage = ({ isSmallScreen }) => {
   return (
     <>
       <div className="mt-[85px] lg:mt-12">
-        {/* <Sort
+        <Sort
           collection={collection}
           // setFilteredCollection={setFilteredCollection}
           // setCurrentPageItem={currentPageItem}
           currentPageItem={currentPageItem}
           setCurrentPageItem={setCurrentPageItem}
           isSmallScreen={isSmallScreen}
-        /> */}
-        <SortComponent
+        />
+        {/* <SortComponent
           collection={collection}
           currentPageItem={currentPageItem}
           setCurrentPageItem={setCurrentPageItem}
           isSmallScreen={isSmallScreen}
-        />
+        /> */}
         <Pagination
           collection={collection}
           setCurrentPage={setCurrentPage}
