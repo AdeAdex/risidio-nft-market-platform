@@ -78,7 +78,7 @@ const LandingPage = ({ isSmallScreen }) => {
         <section className="flex flex-wrap gap-4 w-full justify-center">
           <Cards collection={currentPageItem} />
         </section>
-        <section className="flex justify-between md:justify-center py-[30px]  px-7 lg:px-32 relative">
+        <section className="flex justify-between md:justify-center pb-[30px] md:py-[30px]  px-7 lg:px-32 relative">
           <span className="my-auto">{` Page ${currentPage} of ${totalPage} `}</span>
           <div className="md:absolute end-6 md:end-32">
             <PaginationButton

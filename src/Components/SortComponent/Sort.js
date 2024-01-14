@@ -17,7 +17,7 @@ const Sort = ({
   return (
     <>
       <section
-        className={`mb-12 py-4 px-2 lg:px-32 flex gap-3 shadow-md bg-sort-background  text-white  font-bold ${
+        className={`mb-6 md:mb-12 py-4 px-2 lg:px-32 flex gap-3 shadow-md bg-sort-background  text-white  font-bold ${
           isSmallScreen ? "flex-row z-10 overflow-x-scroll w-full" : ""
         }`}
       >
