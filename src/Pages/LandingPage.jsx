@@ -62,7 +62,6 @@ const LandingPage = ({ isSmallScreen }) => {
           currentPage={currentPage}
           setCurrentPageItem={setCurrentPageItem}
           // isMobile={isMobile}
-          // isTablet={isTablet}
           // isSmallScreen={isSmallScreen}
           itemsPerPage={itemsPerPage}
           currentPageItem={currentPageItem}
