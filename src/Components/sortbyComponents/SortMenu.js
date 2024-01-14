@@ -1,7 +1,7 @@
 import React from "react";
 
 const SortMenu = ({
-  setFilteredCollection,
+  setCurrentPageItem,
   setSelectedCategory,
   collection,
   selectedCategory,
@@ -30,7 +30,8 @@ const SortMenu = ({
         break;
     }
 
-    setFilteredCollection(sortedCollection);
+    // setFilteredCollection(sortedCollection);
+    setCurrentPageItem(sortedCollection)
     setSelectedCategory(value);
   };
   return (

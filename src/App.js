@@ -6,9 +6,12 @@ import Collection from "./Pages/Collection";
 import Wishlist from "./Components/wishlistComponent/Wishlist";
 import Navbar from "./Components/shared/Navbar";
 import Footer from "./Components/shared/Footer";
+// import MobileCheck from "./data/lib/MobileCheck";
+
 
 
 function App() {
+  // const isSmallScreen = MobileCheck()
   const [isSmallScreen, setIsSmallScreen] = useState(false);
 
   useEffect(() => {
@@ -22,7 +25,7 @@ function App() {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [isSmallScreen]);
   return (
     <>
       <Router>

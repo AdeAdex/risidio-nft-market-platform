@@ -1,7 +1,7 @@
 import React from "react";
 
 const Prices = ({
-  setFilteredCollection,
+  setCurrentPageItem,
   setSelectedPriceRange,
   collection,
   selectedPriceRange,
@@ -23,7 +23,7 @@ const Prices = ({
       (item) => parseFloat(item.price) >= min && parseFloat(item.price) <= max
     );
 
-    setFilteredCollection(filtered);
+    setCurrentPageItem(filtered);
   };
   return (
     <>

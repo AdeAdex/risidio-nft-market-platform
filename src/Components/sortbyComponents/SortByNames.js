@@ -1,7 +1,7 @@
 import React from "react";
 
 const Names = ({
-  setFilteredCollection,
+  setCurrentPageItem,
   setSelectedName,
   selectedName,
   collection,
@@ -9,7 +9,7 @@ const Names = ({
   const filterCollectionByName = (selectedName) => {
     setSelectedName(selectedName);
     const filtered = collection.filter((item) => item.title === selectedName);
-    setFilteredCollection(filtered);
+    setCurrentPageItem(filtered);
   };
   return (
     <>

@@ -4,11 +4,16 @@ import Categories from "./SortByCategories";
 import Prices from "./SortByPrices";
 import Names from "./SortByNames";
 
-const Sort = ({ collection, setFilteredCollection, isSmallScreen }) => {
+const Sort = ({
+  collection,
+  currentPageItem,
+  setCurrentPageItem,
+  isSmallScreen,
+}) => {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [selectedPriceRange, setSelectedPriceRange] = useState("all");
   const [selectedName, setSelectedName] = useState("all");
-  
+
   return (
     <>
       <section
@@ -17,9 +22,10 @@ const Sort = ({ collection, setFilteredCollection, isSmallScreen }) => {
         }`}
       >
         <SortMenu
-          setFilteredCollection={setFilteredCollection}
+          setCurrentPageItem={setCurrentPageItem}
           setSelectedCategory={setSelectedCategory}
           collection={collection}
+          // currentPageItem={currentPageItem}
           selectedCategory={selectedCategory}
         />
 
@@ -29,19 +35,20 @@ const Sort = ({ collection, setFilteredCollection, isSmallScreen }) => {
           }`}
         >
           <Categories
-            setFilteredCollection={setFilteredCollection}
+            setCurrentPageItem={setCurrentPageItem}
             setSelectedCategory={setSelectedCategory}
             collection={collection}
+            currentPageItem={currentPageItem}
             selectedCategory={selectedCategory}
           />
           <Prices
-            setFilteredCollection={setFilteredCollection}
+            setCurrentPageItem={setCurrentPageItem}
             setSelectedPriceRange={setSelectedPriceRange}
             collection={collection}
             selectedPriceRange={selectedPriceRange}
           />
           <Names
-            setFilteredCollection={setFilteredCollection}
+            setCurrentPageItem={setCurrentPageItem}
             setSelectedName={setSelectedName}
             selectedName={selectedName}
             collection={collection}

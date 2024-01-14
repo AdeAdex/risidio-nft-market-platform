@@ -2,8 +2,9 @@ import React from "react";
 
 const Categories = ({
   setSelectedCategory,
-  setFilteredCollection,
+  setCurrentPageItem,
   collection,
+  // currentPageItem,
   selectedCategory,
 }) => {
   const uniqueCategories = [
@@ -13,12 +14,12 @@ const Categories = ({
     setSelectedCategory(category);
 
     if (category === "all") {
-      setFilteredCollection(collection);
+      setCurrentPageItem(collection);
     } else {
       const filtered = collection.filter(
         (item) => item.categories === category
       );
-      setFilteredCollection(filtered);
+      setCurrentPageItem(filtered);
       console.log("filterd " + filtered);
     }
   };

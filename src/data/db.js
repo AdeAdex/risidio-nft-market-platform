@@ -1,4 +1,6 @@
 export const collection = [
+
+  // Item 1 
   {
     id: 123456,
     title: "BoomLand - Shards",
@@ -11,6 +13,8 @@ export const collection = [
     owner: "Adex",
     quantity: 0,
   },
+
+  // Item 2
   {
     id: 234567,
     title: "Pixelmon - Generation",
@@ -23,6 +27,8 @@ export const collection = [
     owner: "Adex",
     quantity: 0,
   },
+
+  // Item 3
   {
     id: 345678,
     title: "Fool Again by Westlife",
@@ -36,6 +42,8 @@ export const collection = [
     owner: "Westlife",
     quantity: 0,
   },
+
+  // Item 4
   {
     id: 456789,
     title: "Pi Oasis",
@@ -48,6 +56,8 @@ export const collection = [
     owner: "Adex",
     quantity: 0,
   },
+  
+  // Item 5
   {
     id: 567890,
     title: "Metaverse HQ",
@@ -60,6 +70,8 @@ export const collection = [
     owner: "Adex",
     quantity: 0,
   },
+
+  // Item 6
   {
     id: 678901,
     title: "Rare Pepe",
@@ -72,6 +84,8 @@ export const collection = [
     owner: "Adex",
     quantity: 0,
   },
+
+  // Item 7
   {
     id: 789012,
     title: "Feel by Davido",
@@ -84,6 +98,8 @@ export const collection = [
     owner: "Davido",
     quantity: 0,
   },
+
+  // Item 8
   {
     id: 890123,
     title: "Lunar Symphony",
@@ -97,6 +113,8 @@ export const collection = [
     owner: "ComposerX",
     quantity: 0,
   },
+
+  // Item 9
   {
     id: 901234,
     title: "Neo Tokyo Dreams",
@@ -109,6 +127,8 @@ export const collection = [
     owner: "Adex",
     quantity: 0,
   },
+
+  // Item 10
   {
     id: 123456,
     title: "Quantum Beats",
@@ -122,6 +142,8 @@ export const collection = [
     owner: "QuantumSound",
     quantity: 0,
   },
+
+  // Item 11
   {
     id: 234567,
     title: "Oceanic Harmony",
@@ -135,6 +157,8 @@ export const collection = [
     owner: "SoundSculptor",
     quantity: 0,
   },
+
+  // Item 12
   {
     id: 345678,
     title: "Abstract Echoes",
@@ -146,6 +170,8 @@ export const collection = [
     owner: "VisionaryArt",
     quantity: 0,
   },
+
+  // Item 13
   {
     id: 456789,
     title: "Arcane Alchemy",
@@ -157,6 +183,8 @@ export const collection = [
     owner: "MysticArtisan",
     quantity: 0,
   },
+
+  // Item 14
   {
     id: 567890,
     title: "Vibrant Visions",
@@ -168,6 +196,8 @@ export const collection = [
     owner: "Adex",
     quantity: 0,
   },
+
+  // Item 15
   {
     id: 678901,
     title: "Epic Odyssey",
@@ -180,6 +210,8 @@ export const collection = [
     owner: "DigitalExplorer",
     quantity: 0,
   },
+
+  // Item 16
   {
     id: 789012,
     title: "Celestial Serenade",
@@ -191,6 +223,8 @@ export const collection = [
     owner: "HarmonyMaster",
     quantity: 0,
   },
+
+  // Item 17
   {
     id: 890123,
     title: "Sculpted Soundwaves",
@@ -203,6 +237,8 @@ export const collection = [
     owner: "AudioSculptor",
     quantity: 0,
   },
+
+  // Item 18
   {
     id: 901234,
     title: "Quantum Canvas",
@@ -214,6 +250,8 @@ export const collection = [
     owner: "QuantumArtisan",
     quantity: 0,
   },
+
+  // Item 19
   {
     id: 123456,
     title: "Futuristic Fusion",
@@ -226,6 +264,9 @@ export const collection = [
     owner: "TimeTraveler",
     quantity: 0,
   },
+
+
+  // Item 20
   {
     id: 234567,
     title: "Galactic Grooves",
@@ -236,6 +277,128 @@ export const collection = [
       "Immerse yourself in the otherworldly sounds of Galactic Grooves. A cosmic journey of beats and melodies.",
     categories: "Cosmic",
     owner: "CosmicBeats",
+    quantity: 0,
+  },
+
+  // Item 21
+  {
+    id: 123456,
+    title: "Galactic Aurora",
+    photo: "https://i.imgur.com/0rL2JDe.jpg",
+    price: "110.00",
+    summaries: "Capture the celestial dance of colors in the breathtaking Galactic Aurora.",
+    categories: "Space",
+    owner: "GalacticExplorer",
+    quantity: 0,
+  },
+  
+  // Item 22
+  {
+    id: 234567,
+    title: "Neon Dreamscape",
+    photo: "https://i.imgur.com/vJ3wGrc.jpg",
+    price: "95.00",
+    summaries: "Explore the city nightlife with vibrant energy in Neon Dreamscape.",
+    categories: "Cityscape",
+    owner: "NeonArtist",
+    quantity: 0,
+  },
+  
+  // Item 23
+  {
+    id: 345678,
+    title: "Ethereal Essence",
+    photo: "https://i.imgur.com/7yBMKlO.jpg",
+    price: "130.00",
+    summaries: "Dive into the core of imagination with the surreal beauty of Ethereal Essence.",
+    categories: "Surreal",
+    owner: "DreamWeaver",
+    quantity: 0,
+  },
+  
+  // Item 24
+  {
+    id: 456789,
+    title: "Synthetic Serenity",
+    photo: "https://i.imgur.com/Vy0gETg.jpg",
+    price: "85.00",
+    summaries: "Find peace in the digital realm with the calming vibes of Synthetic Serenity.",
+    categories: "Digital",
+    owner: "TechHarmony",
+    quantity: 0,
+  },
+  
+  // Item 25
+  {
+    id: 567890,
+    title: "Cosmic Canopy",
+    photo: "https://i.imgur.com/2z0b8ZS.jpg",
+    price: "150.00",
+    summaries: "Experience the grandeur of the universe with the captivating Cosmic Canopy.",
+    categories: "Space",
+    owner: "CosmicConductor",
+    quantity: 0,
+  },
+  
+  // Item 26
+  {
+    id: 678901,
+    title: "Vivid Voyage",
+    photo: "https://i.imgur.com/ZuDGsLv.jpg",
+    price: "120.00",
+    summaries: "Embark on a visually stunning journey through the vibrant realms of Vivid Voyage.",
+    categories: "Adventure",
+    owner: "VisualExplorer",
+    quantity: 0,
+  },
+  
+  // Item 27
+  {
+    id: 789012,
+    title: "Astral Atelier",
+    photo: "https://i.imgur.com/0U0GRmP.jpg",
+    price: "100.00",
+    summaries: "Unleash your creativity in the ethereal workshop of Astral Atelier.",
+    categories: "Art",
+    owner: "ArtisanDreamer",
+    quantity: 0,
+  },
+  
+  // Item 28
+  {
+    id: 890123,
+    title: "Lunar Lullaby",
+    photo: "https://i.imgur.com/x6K37wM.jpg",
+    price: "75.00",
+    summaries: "Let the soothing Lunar Lullaby serenade you into a dreamy night.",
+    categories: "Music",
+    music: "/music/Lunar_Lullaby.mp3",
+    owner: "MoonMelodies",
+    quantity: 0,
+  },
+  
+  // Item 29
+  {
+    id: 901234,
+    title: "Quantum Quiver",
+    photo: "https://i.imgur.com/5ZyUcIV.jpg",
+    price: "125.00",
+    summaries: "Feel the pulse of quantum energy with the mesmerizing Quantum Quiver.",
+    categories: "Quantum",
+    owner: "QuantumExplorer",
+    quantity: 0,
+  },
+  
+  // Item 30
+  {
+    id: 123456,
+    title: "Synthwave Symphony",
+    photo: "https://i.imgur.com/bvqenD6.jpg",
+    price: "110.00",
+    summaries: "Immerse yourself in the retro-futuristic vibes of Synthwave Symphony.",
+    categories: "Music",
+    music: "/music/Synthwave_Symphony.mp3",
+    owner: "RetroMaestro",
     quantity: 0,
   },
 ];
