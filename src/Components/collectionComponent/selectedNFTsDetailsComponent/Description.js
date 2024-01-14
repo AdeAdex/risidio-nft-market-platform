@@ -9,7 +9,7 @@ const Description = ({ selectedCollection }) => {
       <small>Code: {selectedCollection.id}</small>
       <p className="text-gray-600 mb-4">{selectedCollection.summaries}</p>
       <p className="text-xl text-blue-500 font-semibold mb-4">
-        Price: {selectedCollection.price}
+        Price: ${selectedCollection.price}
       </p>
     </>
   );
