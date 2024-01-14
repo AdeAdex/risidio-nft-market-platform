@@ -2,9 +2,10 @@ import React, { useEffect, useState } from "react";
 import Cards from "../Components/cardComponent/Cards";
 import { collection } from "../data/db";
 import GoTop from "../Components/GoTop";
-import Sort from "../Components/sortByComponents/Sort";
+// import Sort from "../Components/sortByComponents/Sort";
 import Pagination from "../lib/Pagination";
 import PaginationButton from "../lib/PaginationButton";
+import SortComponent from "../Components/sortByComponents/SortComponent";
 
 const LandingPage = ({ isSmallScreen }) => {
   // const [filteredCollection, setFilteredCollection] = useState([]);
@@ -22,7 +23,6 @@ const LandingPage = ({ isSmallScreen }) => {
     }
   }, []);
 
-  
   const handlePageChange = (newPage) => {
     if (newPage >= 1 && newPage <= totalPage) {
       setCurrentPage(newPage);
@@ -48,10 +48,16 @@ const LandingPage = ({ isSmallScreen }) => {
   return (
     <>
       <div className="mt-[85px] lg:mt-12">
-        <Sort
+        {/* <Sort
           collection={collection}
           // setFilteredCollection={setFilteredCollection}
           // setCurrentPageItem={currentPageItem}
+          currentPageItem={currentPageItem}
+          setCurrentPageItem={setCurrentPageItem}
+          isSmallScreen={isSmallScreen}
+        /> */}
+        <SortComponent
+          collection={collection}
           currentPageItem={currentPageItem}
           setCurrentPageItem={setCurrentPageItem}
           isSmallScreen={isSmallScreen}
@@ -74,11 +80,11 @@ const LandingPage = ({ isSmallScreen }) => {
         <section className="flex justify-between md:justify-center py-[30px]  px-7 lg:px-32 relative">
           <span className="my-auto">{` Page ${currentPage} of ${totalPage} `}</span>
           <div className="md:absolute end-6 md:end-32">
-          <PaginationButton
-            currentPage={currentPage}
-            totalPage={totalPage}
-            handlePageChange={handlePageChange}
-          />
+            <PaginationButton
+              currentPage={currentPage}
+              totalPage={totalPage}
+              handlePageChange={handlePageChange}
+            />
           </div>
         </section>
 
