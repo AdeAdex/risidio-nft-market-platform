@@ -78,7 +78,7 @@ nav {
 
 /* Css code for responsive navbar start here */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .menu-icon {
     display: block;
   }

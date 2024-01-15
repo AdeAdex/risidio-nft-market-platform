@@ -5,8 +5,6 @@ import GoTop from "../Components/GoTop";
 import Pagination from "../lib/Pagination";
 import PaginationButton from "../lib/PaginationButton";
 import Sort from "../Components/SortComponent/Sort";
-// import SortComponent from "../Components/SortComponent/SortComponent";
-
 
 const LandingPage = ({ isSmallScreen }) => {
   // const [filteredCollection, setFilteredCollection] = useState([]);
@@ -48,7 +46,7 @@ const LandingPage = ({ isSmallScreen }) => {
 
   return (
     <>
-      <div className="mt-[85px] lg:mt-12">
+      <div className="mt-[85px] md:mt-12">
         <Sort
           collection={collection}
           // setFilteredCollection={setFilteredCollection}
@@ -57,12 +55,6 @@ const LandingPage = ({ isSmallScreen }) => {
           setCurrentPageItem={setCurrentPageItem}
           isSmallScreen={isSmallScreen}
         />
-        {/* <SortComponent
-          collection={collection}
-          currentPageItem={currentPageItem}
-          setCurrentPageItem={setCurrentPageItem}
-          isSmallScreen={isSmallScreen}
-        /> */}
         <Pagination
           collection={collection}
           setCurrentPage={setCurrentPage}
@@ -75,7 +67,7 @@ const LandingPage = ({ isSmallScreen }) => {
           totalPage={totalPage}
           handlePageChange={handlePageChange}
         />
-        <section className="flex flex-wrap gap-4 w-full justify-center">
+        <section className="flex flex-wrap gap-4 w-[100%] justify-center">
           <Cards collection={currentPageItem} />
         </section>
         <section className="flex justify-between md:justify-center pb-[30px] md:py-[30px]  px-7 lg:px-32 relative">

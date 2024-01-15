@@ -17,10 +17,9 @@ const Sort = ({
   return (
     <>
       <section
-        className={`mb-6 md:mb-12 py-4 px-2 lg:px-32 flex gap-3 shadow-md bg-sort-background  text-white  font-bold ${
-          isSmallScreen ? "flex-row z-10 overflow-x-scroll w-full" : ""
-        }`}
+        className={`w-full mb-6 md:mb-12 py-4 px-4 md:px-[11%] lg:px-[6.5%] flex gap-3 shadow-md bg-sort-background justify-between text-white font-bold z-10 overflow-x-scroll lg:z-[unset] lg:overflow-x-hidden`}
       >
+
         <SortMenu
           setCurrentPageItem={setCurrentPageItem}
           setSelectedCategory={setSelectedCategory}
@@ -28,12 +27,11 @@ const Sort = ({
           // currentPageItem={currentPageItem}
           selectedCategory={selectedCategory}
         />
-
-        <section
-          className={`flex w-9/12  ${
+        {/* <section
+          className={`flex w-9/12 bg-green-500  ${
             isSmallScreen ? "flex-row w-full gap-2" : "gap-14 justify-end"
           }`}
-        >
+        > */}
           <Categories
             setCurrentPageItem={setCurrentPageItem}
             setSelectedCategory={setSelectedCategory}
@@ -53,7 +51,7 @@ const Sort = ({
             selectedName={selectedName}
             collection={collection}
           />
-        </section>
+        {/* </section> */}
       </section>
     </>
   );

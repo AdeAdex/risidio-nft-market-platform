@@ -39,8 +39,8 @@ const Pagination = ({
 
   return (
     <>
-      <div className="flex justify-between  px-7 md:px-32 md:mt-[20px] mb-[50px]">
-        <small className="flex border border-1 border-red-500 py-1 px-4 rounded-sm items-center justify-center">{`${
+      <div className="flex justify-between md:mt-[20px] mb-[50px] px-6 md:px-[11%] lg:px-[6.5%]">
+        <small className="flex border border-1 border-red-500 py-1 px-4 md:px-unset rounded-sm items-center justify-center">{`${
           startIndex + 1
         } - ${endIndex} of ${collection.length}`}</small>
         <PaginationButton
