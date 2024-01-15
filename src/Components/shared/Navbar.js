@@ -64,7 +64,7 @@ const Navbar = ({ isSmallScreen }) => {
                 />
               </div>
               <div className="hidden md:inline-flex w-[40%]">
-                <SearchBar />
+                <SearchBar setMobileMenuOpen={setMobileMenuOpen} />
               </div>
 
               <NavbarWishlistQuantityIcon
@@ -80,7 +80,7 @@ const Navbar = ({ isSmallScreen }) => {
               />
             </div>
             <div className="md:hidden w-[100%]">
-              <SearchBar />
+              <SearchBar setMobileMenuOpen={setMobileMenuOpen}/>
             </div>
           </div>
         </nav>

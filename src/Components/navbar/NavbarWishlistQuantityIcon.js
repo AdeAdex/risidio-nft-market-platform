@@ -14,7 +14,7 @@ const NavbarWishlistQuantityIcon = ({ closeMobileMenu, isSmallScreen }) => {
         to="/wishlist"
         onClick={closeMobileMenu}
         className={`relative my-auto ${
-          isSmallScreen ? "flex justify-center right-[1rem]" : "hidden"
+          isSmallScreen ? "flex justify-center right-[0rem]" : "hidden"
         }`}
         totalQuantity={totalQuantity}
       />

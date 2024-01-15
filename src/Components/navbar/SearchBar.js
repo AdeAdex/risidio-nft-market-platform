@@ -3,7 +3,7 @@ import { BsSearch } from "react-icons/bs";
 import { collection } from "../../data/db";
 import { Link } from "react-router-dom";
 
-const SearchBar = () => {
+const SearchBar = ({setMobileMenuOpen}) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [showDropdown, setShowDropdown] = useState(false);
   const [dropdownItems, setDropdownItems] = useState([]);
@@ -45,10 +45,11 @@ const SearchBar = () => {
 
   const handleClick = () => {
     setShowDropdown(false);
+    setMobileMenuOpen(false)
   };
 
   return (
-    <div className="w-full flex items-center relative" ref={searchBoxRef}>
+    <div className="w-full flex items-center relative z-[999]" ref={searchBoxRef}>
       {/* Search Box */}
       <input
         type="text"
