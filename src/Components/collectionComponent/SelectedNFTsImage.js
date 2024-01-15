@@ -8,6 +8,7 @@ const SelectedNFTsImage = ({ selectedCollection }) => {
           src={selectedCollection.photo}
           alt={selectedCollection.title}
           className="w-full h-full rounded-lg shadow-md"
+          loading="lazy"
         />
       </div>
     </>
