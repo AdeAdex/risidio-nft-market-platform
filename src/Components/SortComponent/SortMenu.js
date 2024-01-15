@@ -31,7 +31,7 @@ const SortMenu = ({
     }
 
     // setFilteredCollection(sortedCollection);
-    setCurrentPageItem(sortedCollection)
+    setCurrentPageItem(sortedCollection);
     setSelectedCategory(value);
   };
   return (

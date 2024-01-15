@@ -8,7 +8,7 @@ const Pagination = ({
   currentPage,
   setCurrentPageItem,
   totalPage,
-  handlePageChange
+  handlePageChange,
   //   currentPageItem,
 }) => {
   let startIndex = (currentPage - 1) * itemsPerPage;

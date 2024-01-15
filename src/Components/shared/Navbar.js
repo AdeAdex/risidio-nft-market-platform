@@ -80,7 +80,7 @@ const Navbar = ({ isSmallScreen }) => {
               />
             </div>
             <div className="md:hidden w-[100%]">
-              <SearchBar setMobileMenuOpen={setMobileMenuOpen}/>
+              <SearchBar setMobileMenuOpen={setMobileMenuOpen} />
             </div>
           </div>
         </nav>
