@@ -7,7 +7,6 @@ import PaginationButton from "../lib/PaginationButton";
 import Sort from "../Components/SortComponent/Sort";
 
 const LandingPage = ({ isSmallScreen }) => {
-  // const [filteredCollection, setFilteredCollection] = useState([]);
   const [loading, setLoading] = useState(true);
   const itemsPerPage = isSmallScreen ? 10 : 20;
   const [currentPage, setCurrentPage] = useState(1);
@@ -17,7 +16,6 @@ const LandingPage = ({ isSmallScreen }) => {
   useEffect(() => {
     if (collection) {
       setLoading(false);
-      // setFilteredCollection(currentPageItem);
       setCurrentPageItem(collection);
     }
   }, []);
@@ -49,7 +47,6 @@ const LandingPage = ({ isSmallScreen }) => {
       <div className="mt-[85px] md:mt-12">
         <Sort
           collection={collection}
-          // setFilteredCollection={setFilteredCollection}
           // setCurrentPageItem={currentPageItem}
           currentPageItem={currentPageItem}
           setCurrentPageItem={setCurrentPageItem}
@@ -57,7 +54,6 @@ const LandingPage = ({ isSmallScreen }) => {
         />
         <Pagination
           collection={collection}
-          setCurrentPage={setCurrentPage}
           currentPage={currentPage}
           setCurrentPageItem={setCurrentPageItem}
           // isMobile={isMobile}
@@ -68,7 +64,7 @@ const LandingPage = ({ isSmallScreen }) => {
           handlePageChange={handlePageChange}
         />
         <section className="flex flex-wrap gap-4 w-[100%] justify-center">
-          <Cards collection={currentPageItem} />
+          <Cards collection={collection} currentPageItem={currentPageItem} />
         </section>
         <section className="flex justify-between md:justify-center pb-[30px] md:py-[30px]  px-7 lg:px-32 relative">
           <span className="my-auto">{` Page ${currentPage} of ${totalPage} `}</span>

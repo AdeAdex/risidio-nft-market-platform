@@ -279,137 +279,136 @@ export const collection = [
   },
 
   // Item 21
-{
-  id: 123456,
-  title: "Galactic Aurora",
-  photo: "https://source.unsplash.com/600x400/?galactic-aurora",
-  price: "110.00",
-  summaries:
-    "Capture the celestial dance of colors in the breathtaking Galactic Aurora.",
-  categories: "Space",
-  owner: "GalacticExplorer",
-  quantity: 0,
-},
+  {
+    id: 123456,
+    title: "Galactic Aurora",
+    photo: "https://source.unsplash.com/600x400/?galactic-aurora",
+    price: "110.00",
+    summaries:
+      "Capture the celestial dance of colors in the breathtaking Galactic Aurora.",
+    categories: "Space",
+    owner: "GalacticExplorer",
+    quantity: 0,
+  },
 
-// Item 22
-{
-  id: 234567,
-  title: "Neon Dreamscape",
-  photo: "https://source.unsplash.com/600x400/?neon-dreamscape",
-  price: "95.00",
-  summaries:
-    "Explore the city nightlife with vibrant energy in Neon Dreamscape.",
-  categories: "Cityscape",
-  owner: "NeonArtist",
-  quantity: 0,
-},
+  // Item 22
+  {
+    id: 234567,
+    title: "Neon Dreamscape",
+    photo: "https://source.unsplash.com/600x400/?neon-dreamscape",
+    price: "95.00",
+    summaries:
+      "Explore the city nightlife with vibrant energy in Neon Dreamscape.",
+    categories: "Cityscape",
+    owner: "NeonArtist",
+    quantity: 0,
+  },
 
-// Item 23
-{
-  id: 345678,
-  title: "Ethereal Essence",
-  photo: "https://source.unsplash.com/600x400/?ethereal-essence",
-  price: "130.00",
-  summaries:
-    "Dive into the core of imagination with the surreal beauty of Ethereal Essence.",
-  categories: "Surreal",
-  owner: "DreamWeaver",
-  quantity: 0,
-},
+  // Item 23
+  {
+    id: 345678,
+    title: "Ethereal Essence",
+    photo: "https://source.unsplash.com/600x400/?ethereal-essence",
+    price: "130.00",
+    summaries:
+      "Dive into the core of imagination with the surreal beauty of Ethereal Essence.",
+    categories: "Surreal",
+    owner: "DreamWeaver",
+    quantity: 0,
+  },
 
-// Item 24
-{
-  id: 456789,
-  title: "Synthetic Serenity",
-  photo: "https://source.unsplash.com/600x400/?synthetic-serenity",
-  price: "85.00",
-  summaries:
-    "Find peace in the digital realm with the calming vibes of Synthetic Serenity.",
-  categories: "Digital",
-  owner: "TechHarmony",
-  quantity: 0,
-},
+  // Item 24
+  {
+    id: 456789,
+    title: "Synthetic Serenity",
+    photo: "https://source.unsplash.com/600x400/?synthetic-serenity",
+    price: "85.00",
+    summaries:
+      "Find peace in the digital realm with the calming vibes of Synthetic Serenity.",
+    categories: "Digital",
+    owner: "TechHarmony",
+    quantity: 0,
+  },
 
-// Item 25
-{
-  id: 567890,
-  title: "Cosmic Canopy",
-  photo: "https://source.unsplash.com/600x400/?cosmic-canopy",
-  price: "150.00",
-  summaries:
-    "Experience the grandeur of the universe with the captivating Cosmic Canopy.",
-  categories: "Space",
-  owner: "CosmicConductor",
-  quantity: 0,
-},
+  // Item 25
+  {
+    id: 567890,
+    title: "Cosmic Canopy",
+    photo: "https://source.unsplash.com/600x400/?cosmic-canopy",
+    price: "150.00",
+    summaries:
+      "Experience the grandeur of the universe with the captivating Cosmic Canopy.",
+    categories: "Space",
+    owner: "CosmicConductor",
+    quantity: 0,
+  },
 
-// Item 26
-{
-  id: 678901,
-  title: "Vivid Voyage",
-  photo: "https://source.unsplash.com/600x400/?vivid-voyage",
-  price: "120.00",
-  summaries:
-    "Embark on a visually stunning journey through the vibrant realms of Vivid Voyage.",
-  categories: "Adventure",
-  owner: "VisualExplorer",
-  quantity: 0,
-},
+  // Item 26
+  {
+    id: 678901,
+    title: "Vivid Voyage",
+    photo: "https://source.unsplash.com/600x400/?vivid-voyage",
+    price: "120.00",
+    summaries:
+      "Embark on a visually stunning journey through the vibrant realms of Vivid Voyage.",
+    categories: "Adventure",
+    owner: "VisualExplorer",
+    quantity: 0,
+  },
 
-// Item 27
-{
-  id: 789012,
-  title: "Astral Atelier",
-  photo: "https://source.unsplash.com/600x400/?astral-atelier",
-  price: "100.00",
-  summaries:
-    "Unleash your creativity in the ethereal workshop of Astral Atelier.",
-  categories: "Art",
-  owner: "ArtisanDreamer",
-  quantity: 0,
-},
+  // Item 27
+  {
+    id: 789012,
+    title: "Astral Atelier",
+    photo: "https://source.unsplash.com/600x400/?astral-atelier",
+    price: "100.00",
+    summaries:
+      "Unleash your creativity in the ethereal workshop of Astral Atelier.",
+    categories: "Art",
+    owner: "ArtisanDreamer",
+    quantity: 0,
+  },
 
-// Item 28
-{
-  id: 890123,
-  title: "Lunar Lullaby",
-  photo: "https://source.unsplash.com/600x400/?lunar-lullaby",
-  price: "75.00",
-  summaries:
-    "Let the soothing Lunar Lullaby serenade you into a dreamy night.",
-  categories: "Music",
-  music: "/music/Lunar_Lullaby.mp3",
-  owner: "MoonMelodies",
-  quantity: 0,
-},
+  // Item 28
+  {
+    id: 890123,
+    title: "Lunar Lullaby",
+    photo: "https://source.unsplash.com/600x400/?lunar-lullaby",
+    price: "75.00",
+    summaries:
+      "Let the soothing Lunar Lullaby serenade you into a dreamy night.",
+    categories: "Music",
+    music: "/music/Lunar_Lullaby.mp3",
+    owner: "MoonMelodies",
+    quantity: 0,
+  },
 
-// Item 29
-{
-  id: 901234,
-  title: "Quantum Quiver",
-  photo: "https://source.unsplash.com/600x400/?quantum-quiver",
-  price: "125.00",
-  summaries:
-    "Feel the pulse of quantum energy with the mesmerizing Quantum Quiver.",
-  categories: "Quantum",
-  owner: "QuantumExplorer",
-  quantity: 0,
-},
+  // Item 29
+  {
+    id: 901234,
+    title: "Quantum Quiver",
+    photo: "https://source.unsplash.com/600x400/?quantum-quiver",
+    price: "125.00",
+    summaries:
+      "Feel the pulse of quantum energy with the mesmerizing Quantum Quiver.",
+    categories: "Quantum",
+    owner: "QuantumExplorer",
+    quantity: 0,
+  },
 
-// Item 30
-{
-  id: 123456,
-  title: "Synthwave Symphony",
-  photo: "https://source.unsplash.com/600x400/?synthwave-symphony",
-  price: "110.00",
-  summaries:
-    "Immerse yourself in the retro-futuristic vibes of Synthwave Symphony.",
-  categories: "Music",
-  music: "/music/Synthwave_Symphony.mp3",
-  owner: "RetroMaestro",
-  quantity: 0,
-},
-
+  // Item 30
+  {
+    id: 123456,
+    title: "Synthwave Symphony",
+    photo: "https://source.unsplash.com/600x400/?synthwave-symphony",
+    price: "110.00",
+    summaries:
+      "Immerse yourself in the retro-futuristic vibes of Synthwave Symphony.",
+    categories: "Music",
+    music: "/music/Synthwave_Symphony.mp3",
+    owner: "RetroMaestro",
+    quantity: 0,
+  },
 
   // Item 31
   {
@@ -1091,224 +1090,240 @@ export const collection = [
   },
 
   // Item 83
-{
-  id: 901234,
-  title: "Enigmatic Euphony",
-  photo: "https://source.unsplash.com/random/600x601",
-  price: "130.00",
-  summaries: "Delve into the mysterious tones of Enigmatic Euphony, a musical journey through the unknown.",
-  categories: "Music",
-  music: "/music/Enigmatic_Euphony.mp3",
-  owner: "MysticMelodies",
-  quantity: 0,
-},
+  {
+    id: 901234,
+    title: "Enigmatic Euphony",
+    photo: "https://source.unsplash.com/random/600x601",
+    price: "130.00",
+    summaries:
+      "Delve into the mysterious tones of Enigmatic Euphony, a musical journey through the unknown.",
+    categories: "Music",
+    music: "/music/Enigmatic_Euphony.mp3",
+    owner: "MysticMelodies",
+    quantity: 0,
+  },
 
-// Item 84
-{
-  id: 123456,
-  title: "Chronicles of Cyberspace",
-  photo: "https://source.unsplash.com/random/600x602",
-  price: "160.00",
-  summaries: "Explore the digital tales in the Chronicles of Cyberspace, where code weaves stories of the virtual realm.",
-  categories: "Digital",
-  owner: "CyberExplorer",
-  quantity: 0,
-},
+  // Item 84
+  {
+    id: 123456,
+    title: "Chronicles of Cyberspace",
+    photo: "https://source.unsplash.com/random/600x602",
+    price: "160.00",
+    summaries:
+      "Explore the digital tales in the Chronicles of Cyberspace, where code weaves stories of the virtual realm.",
+    categories: "Digital",
+    owner: "CyberExplorer",
+    quantity: 0,
+  },
 
-// Item 85
-{
-  id: 234567,
-  title: "Astral Anomaly",
-  photo: "https://source.unsplash.com/random/600x603",
-  price: "180.00",
-  summaries: "Witness the extraordinary with Astral Anomaly, where the cosmos reveals its enigmatic wonders.",
-  categories: "Space",
-  owner: "CosmicReveler",
-  quantity: 0,
-},
+  // Item 85
+  {
+    id: 234567,
+    title: "Astral Anomaly",
+    photo: "https://source.unsplash.com/random/600x603",
+    price: "180.00",
+    summaries:
+      "Witness the extraordinary with Astral Anomaly, where the cosmos reveals its enigmatic wonders.",
+    categories: "Space",
+    owner: "CosmicReveler",
+    quantity: 0,
+  },
 
-// Item 86
-{
-  id: 345678,
-  title: "Luminous Labyrinth",
-  photo: "https://source.unsplash.com/random/600x604",
-  price: "150.00",
-  summaries: "Navigate the radiant paths of the Luminous Labyrinth, a journey through a maze of light and shadow.",
-  categories: "Surreal",
-  owner: "LabyrinthWalker",
-  quantity: 0,
-},
+  // Item 86
+  {
+    id: 345678,
+    title: "Luminous Labyrinth",
+    photo: "https://source.unsplash.com/random/600x604",
+    price: "150.00",
+    summaries:
+      "Navigate the radiant paths of the Luminous Labyrinth, a journey through a maze of light and shadow.",
+    categories: "Surreal",
+    owner: "LabyrinthWalker",
+    quantity: 0,
+  },
 
-// Item 87
-{
-  id: 456789,
-  title: "Quasar Quest",
-  photo: "https://source.unsplash.com/random/600x605",
-  price: "200.00",
-  summaries: "Embark on an interstellar journey with Quasar Quest, where cosmic forces shape the narrative.",
-  categories: "Cosmic",
-  owner: "StellarVoyager",
-  quantity: 0,
-},
+  // Item 87
+  {
+    id: 456789,
+    title: "Quasar Quest",
+    photo: "https://source.unsplash.com/random/600x605",
+    price: "200.00",
+    summaries:
+      "Embark on an interstellar journey with Quasar Quest, where cosmic forces shape the narrative.",
+    categories: "Cosmic",
+    owner: "StellarVoyager",
+    quantity: 0,
+  },
 
-// Item 88
-{
-  id: 567890,
-  title: "Quantum Quasar",
-  photo: "https://source.unsplash.com/random/600x606",
-  price: "170.00",
-  summaries: "Witness the quantum dance of energy in Quantum Quasar, a fusion of science and artistry.",
-  categories: "Quantum",
-  owner: "QuantumArtist",
-  quantity: 0,
-},
+  // Item 88
+  {
+    id: 567890,
+    title: "Quantum Quasar",
+    photo: "https://source.unsplash.com/random/600x606",
+    price: "170.00",
+    summaries:
+      "Witness the quantum dance of energy in Quantum Quasar, a fusion of science and artistry.",
+    categories: "Quantum",
+    owner: "QuantumArtist",
+    quantity: 0,
+  },
 
-// Item 89
-{
-  id: 678901,
-  title: "Vortex Vision",
-  photo: "https://source.unsplash.com/random/600x607",
-  price: "140.00",
-  summaries: "Get lost in the mesmerizing patterns of Vortex Vision, where sight transcends into a visual symphony.",
-  categories: "Abstract",
-  owner: "VisionaryVortex",
-  quantity: 0,
-},
+  // Item 89
+  {
+    id: 678901,
+    title: "Vortex Vision",
+    photo: "https://source.unsplash.com/random/600x607",
+    price: "140.00",
+    summaries:
+      "Get lost in the mesmerizing patterns of Vortex Vision, where sight transcends into a visual symphony.",
+    categories: "Abstract",
+    owner: "VisionaryVortex",
+    quantity: 0,
+  },
 
-// Item 90
-{
-  id: 789012,
-  title: "Ethereal Expedition",
-  photo: "https://source.unsplash.com/random/600x608",
-  price: "190.00",
-  summaries: "Embark on an ethereal expedition, where dreams intertwine with reality in a magical journey.",
-  categories: "Surreal",
-  owner: "DreamExplorer",
-  quantity: 0,
-},
+  // Item 90
+  {
+    id: 789012,
+    title: "Ethereal Expedition",
+    photo: "https://source.unsplash.com/random/600x608",
+    price: "190.00",
+    summaries:
+      "Embark on an ethereal expedition, where dreams intertwine with reality in a magical journey.",
+    categories: "Surreal",
+    owner: "DreamExplorer",
+    quantity: 0,
+  },
 
-// Item 91
-{
-  id: 890123,
-  title: "Stellar Sonata",
-  photo: "https://source.unsplash.com/random/600x609",
-  price: "160.00",
-  summaries: "Experience the cosmic melodies of Stellar Sonata, a celestial symphony that resonates across the universe.",
-  categories: "Music",
-  music: "/music/Stellar_Sonata.mp3",
-  owner: "StellarComposer",
-  quantity: 0,
-},
+  // Item 91
+  {
+    id: 890123,
+    title: "Stellar Sonata",
+    photo: "https://source.unsplash.com/random/600x609",
+    price: "160.00",
+    summaries:
+      "Experience the cosmic melodies of Stellar Sonata, a celestial symphony that resonates across the universe.",
+    categories: "Music",
+    music: "/music/Stellar_Sonata.mp3",
+    owner: "StellarComposer",
+    quantity: 0,
+  },
 
-// Item 92
-{
-  id: 901234,
-  title: "Digital Divinity",
-  photo: "https://source.unsplash.com/random/600x610",
-  price: "180.00",
-  summaries: "Witness the divine fusion of art and technology in Digital Divinity, a testament to the digital realm's grandeur.",
-  categories: "Digital",
-  owner: "TechDivine",
-  quantity: 0,
-},
+  // Item 92
+  {
+    id: 901234,
+    title: "Digital Divinity",
+    photo: "https://source.unsplash.com/random/600x610",
+    price: "180.00",
+    summaries:
+      "Witness the divine fusion of art and technology in Digital Divinity, a testament to the digital realm's grandeur.",
+    categories: "Digital",
+    owner: "TechDivine",
+    quantity: 0,
+  },
 
-// Item 93
-{
-  id: 123456,
-  title: "Abyssal Allegory",
-  photo: "https://source.unsplash.com/random/600x611",
-  price: "150.00",
-  summaries: "Dive into the depths of imagination with Abyssal Allegory, where the mysterious unfolds in the abyss.",
-  categories: "Abstract",
-  owner: "AbyssArtist",
-  quantity: 0,
-},
+  // Item 93
+  {
+    id: 123456,
+    title: "Abyssal Allegory",
+    photo: "https://source.unsplash.com/random/600x611",
+    price: "150.00",
+    summaries:
+      "Dive into the depths of imagination with Abyssal Allegory, where the mysterious unfolds in the abyss.",
+    categories: "Abstract",
+    owner: "AbyssArtist",
+    quantity: 0,
+  },
 
-// Item 94
-{
-  id: 234567,
-  title: "Neon Nexus",
-  photo: "https://source.unsplash.com/random/600x612",
-  price: "120.00",
-  summaries: "Explore the vibrant connections in the Neon Nexus, where the neon glow signifies the interconnected digital world.",
-  categories: "Cityscape",
-  owner: "NeonConnector",
-  quantity: 0,
-},
+  // Item 94
+  {
+    id: 234567,
+    title: "Neon Nexus",
+    photo: "https://source.unsplash.com/random/600x612",
+    price: "120.00",
+    summaries:
+      "Explore the vibrant connections in the Neon Nexus, where the neon glow signifies the interconnected digital world.",
+    categories: "Cityscape",
+    owner: "NeonConnector",
+    quantity: 0,
+  },
 
-// Item 95
-{
-  id: 345678,
-  title: "Celestial Cascade",
-  photo: "https://source.unsplash.com/random/600x613",
-  price: "190.00",
-  summaries: "Cascade through the celestial beauty with Celestial Cascade, where stars paint a luminous tapestry in the cosmos.",
-  categories: "Space",
-  owner: "StellarCascader",
-  quantity: 0,
-},
+  // Item 95
+  {
+    id: 345678,
+    title: "Celestial Cascade",
+    photo: "https://source.unsplash.com/random/600x613",
+    price: "190.00",
+    summaries:
+      "Cascade through the celestial beauty with Celestial Cascade, where stars paint a luminous tapestry in the cosmos.",
+    categories: "Space",
+    owner: "StellarCascader",
+    quantity: 0,
+  },
 
-// Item 96
-{
-  id: 456789,
-  title: "Synthwave Supernova",
-  photo: "https://source.unsplash.com/random/600x614",
-  price: "170.00",
-  summaries: "Experience the explosive energy of Synthwave Supernova, a fusion of retro vibes and cosmic power.",
-  categories: "Music",
-  music: "/music/Synthwave_Supernova.mp3",
-  owner: "RetroNova",
-  quantity: 0,
-},
+  // Item 96
+  {
+    id: 456789,
+    title: "Synthwave Supernova",
+    photo: "https://source.unsplash.com/random/600x614",
+    price: "170.00",
+    summaries:
+      "Experience the explosive energy of Synthwave Supernova, a fusion of retro vibes and cosmic power.",
+    categories: "Music",
+    music: "/music/Synthwave_Supernova.mp3",
+    owner: "RetroNova",
+    quantity: 0,
+  },
 
-// Item 97
-{
-  id: 567890,
-  title: "Quantum Quasar",
-  photo: "https://source.unsplash.com/random/600x615",
-  price: "160.00",
-  summaries: "Witness the quantum dance of energy in Quantum Quasar, a fusion of science and artistry.",
-  categories: "Quantum",
-  owner: "QuantumArtist",
-  quantity: 0,
-},
+  // Item 97
+  {
+    id: 567890,
+    title: "Quantum Quasar",
+    photo: "https://source.unsplash.com/random/600x615",
+    price: "160.00",
+    summaries:
+      "Witness the quantum dance of energy in Quantum Quasar, a fusion of science and artistry.",
+    categories: "Quantum",
+    owner: "QuantumArtist",
+    quantity: 0,
+  },
 
-// Item 98
-{
-  id: 678901,
-  title: "Vortex Vision",
-  photo: "https://source.unsplash.com/random/600x616",
-  price: "140.00",
-  summaries: "Get lost in the mesmerizing patterns of Vortex Vision, where sight transcends into a visual symphony.",
-  categories: "Abstract",
-  owner: "VisionaryVortex",
-  quantity: 0,
-},
+  // Item 98
+  {
+    id: 678901,
+    title: "Vortex Vision",
+    photo: "https://source.unsplash.com/random/600x616",
+    price: "140.00",
+    summaries:
+      "Get lost in the mesmerizing patterns of Vortex Vision, where sight transcends into a visual symphony.",
+    categories: "Abstract",
+    owner: "VisionaryVortex",
+    quantity: 0,
+  },
 
-// Item 99
-{
-  id: 789012,
-  title: "Ethereal Expedition",
-  photo: "https://source.unsplash.com/random/600x617",
-  price: "190.00",
-  summaries: "Embark on an ethereal expedition, where dreams intertwine with reality in a magical journey.",
-  categories: "Surreal",
-  owner: "DreamExplorer",
-  quantity: 0,
-},
+  // Item 99
+  {
+    id: 789012,
+    title: "Ethereal Expedition",
+    photo: "https://source.unsplash.com/random/600x617",
+    price: "190.00",
+    summaries:
+      "Embark on an ethereal expedition, where dreams intertwine with reality in a magical journey.",
+    categories: "Surreal",
+    owner: "DreamExplorer",
+    quantity: 0,
+  },
 
-// Item 100
-{
-  id: 890123,
-  title: "Stellar Sonata",
-  photo: "https://source.unsplash.com/random/600x618",
-  price: "160.00",
-  summaries: "Experience the cosmic melodies of Stellar Sonata, a celestial symphony that resonates across the universe.",
-  categories: "Music",
-  music: "/music/Stellar_Sonata.mp3",
-  owner: "StellarComposer",
-  quantity: 0,
-},
-
-
+  // Item 100
+  {
+    id: 890123,
+    title: "Stellar Sonata",
+    photo: "https://source.unsplash.com/random/600x618",
+    price: "160.00",
+    summaries:
+      "Experience the cosmic melodies of Stellar Sonata, a celestial symphony that resonates across the universe.",
+    categories: "Music",
+    music: "/music/Stellar_Sonata.mp3",
+    owner: "StellarComposer",
+    quantity: 0,
+  },
 ];
