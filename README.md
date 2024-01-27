@@ -8,7 +8,7 @@ Welcome to the NFT Market Platform application! This is a frontend application d
 1. **Landing Page:**
    - Displays all NFT items or collections.
    - Users can search for items by name.
-   - Filter items by sorting (A - Z or Z - A), price (low to high or high to low), and categories.
+   - Filter items by sorting (A - Z or Z - A), price (low to high or high to low), name, and categories.
 
 2. **Item Cards:**
    - Each item card includes:
