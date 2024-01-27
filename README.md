@@ -47,7 +47,7 @@ Welcome to the NFT Market Platform application! This is a frontend application d
 
 1. Clone the repository:
    ```
-   git clone https://github.com/your-username/nft-market-platform.git
+   git clone https://github.com/Adex2210/risidio-nft-market-platform.git
    ```
 
 2. Install dependencies:
