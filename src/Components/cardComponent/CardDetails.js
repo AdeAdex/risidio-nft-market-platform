@@ -4,7 +4,7 @@ const CardDetails = ({ eachCollection }) => {
   return (
     <>
       <div className="p-6">
-        <h5 className="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
+        <h5 className="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased overflow-hidden md:h-[50px]">
           {eachCollection.title}
         </h5>
         <p className="text-sm">{eachCollection.categories}</p>

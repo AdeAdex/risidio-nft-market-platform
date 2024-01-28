@@ -25,7 +25,7 @@ const Cards = ({ collection, currentPageItem }) => {
       {currentPageItem.map((eachCollection, index) => (
         <section
           key={index}
-          className="w-full px-6 md:px-0 lg:px-0 md:w-1/4 lg:w-1/6 mx-auto md:mx-0 lg:mx-0 mb-12 lg:mb-8"
+          className="w-full px-6 md:px-0 lg:px-0 ms:w-1/3 md:w-1/4 lg:w-1/5 xl:w-1/6  mx-auto md:mx-0 lg:mx-0 mb-12 lg:mb-8"
         >
           <div
             key={index}
