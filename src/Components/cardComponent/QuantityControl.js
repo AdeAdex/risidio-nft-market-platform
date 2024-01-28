@@ -25,7 +25,7 @@ const QuantityControl = ({
   const handleDecreaseQuantity = (index) => {
     const itemIndex = wishlist.findIndex(
       (item) => item.title === collection[index].title
-    );
+      );
 
     if (itemIndex !== -1) {
       dispatch(decreaseQuantity(itemIndex));
@@ -37,7 +37,7 @@ const QuantityControl = ({
       <div className="flex items-center border border-1 border-border-color">
         <button
           onClick={() => handleDecreaseQuantity(index)}
-          className="bg-gray-300 px-3 py-1 rounded-sm"
+          className={`px-3 py-1 rounded-sm ${wishlist[0].quantity <= 1 ? "bg-gray-300" : "bg-button-background text-white"}`}
         >
           -
         </button>

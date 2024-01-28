@@ -20,7 +20,7 @@ const QuantityControl = ({
       <div className="flex items-center">
         <button
           onClick={() => handleDecreaseQuantity(index)}
-          className="bg-gray-300 px-3 py-1 rounded-sm"
+          className={`px-3 py-1 rounded-sm ${item.quantity <= 1 ? "bg-gray-300" : "bg-button-background text-white"}`}
         >
           -
         </button>

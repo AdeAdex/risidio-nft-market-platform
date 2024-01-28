@@ -16,7 +16,7 @@ const Cards = ({ collection, currentPageItem }) => {
   const dispatch = useDispatch();
   const wishlist = useSelector((state) => state.wishlist.items);
   useEffect(() => {
-    console.log(currentPageItem);
+    // console.log(currentPageItem);
   }, [currentPageItem])
   
 
